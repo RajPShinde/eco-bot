@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>object_collector</name>
+  <name>ecobot</name>
   <version>1.0.0</version>
-  <description>An object collector simulated in gazebo</description>
+  <description>An environment protector robot which automatically picks objects(trash) spawned randomly.</description>
 
   <maintainer email="prasheel@umd.edu">Prasheel Renkuntla</maintainer>
 
@@ -10,18 +10,21 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <build_depend>nav_core</build_depend>
+  <build_depend>move_base_msgs</build_depend>
+  <build_depend>base_local_planner</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>std_msgs</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>sensor_msgs</build_depend>
 
+  <build_export_depend>nav_core</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
-  <build_export_depend>geometry_msgs</build_export_depend>
-  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>move_base_msgs</build_export_depend>
+  <build_export_depend>base_local_planner</build_export_depend>
 
+  <exec_depend>nav_core</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>std_msgs</exec_depend>
-  <exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>base_local_planner</exec_depend>
+  <exec_depend>move_base_msgs</exec_depend>
 </package>
