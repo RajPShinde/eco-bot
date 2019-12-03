@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 3.2.1)
-project(object_collector)
+project(ecobot)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 14)
 
-find_package(catkin REQUIRED COMPONENTS roscpp geometry_msgs sensor_msgs)
+find_package(catkin REQUIRED COMPONENTS 
+  nav_core 
+  move_base_msgs
+  base_local_planner
+  roscpp
+  std_msgs)
 
 ## Generate messages in the 'msg' folder
 # add_message_files(
@@ -39,7 +44,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp geometry_msgs sensor_msgs)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES cleaner_robot
-#  CATKIN_DEPENDS genmsg geometry_msgs roscpp sensor_msgs std_msgs
+   CATKIN_DEPENDS nav_core roscpp std_msgs
 #  DEPENDS system_lib
 )
 
