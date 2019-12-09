@@ -78,11 +78,13 @@ namespace astar_plugin {
   }
 
   AStarPlanner::AStarPlanner(ros::NodeHandle &nh) {
+  	//  initialise node handle for this plugin
     ROSNodeHandle = nh;
   }
 
   AStarPlanner::AStarPlanner(std::string name,
                              costmap_2d::Costmap2DROS *cost_ros) {
+  	//  overridden function call for the node initialisation
     initialize(name, cost_ros);
   }
 
@@ -91,9 +93,7 @@ namespace astar_plugin {
   if (!initialized) {
     costmap_ros = cost_ros;
     costmap = costmap_ros->getCostmap();
-    //  ROS_WARN_STREAM(name << "~~" << costmap_ros->getCostmap());
     ros::NodeHandle private_nh("~/" + name);
-    //  ROS_WARN_STREAM(ros::this_node::getName());
     originX = costmap->getOriginX();
     originY = costmap->getOriginY();
 
@@ -176,7 +176,7 @@ bool AStarPlanner::makePlan(const geometry_msgs::PoseStamped &start,
                      << goal.header.frame_id.c_str() << " frame.");
     return false;
   }
-
+  //  take the start and goal to make plan
   float startX = start.pose.position.x;
   float startY = start.pose.position.y;
 
@@ -187,6 +187,7 @@ bool AStarPlanner::makePlan(const geometry_msgs::PoseStamped &start,
 
   int startCell = 0;
   int goalCell = 0;
+  //  check if coordinates are within boundary
   if (isCoordinateInBounds(startX, startY) &&
       isCoordinateInBounds(goalX, goalY)) {
     startCell = getCellIndex(startX, startY);  //  (x/res) * width + (y/res)
@@ -199,7 +200,9 @@ bool AStarPlanner::makePlan(const geometry_msgs::PoseStamped &start,
   if (isStartAndGoalValid(startCell, goalCell)) {
     std::vector<int> bestPath;
     bestPath.clear();
+    //  main function call to run A star on the map
     bestPath = runAStar(startCell, goalCell);
+    //  run through map to make path
     if (bestPath.size() > 0) {
       for (auto& i : bestPath) {
         float x = 0.0;
@@ -242,12 +245,14 @@ bool AStarPlanner::makePlan(const geometry_msgs::PoseStamped &start,
 }
 
 void AStarPlanner::convertToMapCoordinates(float &x, float &y) {
+  //  input from world, output w.r.t map
   x = x - originX;
   y = y - originY;
   getMapCoordinates(x, y);
 }
 
 std::vector<float> AStarPlanner::getMapCoordinates(float x, float y) {
+  //  method to check for test cases
   std::vector<float> coordinates {x, y};
   return coordinates;
 }
@@ -256,6 +261,7 @@ int AStarPlanner::getCellIndex(float x, float y) {
   int cell;
   float newX = x / (resolution);
   float newY = y / (resolution);
+  //  returns cell index here
   cell = calculateCellIndex(newY, newX);
   return cell;
 }
@@ -271,6 +277,7 @@ void AStarPlanner::getCellCoordinates(int index, float &x, float &y) {
 }
 
 bool AStarPlanner::isCoordinateInBounds(float x, float y) {
+  //  check if the coordinates are in bounds
   bool valid = true;
   if (x > (width * resolution) || y > (height * resolution)) {
     valid = false;
@@ -281,7 +288,7 @@ bool AStarPlanner::isCoordinateInBounds(float x, float y) {
 std::vector<int> AStarPlanner::runAStar(int startCell, int goalCell) {
   std::vector<int> bestPath;
   std::vector<float> g_score;
-
+  //  take a vector with infinity values till map size for g function
   g_score.assign(mapSize, infinity);
   bestPath = findPath(startCell, goalCell, g_score);
   return bestPath;
@@ -300,11 +307,7 @@ std::vector<int> AStarPlanner::findPath(int startCell,
   g_score[startCell] = 0;
   cell.currentGridSquare = startCell;
   cell.fCost = g_score[startCell] + calculateHCellScore(startCell, goalCell);
-
-  // cell = std::make_pair(startCell,
-  //                         (g_score[startCell] +
-  //                             calculateHCellScore(startCell,
-  //                                              goalCell)));
+  //  open list to have free cells
   openSquaresList.insert(cell);
   currentCell = startCell;
 
@@ -318,6 +321,7 @@ std::vector<int> AStarPlanner::findPath(int startCell,
           g_score[i] = g_score[currentCell] +
                                           getMoveToCellCost(currentCell,
                                           i);
+        //  add neighbor cells to list
         addNeighborCellToOpenList(openSquaresList,
                                         i,
                                         goalCell, g_score);
@@ -325,6 +329,7 @@ std::vector<int> AStarPlanner::findPath(int startCell,
     }
   }
   if (g_score[goalCell] != infinity) {
+  	//  planner constructs path from here
     bestPath = constructPath(startCell, goalCell, g_score);
     return bestPath;
   } else {
@@ -342,7 +347,7 @@ std::vector<int> AStarPlanner::constructPath(int startCell,
 
   path.insert(path.begin() + bestPath.size(), goalCell);
   int currentCell = goalCell;
-
+  //  construct a path that has minimum g and h function value
   while (currentCell != startCell) {
     std::vector<int> neighborCells;
     neighborCells = findFreeNeighborCell(currentCell);
@@ -362,6 +367,7 @@ std::vector<int> AStarPlanner::constructPath(int startCell,
   int p_size = path.size();
   std::vector<int> tempPath = path;
   auto it = 0;
+  //  loop through to make path
   for (auto& i : path) {
     bestPath.insert(bestPath.begin() + bestPath.size(),
                     tempPath[(p_size - (it + 1))]);
@@ -389,6 +395,7 @@ std::vector<int> AStarPlanner::findFreeNeighborCell(int cell) {
   std::vector<int> freeNeighborCells = {0};
   std::vector<int> row {-1, 0, 1};
   std::vector<int> col {-1, 0, 1};
+  //  check through the neighbor cells
   for (auto& i : row) {
     for (auto& j : col) {
       if ((rowIndex + i >= 0) && (rowIndex + i < height)
@@ -436,10 +443,12 @@ bool AStarPlanner::isStartAndGoalValid(int startCell, int goalCell) {
 
 float AStarPlanner::getMoveToCellCost(int i1, int j1, int i2, int j2) {
   float moveCost = infinity;
+  //  if moving in diagonal, then h movecost is root 2
   if ((j2 == j1 + 1 && i2 == i1 + 1) || (i2 == i1 - 1 && j2 == j1 + 1)
       || (i2 == i1 - 1 && j2 == j1 - 1) || (j2 == j1 - 1 && i2 == i1 + 1)) {
     moveCost = 1.4;
   } else {
+  	//  if moving in straight line, then h movecost is 1
     if ((j2 == j1 && i2 == i1 - 1) || (i2 == i1 && j2 == j1 - 1)
        || (i2 == i1 + 1 && j2 == j1) || (i2 == i1 && j2 == j1 + 1)) {
       moveCost = 1;

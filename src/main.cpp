@@ -47,8 +47,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "navigateRobot.hpp"
 
 int main(int argc, char** argv) {
+//  main node to start
 ros::init(argc, argv, "ecobot_listener");
 NavigateRobot ecobot;
+//  start ecobot here
 int var = ecobot.start(true);
 return 0;
 }
