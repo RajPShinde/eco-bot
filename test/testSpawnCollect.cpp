@@ -66,3 +66,13 @@ SpawnCollect testn;
 // should be true on collect
 EXPECT_TRUE(testn.collect(0));
 }
+
+/**
+ *  @brief  Main Function for running tests
+ *  @param  int argc, char argv
+ *  @return int
+ */
+int main(int argc, char **argv){
+testing::InitGoogleTest(&argc, argv);
+return RUN_ALL_TESTS();
+}
