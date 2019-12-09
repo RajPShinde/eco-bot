@@ -34,43 +34,46 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /**
  *  @copyright BSD 3-Clause License
  *  @copyright Copyright © 2019 Raj Shinde, Prasheel Renkuntla
- *  @file    main.cpp
+ *  @file    testGridSquare.cpp
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
  *  @date    12/09/2019
  *  @version 3.0 
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
- *  @section main program to run gtest
+ *  @section To test grid squares of the map. for planner
  */
 
-#include <ros/ros.h>
 #include <gtest/gtest.h>
-#include <boost/thread.hpp>
+#include "gridSquare.hpp"
 
 /**
- *  @brief  Main Function for running tests
+ * @def TEST(TestGridSquare, testGetCurrentSquare)
+ * @brief To check if the current gridsquare is 0
+ */
+TEST(TestGridSquare, testGetCurrentSquare) {	
+int res = 0;
+GridSquare testGS;
+//  Should return true when initial gridsquare is 0
+ASSERT_EQ(res, testGS.getCurrentGridSquare());
+}
+
+/**
+ * @def TEST(TestGridSquare, testFCost)
+ * @brief To check if the current fCost is 0
+ */
+TEST(TestGridSquare, testFCost) {
+float resF = 0.0;
+GridSquare testGS;
+//  Should return true when initial fcost is 0
+EXPECT_EQ(resF, testGS.getFCost());
+}
+
+/**
+ *  @brief  Main Function for running tests of GridSquare Class
  *  @param  int argc, char argv
  *  @return int
  */
-void threadSpinning(void) {
-    ros::Rate loop_rate(10);
-
-    while (ros::ok()) {
-        ros::spinOnce();
-        loop_rate.sleep();
-    }
-}
-
-int main(int argc, char** argv) {
+int main(int argc, char **argv){
   testing::InitGoogleTest(&argc, argv);
-  ros::init(argc, argv, "testPlanner");
-  ros::NodeHandle nh;
-  boost::thread th(threadSpinning);
-
-  int ret = RUN_ALL_TESTS();
-
-  ros::shutdown();
-  th.join();
-
   return RUN_ALL_TESTS();
 }
