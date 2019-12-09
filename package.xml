@@ -29,6 +29,6 @@
   <exec_depend>move_base_msgs</exec_depend>
   <test_depend>rosunit</test_depend>
   <export>
-    <nav_core plugin="${prefix}/astar_plugin.xml" />
+    <nav_core plugin="${prefix}/data/includes/astar_plugin.xml" />
   </export>
 </package>
