@@ -50,15 +50,67 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "randomizer.hpp"
 #include "collector.hpp"
 
-Collector::Collector(){
+typedef actionlib::SimpleActionClient
+<move_base_msgs::MoveBaseAction> MoveBaseClient;
+
+Collector::Collector() {
 }
-Collector::~Collector(){
+Collector::~Collector() {
 }
 
 bool Collector::collector() {
-bool flag;
+  double xo = 0;
+  double yo = 0;
+  Randomizer r;
+  SpawnCollect s;
+  double xr = r.randomizeX();
+  double yr = r.randomizeY();
+  s.spawn(xr, yr, 1);
+
+  double xn = -7.0 + xr;
+  double yn = -6.5 + yr;
+  xn = r.xOffset(xo, xr, xn);
+  yn = r.yOffset(yo, yr, yn);
+
+  // tell the action client  to spin a thread
+  MoveBaseClient ac("move_base", true);
+
+  // wait for action server
+  while (!ac.waitForServer(ros::Duration(10.0))) {
+    ROS_INFO_STREAM("Waiting for the move_base action server to come up");
+  }
+
+  move_base_msgs::MoveBaseGoal goal;
+
+  // sending goal
+  goal.target_pose.header.frame_id = "map";
+  goal.target_pose.header.stamp = ros::Time::now();
+
+  goal.target_pose.pose.position.x = xn;
+  goal.target_pose.pose.position.y = yn;
+  goal.target_pose.pose.position.z = 0.0;
+  goal.target_pose.pose.orientation.w = 1.0;
+
+  ROS_INFO_STREAM("Sending goal");
+  ac.sendGoal(goal);
+
+  ac.waitForResult(ros::Duration(17 + 2.3 * abs(6.5 + yr)));
+
+  if (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
+    ROS_INFO_STREAM("Hooray, Trash is collected!");
+    s.collect(1);
+    // ros::shutdown();
+  } else {
+    ROS_INFO_STREAM("The base is in vicinity to the Object. Hence collected!");
+    s.collect(1);
+    // ros::shutdown();
+  }
 return flag;
 }
 
-int main(int argc, char** argv){
+int main(int argc, char** argv) {
+  ros::init(argc, argv, "simple_navigation_goals");
+  Collector trash;
+  trash.collector();
+  return 0;
 }

@@ -85,5 +85,5 @@ return xn;
 
 double Randomizer::yOffset(double yo, double yr, double yn) {
 // add offset to trash location
-return yn+1;
+return yn+0.4;
 }
