@@ -43,30 +43,47 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @section Implemention of coordinate randomization.
  */
 
-#include <cstdlib> 
+#include <cstdlib>
 #include <ctime>
 #include <randomizer.hpp>
 
-Randomizer::Randomizer(){
+Randomizer::Randomizer() {
 }
 
-Randomizer::~Randomizer(){
+Randomizer::~Randomizer() {
 }
 
 double Randomizer::randomizeX() {
-double xc = 0.0;
+// seed with timee
+srand(time(0));
+// randomize x between 1 to 5
+float xc = (rand() % 5) + 1;
+if(xc == 2) {
+  xc = 0;
+} else if (xc > 2) {
+  xc = -1 * (xc - 2);
+}
 return xc;
 }
 
 double Randomizer::randomizeY() {
-double yc = 0.0;
+// randomize y between -3 to 3
+srand(time(0));
+float yc = (rand() % 7) + 1;
+if(yc == 4) {
+  yc = 0;
+} else if (yc > 4) {
+  yc = -1*(yc-4);
+}
 return yc;
 }
 
 double Randomizer::xOffset(double xo, double xr, double xn) {
+// add offset to trash location
 return xn;
 }
 
 double Randomizer::yOffset(double yo, double yr, double yn) {
-return yn;
+// add offset to trash location
+return yn+1;
 }

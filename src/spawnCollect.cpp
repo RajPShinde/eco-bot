@@ -44,20 +44,31 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 #include <spawnCollect.hpp>
-#include <cstdlib> 
+#include <cstdlib>
 #include <string>
 
-SpawnCollect::SpawnCollect(){
+SpawnCollect::SpawnCollect() {
 }
 
-SpawnCollect::~SpawnCollect(){
+SpawnCollect::~SpawnCollect() {
 }
 
 bool SpawnCollect::spawn(int xr, int yr, int flag) {
-bool flag;
-return flag;
+// String to spawn construction cone in gazebo world
+std::string spawn11 ="rosrun gazebo_ros spawn_model -database construction_cone -sdf -model cab1 -z 0.0 -y ";
+std::string spawn2 = " -x ";
+std::string spawna = spawn11 + std::to_string(yr) + spawn2 +
+                     std::to_string(xr);
+if(flag == 1) {
+// Enter in terminal
+system(spawna.c_str());
+}
+return true;
 }
 bool SpawnCollect::collect(int flag) {
-bool flag;
-return flag;
+if(flag == 1) {
+// Delete construction cone from gazebo world
+system("rosservice call gazebo/delete_model '{model_name: cab1}'");
+}
+return true;
 }
