@@ -59,6 +59,7 @@ Collector::~Collector() {
 }
 
 bool Collector::collector() {
+  bool flag = true;
   double xo = 0;
   double yo = 0;
   Randomizer r;
