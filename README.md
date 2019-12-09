@@ -1,9 +1,10 @@
-<img src="ecobot.png"/>
+<img src="/data/ecobot.png"/>
 
-[![Build Status](https://travis-ci.org/Prasheel24/Object-Collector-Robot.svg?branch=master)](https://travis-ci.org/Prasheel24/Object-Collector-Robot)
-[![Coverage Status](https://coveralls.io/repos/github/Prasheel24/Object-Collector-Robot/badge.svg?branch=master&service=github)](https://coveralls.io/github/Prasheel24/Object-Collector-Robot?branch=master)
-[![License BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Prasheel24/Object-Collector-Robot/blob/master/LICENSE)
-
+[![Build Status](https://travis-ci.org/Prasheel24/eco-bot.svg?branch=master)](https://travis-ci.org/Prasheel24/eco-bot)
+[![Coverage Status](https://coveralls.io/repos/github/Prasheel24/eco-bot/badge.svg?branch=master&service=github)](https://coveralls.io/github/Prasheel24/eco-bot?branch=master&service=github)
+[![License BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Prasheel24/eco-bot/blob/master/LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-generated-brightgreen.svg)](https://github.com/Prasheel24/eco-bot/docs)
+---
 
 ## Authors
 
@@ -13,24 +14,36 @@
 <br>I am a Master's in Robotics Engineering student at the University of Maryland, College Park. My primary area of interest is in Vision integrated Robot Systems.
 
 ## Overview
-This is ROS Package developed for ACME Robotics to demonstrate the functionality of their new eco-bot.
+This is ROS Package developed for ACME Robotics to demonstrate the functionality of their new eco-bot in a simulated environment.
 
+## Description
+The eco-bot is a trash collecting robot, that once given the location of trash, goes to the location and collects all the trash. 
+<br>The ecobot first needs to generate a map of the area, which is done by using GMapping and RRT Exploration package. The RRT Exploration Package uses the Rapidly-Exploring Random Tree (RRT) path planning algorithm. A LiDAR is used for GMapping insted of a Laser, which enables to generate map very quickly.
+<br>Once the map is generated, it is stored as a pgm image file. The generated pgm file is used later during the trash collection. The ecobot is assumed to be connected to internet, from where it receives the trash location. The robot then navigated to the trash loacation, using A* Algorithm. After the robot reaches near the trash, it collects the trash. 
+<img src="/data/pic.png"/>
 ## Sprint Planning and Discussion
 Sprint- [Link](https://docs.google.com/document/d/1_uG7fMXPrtZlpRLsgD74NdLRX3DKDXxCicppZWBDNvQ)
 
 ## Agile Iterative Process Log
 Log- [Link](https://docs.google.com/spreadsheets/d/1DkxCx4_GxvRXjRTTrmgZvdOQ4z0DMrpGEavg439tQak)
 
+## Presentation
+ecobot presentation- [Link](https://docs.google.com/presentation/d/1IUGE4VEXWjybyAAlP8kH_GjFQwXpRnje)
+
 ## Dependencies
 1. Ubuntu 16.04
 2. C++ 11/14/17
-3. ROS Kinetic
+3. ROS Kinetic- [Install](http://wiki.ros.org/kinetic/Installation)
 4. Turtlebot stack
 <br> Install by running following command
 ```
 
 sudo apt-get install ros-kinetic-turtlebot-gazebo ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-rviz-launchers
 ```
+5. RRT Exploration Package by [hasauino](http://wiki.ros.org/rrt_exploration)
+6. GMapping
+7. amcl
+8. Navigation stack
 
 ## Build
 Steps to build
@@ -40,7 +53,8 @@ cd ~/catkin_ws/
 catkin_make
 source devel/setup.bash
 cd src/
-git clone https://github.com/Prasheel24/Object-Collector-Robot
+git clone https://github.com/Prasheel24/eco-bot
+git clone https://github.com/hasauino/rrt_exploration.git
 cd ~/catkin_ws/
 catkin_make
 ```
@@ -49,19 +63,82 @@ catkin_make
 <br> Open a new Terminal
 ```
 source devel/setup.bash
-roslaunch ecobot TurtlebotMapping.launch
+roslaunch ecobot Mapping.launch
 ```
+Now on rviz provide four publish points in following order, the fifth should be inside the world/room.
+<img src="/data/seq.png"/>
+
 **Save Map to Directory**
-<br> Open a new Terminal
+Once a satisfactory map is generated (Open a new Terminal)
 ```
 rosrun map_server map_saver map:=/robot_1/map -f CollectorSpace
 ```
+
 **Collect Garbage**
-<br> Open a new Terminal
+Press Ctrl+ C to close the previous sessions and start a this in a new Terminal
 ```
 source devel/setup.bash
-roslaunch ecobot TurtlebotCollect.launch
+roslaunch ecobot Collecting.launch
 ```
+wait till the odom is received on main terminal then Open a new Terminal,
+```
+source ./devel/setup.bash
+rosrun ecobot trash
+```
+**Record bag while Mapping and Collecting**
+<br> to record Mapping in a bag file, pass a record:=true argument as shown below (Open a new Terminal)
+```
+source devel/setup.bash
+roslaunch ecobot Mapping.launch record:=true
+```
+<br> to record Collecting in a bag file, pass a record:=true argument as shown below (Open a new Terminal)
+```
+source devel/setup.bash
+roslaunch ecobot Collecting.launch record:=true
+```
+
+**View Log Levels**
+To view Log levels using rqt console and rqt logger level
+Open a new Terminal
+```
+rosrun rqt_console rqt_console
+```
+Open a new Terminal
+```
+rosrun rqt_logger_level rqt_logger_level
+```
+
+**Run Bag Files**
+Go to the directory consisting bag file(Open a new Terminal)
+Run roscore
+```
+roscore
+```
+Open a new terminal
+```
+cd ~/catkin_ws/
+source devel/setup.bash
+cd ~/catkin_ws/src/eco-bot/results/
+rosbag play recording.bag 
+```
+
+## Run Test
+To run gtest and rostest (Open a new Terminal)
+```
+catkin_make run_tests_ecobot
+```
+
+## Gererate Doxygen docs
+In a new terminal
+```
+sudo apt-get install doxygen
+sudo apt install doxygen-gui
+doxywizard
+```
+
+
+## Bugs
+ecobot sometimes take more time to collect/delete garbage even after reaching near, because A* path planner takes more time to achieve exact target location.
 
 ## References
 * http://wiki.ros.org/
