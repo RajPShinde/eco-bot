@@ -1,0 +1,1238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="test_path_planner_8cpp" kind="file" language="C++">
+    <compoundname>testPathPlanner.cpp</compoundname>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">ros/console.h</includes>
+    <includes local="no">tf/transform_listener.h</includes>
+    <includes local="no">geometry_msgs/Twist.h</includes>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes local="no">geometry_msgs/Point.h</includes>
+    <includes local="no">geometry_msgs/Quaternion.h</includes>
+    <includes local="no">geometry_msgs/PoseStamped.h</includes>
+    <includes local="no">geometry_msgs/PoseWithCovarianceStamped.h</includes>
+    <includes local="no">costmap_2d/costmap_2d_ros.h</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">set</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">limits</includes>
+    <includes refid="path_planner_8hpp" local="yes">pathPlanner.hpp</includes>
+    <incdepgraph>
+      <node id="224">
+        <label>sensor_msgs/PointCloud2.h</label>
+      </node>
+      <node id="198">
+        <label>iomanip</label>
+      </node>
+      <node id="205">
+        <label>limits</label>
+      </node>
+      <node id="218">
+        <label>nav_msgs/GetPlan.h</label>
+      </node>
+      <node id="199">
+        <label>iterator</label>
+      </node>
+      <node id="185">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="195">
+        <label>numeric</label>
+      </node>
+      <node id="215">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
+      <node id="184">
+        <label>ros/console.h</label>
+      </node>
+      <node id="201">
+        <label>string</label>
+      </node>
+      <node id="188">
+        <label>geometry_msgs/Point.h</label>
+      </node>
+      <node id="204">
+        <label>map</label>
+      </node>
+      <node id="212">
+        <label>move_base_msgs/MoveBaseGoal.h</label>
+      </node>
+      <node id="207">
+        <label>tf/tf.h</label>
+      </node>
+      <node id="209">
+        <label>angles/angles.h</label>
+      </node>
+      <node id="196">
+        <label>fstream</label>
+      </node>
+      <node id="211">
+        <label>base_local_planner/costmap_model.h</label>
+      </node>
+      <node id="221">
+        <label>random</label>
+      </node>
+      <node id="182">
+        <label>test/testPathPlanner.cpp</label>
+        <link refid="testPathPlanner.cpp"/>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>move_base_msgs/MoveBaseAction.h</label>
+      </node>
+      <node id="191">
+        <label>geometry_msgs/PoseWithCovarianceStamped.h</label>
+      </node>
+      <node id="192">
+        <label>costmap_2d/costmap_2d_ros.h</label>
+      </node>
+      <node id="208">
+        <label>tf/transform_datatypes.h</label>
+      </node>
+      <node id="190">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="186">
+        <label>geometry_msgs/Twist.h</label>
+      </node>
+      <node id="202">
+        <label>vector</label>
+      </node>
+      <node id="217">
+        <label>nav_msgs/Path.h</label>
+      </node>
+      <node id="187">
+        <label>gtest/gtest.h</label>
+      </node>
+      <node id="222">
+        <label>gridSquare.hpp</label>
+        <link refid="grid_square_8hpp"/>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>utility</label>
+      </node>
+      <node id="203">
+        <label>sstream</label>
+      </node>
+      <node id="183">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="206">
+        <label>pathPlanner.hpp</label>
+        <link refid="path_planner_8hpp"/>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>iostream</label>
+      </node>
+      <node id="219">
+        <label>nav_core/base_global_planner.h</label>
+      </node>
+      <node id="216">
+        <label>nav_msgs/OccupancyGrid.h</label>
+      </node>
+      <node id="210">
+        <label>base_local_planner/world_model.h</label>
+      </node>
+      <node id="223">
+        <label>sensor_msgs/LaserScan.h</label>
+      </node>
+      <node id="189">
+        <label>geometry_msgs/Quaternion.h</label>
+      </node>
+      <node id="194">
+        <label>set</label>
+      </node>
+      <node id="200">
+        <label>algorithm</label>
+      </node>
+      <node id="193">
+        <label>memory</label>
+      </node>
+      <node id="214">
+        <label>costmap_2d/costmap_2d.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testNodeHandle)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testNodeHandle</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="77" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a4d861461d0da76f4df110cb76d92703e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testConversionToMap)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testConversionToMap</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="91" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="91" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a9221fc80803af264b8f6c0b7e5ded6d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testCheckCellCoordinates)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testCheckCellCoordinates</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="110" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="110" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a9517790106786b00a5d81287fadd5671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testCoordinateBounds)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testCoordinateBounds</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="134" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="134" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a5734ee20bc8bcc184b682dff07944d7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testCellValuesIndex)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testCellValuesIndex</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="144" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="144" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1ae4eea0f42fb9725b98c44764c779fc5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testCellValues)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testCellValues</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="159" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="159" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a3b8b8056849157ca413be5b843333b49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testCellIndexCalculation)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testCellIndexCalculation</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="174" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="174" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1aaf1d4469153226e7f61dbf9dfaebd708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testCellIndex)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testCellIndex</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="185" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="185" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a694d5894f7bb1a9c0a38cb22aa015816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testRowIndex)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testRowIndex</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="196" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="196" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a2658881037901d96358ad4e325e8697d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testColIndex)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testColIndex</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="208" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="208" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a9e3c714032270e641abff3dc7b08c9e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testHValue)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testHValue</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="220" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="220" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1ae95e0b89cd974af68e0c0d9629ff42f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testMovingCost)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testMovingCost</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="232" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="232" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a532503ede4e65a7c0c5dc524caa60e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testMovingCostIndividualDiagonal)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testMovingCostIndividualDiagonal</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="245" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="245" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a90ad57f20e9660deedd92bf143d53186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testMovingCostIndividualStraight)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testMovingCostIndividualStraight</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="256" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="256" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a9b0c4b226b95442108829473be3a9d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(testPathPlanner, testNeighborCellNewPoint)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>testPathPlanner</type>
+        </param>
+        <param>
+          <type>testNeighborCellNewPoint</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="267" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="267" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a4e58186605d8ec87ffac79bcbc9a4e5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(testPathPlanner, testNeighborCell)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>testPathPlanner</type>
+        </param>
+        <param>
+          <type>testNeighborCell</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="279" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="279" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1afc2cc941fa5c95d5e6673a7b9d91b764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testConstructPath)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testConstructPath</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="291" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="291" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a5b72b88d64f1938d3f8a4bfc76c9816c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testFindPath)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testFindPath</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="304" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="304" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a9c7475d0696e7c9ca9940d2b6123260a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testFindPathNew)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testFindPathNew</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="319" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="319" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a8e80e538bf915bf00f6c751909ec9e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testFindPathNewFilled)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testFindPathNewFilled</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="335" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="335" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a4a1285e3edabd619ae0b8658d802af63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testFindPathNewExtreme)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testFindPathNewExtreme</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="351" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="351" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1aa0148b0144da2556d4fae9b6579b0039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testRunAStar)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testRunAStar</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="366" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="366" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1ac5d266559642ed4d5e6b8469a69ac50b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testStartGoalValidationFirst)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testStartGoalValidationFirst</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="384" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="384" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a941048139ec90fc74286ff13cace75b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testStartGoalValidationSecond)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testStartGoalValidationSecond</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="399" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="399" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1a974f48f0f003284d61e6842c0bee0a8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testFindPathThorough)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testFindPathThorough</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="414" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="414" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1ac9cf7f47b6ddea8d065bc70fdfa72195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testFindFreeNeighborCell)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testFindFreeNeighborCell</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="450" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="450" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1ab664a2d8a8a44aef432c78ebdcc6b982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testAddNeighborsToOpenList)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testAddNeighborsToOpenList</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="480" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="480" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="test_path_planner_8cpp_1aa32dc0b52130e967fd354db4d3f7a13e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(TestPathPlanner, testIsStartGoalValid)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>TestPathPlanner</type>
+        </param>
+        <param>
+          <type>testIsStartGoalValid</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/testPathPlanner.cpp" line="504" column="1" bodyfile="test/testPathPlanner.cpp" bodystart="504" bodyend="543"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">BSD<sp/>3-Clause<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Copyright<sp/>(c)<sp/>2019,<sp/>Raj<sp/>Shinde</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Copyright<sp/>(c)<sp/>2019,<sp/>Prasheel<sp/>Renkuntla</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor">#include<sp/>&lt;ros/ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ros/console.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/Twist.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/Point.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/Quaternion.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseWithCovarianceStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;costmap_2d/costmap_2d_ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="path_planner_8hpp" kindref="compound">pathPlanner.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&quot;gridSquare.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testNodeHandle)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Create<sp/>a<sp/>test<sp/>node<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">ros::NodeHandle<sp/>nh;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP(nh);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>current<sp/>node<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>node_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/testPlanner&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Returns<sp/>true<sp/>when<sp/>robot<sp/>name<sp/>is<sp/>testPlanner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">EXPECT_EQ(node_name,<sp/>ros::this_node::getName());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="test_path_planner_8cpp_1a4d861461d0da76f4df110cb76d92703e" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testConversionToMap)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Initialise<sp/>test<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a9accb42a886464ae84db5259aad9c444" kindref="member">originX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1aa680b5cf31ff141738c409c4e86dbba6" kindref="member">originY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>point<sp/>=<sp/>10.0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>indCoordinate<sp/>=<sp/>point;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Convert<sp/>to<sp/>map<sp/>coordinates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ac43f501b17770643240a6e36174a73b9" kindref="member">convertToMapCoordinates</ref>(indCoordinate,<sp/>indCoordinate);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">std::vector&lt;float&gt;<sp/>testCoordinates<sp/>{10.0,<sp/>10.0};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>true<sp/>when<sp/>testcoordinates<sp/>are<sp/>equal<sp/>to<sp/>10,<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">EXPECT_EQ(testCoordinates,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a875990bd4b8b9ab17855ce54b4df4780" kindref="member">getMapCoordinates</ref>(indCoordinate,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>indCoordinate));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="test_path_planner_8cpp_1a9221fc80803af264b8f6c0b7e5ded6d9" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testCheckCellCoordinates)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>initialise<sp/>test<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a9accb42a886464ae84db5259aad9c444" kindref="member">originX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1aa680b5cf31ff141738c409c4e86dbba6" kindref="member">originY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>point<sp/>=<sp/>10.0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>indCoordinate<sp/>=<sp/>point;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a698245ae6075cbbcb7d50d949025df95" kindref="member">resolution</ref><sp/>=<sp/>180.0;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>fetch<sp/>the<sp/>cell<sp/>coordinates<sp/>using<sp/>the<sp/>index,<sp/>and<sp/>individual<sp/>coordinates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1add9c03d5a079ad44e5f91ccc8344679d" kindref="member">getCellCoordinates</ref>(index,<sp/>indCoordinate,<sp/>indCoordinate);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">std::vector&lt;float&gt;<sp/>testCoordinates<sp/>{0.0,<sp/>0.0};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>true<sp/>when<sp/>the<sp/>testcoordinates<sp/>are<sp/>at<sp/>origin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">EXPECT_EQ(testCoordinates,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a875990bd4b8b9ab17855ce54b4df4780" kindref="member">getMapCoordinates</ref>(indCoordinate,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>indCoordinate));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="test_path_planner_8cpp_1a9517790106786b00a5d81287fadd5671" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testCoordinateBounds)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>The<sp/>testcoordinates<sp/>should<sp/>be<sp/>out<sp/>of<sp/>boundary<sp/>when<sp/>map<sp/>not<sp/>initialised.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">EXPECT_FALSE(testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a3e3717511d9000f1c55f3f57a58dfd0f" kindref="member">isCoordinateInBounds</ref>(10,<sp/>10));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="test_path_planner_8cpp_1a5734ee20bc8bcc184b682dff07944d7a" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testCellValuesIndex)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref><sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>*<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>create<sp/>a<sp/>test<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref>];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>false<sp/>for<sp/>origin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">EXPECT_FALSE(testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a29d81e8f4ac6191296d5c180be9ac8ae" kindref="member">isCellFree</ref>(0));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="test_path_planner_8cpp_1ae4eea0f42fb9725b98c44764c779fc5f" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testCellValues)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref><sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>*<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Create<sp/>a<sp/>test<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref>];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>false<sp/>for<sp/>origin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">EXPECT_FALSE(testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a29d81e8f4ac6191296d5c180be9ac8ae" kindref="member">isCellFree</ref>(0,<sp/>0));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="test_path_planner_8cpp_1a3b8b8056849157ca413be5b843333b49" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testCellIndexCalculation)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>0<sp/>for<sp/>origin<sp/>when<sp/>no<sp/>map<sp/>params</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">EXPECT_EQ(res,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1aa54d997cd223de69fb7a37a79dc5cd1c" kindref="member">calculateCellIndex</ref>(0,<sp/>0));</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="test_path_planner_8cpp_1aaf1d4469153226e7f61dbf9dfaebd708" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testCellIndex)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>index<sp/>should<sp/>be<sp/>zero<sp/>for<sp/>origin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">EXPECT_EQ(res,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1aae9903fa7f48e8e1ce45f4c772989e95" kindref="member">getCellIndex</ref>(0,<sp/>0));</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="test_path_planner_8cpp_1a694d5894f7bb1a9c0a38cb22aa015816" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testRowIndex)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>0<sp/>for<sp/>the<sp/>origin<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">EXPECT_EQ(res,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a660c014cd14a8de3080b138b44f5437e" kindref="member">getCellRowIndex</ref>(0));</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="test_path_planner_8cpp_1a2658881037901d96358ad4e325e8697d" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testColIndex)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>0<sp/>for<sp/>the<sp/>cell<sp/>column<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">EXPECT_EQ(res,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a7242cadadc720feb8af97bc9f427f53c" kindref="member">getCellColIndex</ref>(0));</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="test_path_planner_8cpp_1a9e3c714032270e641abff3dc7b08c9e7" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testHValue)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resF<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>At<sp/>origin<sp/>the<sp/>H<sp/>Cell<sp/>score<sp/>is<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a18fac92699522fa76a2add6ea75fa6fc" kindref="member">calculateHCellScore</ref>(0,<sp/>0));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="test_path_planner_8cpp_1ae95e0b89cd974af68e0c0d9629ff42f4" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testMovingCost)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resF<sp/>=<sp/>infinity;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>be<sp/>infinite<sp/>for<sp/>origin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad07f32fd3a1e44ef3bb9bb1e59237023" kindref="member">getMoveToCellCost</ref>(0,<sp/>0));</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245" refid="test_path_planner_8cpp_1a532503ede4e65a7c0c5dc524caa60e63" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testMovingCostIndividualDiagonal)<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resF<sp/>=<sp/>1.4;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>root<sp/>2<sp/>for<sp/>diagonal<sp/>movement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad07f32fd3a1e44ef3bb9bb1e59237023" kindref="member">getMoveToCellCost</ref>(1,<sp/>1,<sp/>2,<sp/>2));</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="test_path_planner_8cpp_1a90ad57f20e9660deedd92bf143d53186" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testMovingCostIndividualStraight)<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resF<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>1<sp/>for<sp/>straight<sp/>line<sp/>motion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad07f32fd3a1e44ef3bb9bb1e59237023" kindref="member">getMoveToCellCost</ref>(1,<sp/>1,<sp/>0,<sp/>1));</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="test_path_planner_8cpp_1a9b0c4b226b95442108829473be3a9d86" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(testPathPlanner,<sp/>testNeighborCellNewPoint)<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">std::vector&lt;int&gt;<sp/>resCells<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Given<sp/>index<sp/>10,<sp/>without<sp/>map<sp/>the<sp/>free<sp/>neighbor<sp/>cells<sp/>are<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal">EXPECT_EQ(resCells,<sp/>(testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5ea485f93bfba47034d611b04eba2189" kindref="member">findFreeNeighborCell</ref>(10)));</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279" refid="test_path_planner_8cpp_1a4e58186605d8ec87ffac79bcbc9a4e5f" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(testPathPlanner,<sp/>testNeighborCell)<sp/>{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">std::vector&lt;int&gt;<sp/>resCells<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Without<sp/>map,<sp/>the<sp/>free<sp/>neighbor<sp/>cells<sp/>are<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal">EXPECT_EQ(resCells,<sp/>(testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5ea485f93bfba47034d611b04eba2189" kindref="member">findFreeNeighborCell</ref>(0)));</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="test_path_planner_8cpp_1afc2cc941fa5c95d5e6673a7b9d91b764" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testConstructPath)<sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_test<sp/>=<sp/>{infinity};</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">std::vector&lt;int&gt;<sp/>resF<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>without<sp/>a<sp/>given<sp/>map,<sp/>it<sp/>should<sp/>return<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1aae75ccdcf38f6cd848d024a8aebc0bc0" kindref="member">constructPath</ref>(0,<sp/>0,<sp/>g_test));</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="test_path_planner_8cpp_1a5b72b88d64f1938d3f8a4bfc76c9816c" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testFindPath)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" kindref="member">value</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_test<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">std::vector&lt;int&gt;<sp/>resF<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>0<sp/>for<sp/>origin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a65c23083aa562f0ce8a881d26fb020a7" kindref="member">findPath</ref>(0,<sp/>0,<sp/>g_test));</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="test_path_planner_8cpp_1a9c7475d0696e7c9ca9940d2b6123260a" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testFindPathNew)<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" kindref="member">value</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_test<sp/>=<sp/>{infinity};</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">std::vector&lt;int&gt;<sp/>resF<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>0<sp/>for<sp/>origin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a65c23083aa562f0ce8a881d26fb020a7" kindref="member">findPath</ref>(0,<sp/>0,<sp/>g_test));</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335" refid="test_path_planner_8cpp_1a8e80e538bf915bf00f6c751909ec9e32" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testFindPathNewFilled)<sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" kindref="member">value</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_test<sp/>=<sp/>{infinity};</highlight></codeline>
+<codeline lineno="341"><highlight class="normal">std::vector&lt;int&gt;<sp/>resF<sp/>=<sp/>{10};</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>10<sp/>for<sp/>the<sp/>given<sp/>coordinate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a65c23083aa562f0ce8a881d26fb020a7" kindref="member">findPath</ref>(10,<sp/>10,<sp/>g_test));</highlight></codeline>
+<codeline lineno="345"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351" refid="test_path_planner_8cpp_1a4a1285e3edabd619ae0b8658d802af63" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testFindPathNewExtreme)<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" kindref="member">value</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="355"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_test<sp/>=<sp/>{infinity};</highlight></codeline>
+<codeline lineno="356"><highlight class="normal">std::vector&lt;int&gt;<sp/>resF<sp/>=<sp/>{1000};</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>1000<sp/>for<sp/>extreme<sp/>coordinates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a65c23083aa562f0ce8a881d26fb020a7" kindref="member">findPath</ref>(1000,<sp/>1000,<sp/>g_test));</highlight></codeline>
+<codeline lineno="360"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366" refid="test_path_planner_8cpp_1aa0148b0144da2556d4fae9b6579b0039" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testRunAStar)<sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" kindref="member">value</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_test<sp/>=<sp/>{infinity};</highlight></codeline>
+<codeline lineno="371"><highlight class="normal">std::vector&lt;int&gt;<sp/>resF<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref><sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>*<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref>];</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Given<sp/>the<sp/>map,<sp/>the<sp/>result<sp/>should<sp/>be<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal">EXPECT_EQ(resF,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a70e9cb8c51872dd8f83d1ae4a7006c62" kindref="member">runAStar</ref>(0,<sp/>0));</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384" refid="test_path_planner_8cpp_1ac5d266559642ed4d5e6b8469a69ac50b" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testStartGoalValidationFirst)<sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref><sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>*<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Create<sp/>a<sp/>test<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref>];</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>false<sp/>for<sp/>origin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal">EXPECT_FALSE(testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(0,<sp/>0));</highlight></codeline>
+<codeline lineno="393"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399" refid="test_path_planner_8cpp_1a941048139ec90fc74286ff13cace75b0" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testStartGoalValidationSecond)<sp/>{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="402"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref><sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>*<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Create<sp/>a<sp/>test<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref>];</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>false<sp/>for<sp/>the<sp/>1,<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal">EXPECT_FALSE(testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(1,<sp/>1));</highlight></codeline>
+<codeline lineno="408"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="test_path_planner_8cpp_1a974f48f0f003284d61e6842c0bee0a8b" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testFindPathThorough)<sp/>{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="416"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>5.0;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>5.0;</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;<sp/>float<sp/>&gt;::infinity();</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startCell<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endCell<sp/>=<sp/>23;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mapSize<sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>*testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Create<sp/>a<sp/>test<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[mapSize];</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iy<sp/>=<sp/>0;<sp/>iy<sp/>&lt;<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;<sp/>iy++)<sp/>{</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix<sp/>=<sp/>0;<sp/>ix<sp/>&lt;<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>;<sp/>ix++)<sp/>{</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cost<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cost<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref>[iy*testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>+ix]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Fill<sp/>the<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_score;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal">g_score.assign(mapSize,<sp/>infinity);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ints[]<sp/>=<sp/>{1,<sp/>0,<sp/>23};</highlight></codeline>
+<codeline lineno="436"><highlight class="normal">std::vector<sp/>&lt;int&gt;<sp/>test<sp/>(ints,<sp/>ints+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ints)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="437"><highlight class="normal">std::vector&lt;int&gt;<sp/>bpath;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Call<sp/>the<sp/>find<sp/>path<sp/>and<sp/>get<sp/>the<sp/>best<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal">bpath<sp/>=<sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a65c23083aa562f0ce8a881d26fb020a7" kindref="member">findPath</ref>(startCell,<sp/>endCell,<sp/>g_score);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>be<sp/>1,<sp/>0,<sp/>23<sp/>for<sp/>the<sp/>given<sp/>path.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal">EXPECT_EQ(test,<sp/>bpath);</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Delete<sp/>the<sp/>map.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref>;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450" refid="test_path_planner_8cpp_1ac9cf7f47b6ddea8d065bc70fdfa72195" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testFindFreeNeighborCell)<sp/>{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="452"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>3.0;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>3.0;</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mapSize<sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>*testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="456"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[mapSize];</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Fill<sp/>the<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iy<sp/>=<sp/>0;<sp/>iy<sp/>&lt;<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;<sp/>iy++)<sp/>{</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix<sp/>=<sp/>0;<sp/>ix<sp/>&lt;<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>;<sp/>ix++)<sp/>{</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cost<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cost<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref>[iy*testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>+ix]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="465"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ints[]<sp/>=<sp/>{0,<sp/>0,<sp/>1,<sp/>2,<sp/>3,<sp/>5,<sp/>6,<sp/>7,<sp/>8};</highlight></codeline>
+<codeline lineno="467"><highlight class="normal">std::vector<sp/>&lt;int&gt;<sp/>test<sp/>(ints,<sp/>ints+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ints)/</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="468"><highlight class="normal">std::vector<sp/>&lt;int&gt;<sp/>nay;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal">nay<sp/>=<sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a5ea485f93bfba47034d611b04eba2189" kindref="member">findFreeNeighborCell</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>For<sp/>the<sp/>given<sp/>id,<sp/>the<sp/>test<sp/>should<sp/>give<sp/>us<sp/>free<sp/>cells.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="471"><highlight class="normal">EXPECT_EQ(test,<sp/>nay);</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Delete<sp/>the<sp/>map.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref>;</highlight></codeline>
+<codeline lineno="474"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480" refid="test_path_planner_8cpp_1ab664a2d8a8a44aef432c78ebdcc6b982" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testAddNeighborsToOpenList)<sp/>{</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>neighborCell<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goalCell<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>5.0;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>5.0;</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mapSize<sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>*testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>infinity<sp/>=<sp/>std::numeric_limits&lt;<sp/>float<sp/>&gt;::infinity();</highlight></codeline>
+<codeline lineno="488"><highlight class="normal">std::vector&lt;float&gt;<sp/>g_score;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>fill<sp/>the<sp/>g_score<sp/>vector<sp/>with<sp/>inf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal">g_score.assign(mapSize,<sp/>infinity);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal">std::set&lt;GridSquare&gt;<sp/>OPL;</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>true<sp/>if<sp/>empty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal">EXPECT_EQ(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>OPL.empty());</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>the<sp/>OPL<sp/>list<sp/>for<sp/>the<sp/>given<sp/>neighbor<sp/>cells.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal">testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a2d44c51604b31cd5f7e8599520ae3645" kindref="member">addNeighborCellToOpenList</ref>(OPL,<sp/>neighborCell,<sp/>goalCell,<sp/>g_score);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Should<sp/>return<sp/>false<sp/>as<sp/>the<sp/>list<sp/>is<sp/>filled.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal">EXPECT_EQ(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>OPL.empty());</highlight></codeline>
+<codeline lineno="498"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504" refid="test_path_planner_8cpp_1aa32dc0b52130e967fd354db4d3f7a13e" refkind="member"><highlight class="normal"><ref refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kindref="member">TEST</ref>(TestPathPlanner,<sp/>testIsStartGoalValid)<sp/>{</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">astar_plugin::AStarPlanner</ref><sp/>testPP;</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start1<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goal1<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start2<sp/>=<sp/>90;</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goal2<sp/>=<sp/>91;</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start3<sp/>=<sp/>90;</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goal3<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start4<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goal4<sp/>=<sp/>90;</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start5<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goal5<sp/>=<sp/>11;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mapSize<sp/>=<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>*testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[mapSize];</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Fill<sp/>the<sp/>occupancy<sp/>grid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iy<sp/>=<sp/>0;<sp/>iy<sp/>&lt;<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;<sp/>iy++)<sp/>{</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix<sp/>=<sp/>0;<sp/>ix<sp/>&lt;<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>;<sp/>ix++)<sp/>{</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cost<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cost<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref>[iy*testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>+ix]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Check<sp/>for<sp/>the<sp/>given<sp/>outer<sp/>boundary<sp/>conditions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(start1,<sp/>goal1));</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(start2,<sp/>goal2));</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(start3,<sp/>goal3));</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(start4,<sp/>goal4));</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/>EXPECT_EQ(</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>,<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(start5,<sp/>goal5));</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Delete<sp/>the<sp/>map.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>testPP.<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref>;</highlight></codeline>
+<codeline lineno="543"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/testPathPlanner.cpp"/>
+  </compounddef>
+</doxygen>

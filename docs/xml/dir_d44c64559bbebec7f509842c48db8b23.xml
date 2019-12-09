@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="collector_8hpp">collector.hpp</innerfile>
+    <innerfile refid="grid_square_8hpp">gridSquare.hpp</innerfile>
+    <innerfile refid="navigate_robot_8hpp">navigateRobot.hpp</innerfile>
+    <innerfile refid="path_planner_8hpp">pathPlanner.hpp</innerfile>
+    <innerfile refid="randomizer_8hpp">randomizer.hpp</innerfile>
+    <innerfile refid="spawn_collect_8hpp">spawnCollect.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

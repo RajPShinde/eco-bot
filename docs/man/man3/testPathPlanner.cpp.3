@@ -1,0 +1,262 @@
+.TH "test/testPathPlanner.cpp" 3 "Mon Dec 9 2019" "Version 3.0" "eco-bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test/testPathPlanner.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ros/ros\&.h>\fP
+.br
+\fC#include <ros/console\&.h>\fP
+.br
+\fC#include <tf/transform_listener\&.h>\fP
+.br
+\fC#include <geometry_msgs/Twist\&.h>\fP
+.br
+\fC#include <gtest/gtest\&.h>\fP
+.br
+\fC#include <geometry_msgs/Point\&.h>\fP
+.br
+\fC#include <geometry_msgs/Quaternion\&.h>\fP
+.br
+\fC#include <geometry_msgs/PoseStamped\&.h>\fP
+.br
+\fC#include <geometry_msgs/PoseWithCovarianceStamped\&.h>\fP
+.br
+\fC#include <costmap_2d/costmap_2d_ros\&.h>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <set>\fP
+.br
+\fC#include <numeric>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <iomanip>\fP
+.br
+\fC#include <iterator>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <limits>\fP
+.br
+\fC#include 'pathPlanner\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testNodeHandle)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testConversionToMap)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testCheckCellCoordinates)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testCoordinateBounds)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testCellValuesIndex)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testCellValues)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testCellIndexCalculation)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testCellIndex)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testRowIndex)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testColIndex)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testHValue)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testMovingCost)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testMovingCostIndividualDiagonal)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testMovingCostIndividualStraight)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (testPathPlanner, testNeighborCellNewPoint)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (testPathPlanner, testNeighborCell)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testConstructPath)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testFindPath)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testFindPathNew)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testFindPathNewFilled)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testFindPathNewExtreme)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testRunAStar)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testStartGoalValidationFirst)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testStartGoalValidationSecond)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testFindPathThorough)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testFindFreeNeighborCell)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testAddNeighborsToOpenList)"
+.br
+.ti -1c
+.RI "\fBTEST\fP (TestPathPlanner, testIsStartGoalValid)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "TEST (TestPathPlanner, testNodeHandle)"
+
+.PP
+Definition at line 77 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testConversionToMap)"
+
+.PP
+Definition at line 91 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testCheckCellCoordinates)"
+
+.PP
+Definition at line 110 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testCoordinateBounds)"
+
+.PP
+Definition at line 134 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testCellValuesIndex)"
+
+.PP
+Definition at line 144 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testCellValues)"
+
+.PP
+Definition at line 159 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testCellIndexCalculation)"
+
+.PP
+Definition at line 174 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testCellIndex)"
+
+.PP
+Definition at line 185 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testRowIndex)"
+
+.PP
+Definition at line 196 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testColIndex)"
+
+.PP
+Definition at line 208 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testHValue)"
+
+.PP
+Definition at line 220 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testMovingCost)"
+
+.PP
+Definition at line 232 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testMovingCostIndividualDiagonal)"
+
+.PP
+Definition at line 245 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testMovingCostIndividualStraight)"
+
+.PP
+Definition at line 256 of file testPathPlanner\&.cpp\&.
+.SS "TEST (testPathPlanner, testNeighborCellNewPoint)"
+
+.PP
+Definition at line 267 of file testPathPlanner\&.cpp\&.
+.SS "TEST (testPathPlanner, testNeighborCell)"
+
+.PP
+Definition at line 279 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testConstructPath)"
+
+.PP
+Definition at line 291 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testFindPath)"
+
+.PP
+Definition at line 304 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testFindPathNew)"
+
+.PP
+Definition at line 319 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testFindPathNewFilled)"
+
+.PP
+Definition at line 335 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testFindPathNewExtreme)"
+
+.PP
+Definition at line 351 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testRunAStar)"
+
+.PP
+Definition at line 366 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testStartGoalValidationFirst)"
+
+.PP
+Definition at line 384 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testStartGoalValidationSecond)"
+
+.PP
+Definition at line 399 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testFindPathThorough)"
+
+.PP
+Definition at line 414 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testFindFreeNeighborCell)"
+
+.PP
+Definition at line 450 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testAddNeighborsToOpenList)"
+
+.PP
+Definition at line 480 of file testPathPlanner\&.cpp\&.
+.SS "TEST (TestPathPlanner, testIsStartGoalValid)"
+
+.PP
+Definition at line 504 of file testPathPlanner\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for eco-bot from the source code\&.

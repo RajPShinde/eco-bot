@@ -1,0 +1,130 @@
+
+
+\href{https://travis-ci.org/Prasheel24/Object-Collector-Robot}{\tt } \href{https://coveralls.io/github/Prasheel24/Object-Collector-Robot?branch=master}{\tt } \href{https://github.com/Prasheel24/Object-Collector-Robot/blob/master/LICENSE}{\tt }
+
+\subsection*{Authors}
+
+
+\begin{DoxyItemize}
+\item {\bfseries Raj Prakash Shinde} \href{https://github.com/RajPShinde}{\tt Git\+Hub} ~\newline
+I am a Masters in Robotics Engineering student at the University of Maryland, College Park. My primary area of interest are Legged Robotics and Automation.
+\item {\bfseries Prasheel Renkuntla} \href{https://github.com/Prasheel24}{\tt Git\+Hub} ~\newline
+I am a Master\textquotesingle{}s in Robotics Engineering student at the University of Maryland, College Park. My primary area of interest is in Vision integrated Robot Systems.
+\end{DoxyItemize}
+
+\subsection*{Overview}
+
+This is R\+OS Package developed for A\+C\+ME Robotics to demonstrate the functionality of their new eco-\/bot.
+
+\subsection*{Sprint Planning and Discussion}
+
+Sprint-\/ \href{https://docs.google.com/document/d/1_uG7fMXPrtZlpRLsgD74NdLRX3DKDXxCicppZWBDNvQ}{\tt Link}
+
+\subsection*{Agile Iterative Process Log}
+
+Log-\/ \href{https://docs.google.com/spreadsheets/d/1DkxCx4_GxvRXjRTTrmgZvdOQ4z0DMrpGEavg439tQak}{\tt Link}
+
+\subsection*{Dependencies}
+
+
+\begin{DoxyEnumerate}
+\item Ubuntu 16.\+04
+\item C++ 11/14/17
+\item R\+OS Kinetic
+\item Turtlebot stack ~\newline
+ Install by running following command 
+\begin{DoxyCode}
+1 sudo apt-get install ros-kinetic-turtlebot-gazebo ros-kinetic-turtlebot-apps
+       ros-kinetic-turtlebot-rviz-launchers
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\subsection*{Build}
+
+Steps to build 
+\begin{DoxyCode}
+1 mkdir -p ~/catkin\_ws/src
+2 cd ~/catkin\_ws/
+3 catkin\_make
+4 source devel/setup.bash
+5 cd src/
+6 git clone https://github.com/Prasheel24/Object-Collector-Robot
+7 cd ~/catkin\_ws/
+8 catkin\_make
+\end{DoxyCode}
+ \subsection*{Run}
+
+{\bfseries Generate Map} ~\newline
+ Open a new Terminal 
+\begin{DoxyCode}
+1 source devel/setup.bash
+2 roslaunch ecobot TurtlebotMapping.launch
+\end{DoxyCode}
+ {\bfseries Save Map to Directory} ~\newline
+ Open a new Terminal 
+\begin{DoxyCode}
+1 rosrun map\_server map\_saver map:=/robot\_1/map -f CollectorSpace
+\end{DoxyCode}
+ {\bfseries Collect Garbage} ~\newline
+ Open a new Terminal 
+\begin{DoxyCode}
+1 source devel/setup.bash
+2 roslaunch ecobot TurtlebotCollect.launch
+\end{DoxyCode}
+
+
+\subsection*{References}
+
+
+\begin{DoxyItemize}
+\item \href{http://wiki.ros.org/}{\tt http\+://wiki.\+ros.\+org/}
+\item \href{http://wiki.ros.org/rrt_exploration}{\tt http\+://wiki.\+ros.\+org/rrt\+\_\+exploration}
+\item \href{http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%20As%20Plugin%20in%20ROS}{\tt http\+://wiki.\+ros.\+org/navigation/\+Tutorials/\+Writing\%20\+A\%20\+Global\%20\+Path\%20\+Planner\%20\+As\%20\+Plugin\%20in\%20\+R\+OS}
+\item \href{https://www.geeksforgeeks.org/a-search-algorithm/}{\tt https\+://www.\+geeksforgeeks.\+org/a-\/search-\/algorithm/}
+\end{DoxyItemize}
+
+\subsection*{Contributions}
+
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$\+R\+RT Exploration Package-\/$\ast$$\ast$ {\itshape H. Umari and S. Mukhopadhyay, \char`\"{}\+Autonomous robotic exploration based on multiple rapidly-\/exploring randomized trees,\char`\"{} 2017 I\+E\+E\+E/\+R\+SJ International Conference on Intelligent Robots and Systems (I\+R\+OS), Vancouver, BC, 2017, pp. 1396-\/1402.} {\itshape doi\+: 10.\+1109/\+I\+R\+OS.2017.\+8202319} {\itshape keywords\+: \{edge detection;mobile robots;multi-\/agent systems;navigation;path planning;random processes;robot vision;trees (mathematics);efficient robotic exploration;three-\/dimensional space;autonomous robotic exploration;randomized trees;efficient robotic navigation;autonomous exploration strategies;edge detection;dimensional exploration;multiple Rapidly-\/exploring Random Trees;R\+RT algorithm;Robot Operating System framework;frontier detection;image processing;Detectors;Image edge detection;Robot sensing systems;Path planning;Navigation\},} U\+RL\+: \href{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8202319&isnumber=8202121}{\tt http\+://ieeexplore.\+ieee.\+org/stamp/stamp.\+jsp?tp=\&arnumber=8202319\&isnumber=8202121}
+\item $\ast$$\ast$\+Logo -\/$\ast$$\ast$ \href{https://www.flaticon.com/authors/nhor-phai}{\tt https\+://www.\+flaticon.\+com/authors/nhor-\/phai}
+\end{DoxyItemize}
+
+\subsection*{Disclaimer}
+
+
+\begin{DoxyCode}
+1 BSD 3-Clause License
+2 
+3 Copyright (c) 2019, Raj Shinde
+4 Copyright (c) 2019, Prasheel Renkuntla
+5 All rights reserved.
+6 
+7 Redistribution and use in source and binary forms, with or without
+8 modification, are permitted provided that the following conditions are met:
+9 
+10 1. Redistributions of source code must retain the above copyright notice, this
+11    list of conditions and the following disclaimer.
+12 
+13 2. Redistributions in binary form must reproduce the above copyright notice,
+14    this list of conditions and the following disclaimer in the documentation
+15    and/or other materials provided with the distribution.
+16 
+17 3. Neither the name of the copyright holder nor the names of its
+18    contributors may be used to endorse or promote products derived from
+19    this software without specific prior written permission.
+20 
+21 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+22 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+23 IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+24 DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+25 FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+26 DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+27 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+28 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+29 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+30 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+\end{DoxyCode}
+ 

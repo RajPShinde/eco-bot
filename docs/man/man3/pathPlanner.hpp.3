@@ -1,0 +1,82 @@
+.TH "include/pathPlanner.hpp" 3 "Mon Dec 9 2019" "Version 3.0" "eco-bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/pathPlanner.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ros/ros\&.h>\fP
+.br
+\fC#include <tf/tf\&.h>\fP
+.br
+\fC#include <tf/transform_datatypes\&.h>\fP
+.br
+\fC#include <tf/transform_listener\&.h>\fP
+.br
+\fC#include <geometry_msgs/Twist\&.h>\fP
+.br
+\fC#include <geometry_msgs/PoseStamped\&.h>\fP
+.br
+\fC#include <geometry_msgs/PoseWithCovarianceStamped\&.h>\fP
+.br
+\fC#include <angles/angles\&.h>\fP
+.br
+\fC#include <base_local_planner/world_model\&.h>\fP
+.br
+\fC#include <base_local_planner/costmap_model\&.h>\fP
+.br
+\fC#include <move_base_msgs/MoveBaseGoal\&.h>\fP
+.br
+\fC#include <move_base_msgs/MoveBaseAction\&.h>\fP
+.br
+\fC#include <costmap_2d/costmap_2d\&.h>\fP
+.br
+\fC#include <costmap_2d/costmap_2d_ros\&.h>\fP
+.br
+\fC#include <nav_msgs/Odometry\&.h>\fP
+.br
+\fC#include <nav_msgs/OccupancyGrid\&.h>\fP
+.br
+\fC#include <nav_msgs/Path\&.h>\fP
+.br
+\fC#include <nav_msgs/GetPlan\&.h>\fP
+.br
+\fC#include <nav_core/base_global_planner\&.h>\fP
+.br
+\fC#include <set>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <limits>\fP
+.br
+\fC#include <random>\fP
+.br
+\fC#include 'gridSquare\&.hpp'\fP
+.br
+\fC#include 'sensor_msgs/LaserScan\&.h'\fP
+.br
+\fC#include 'sensor_msgs/PointCloud2\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBastar_plugin::AStarPlanner\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBastar_plugin\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for eco-bot from the source code\&.

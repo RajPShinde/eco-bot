@@ -1,0 +1,160 @@
+.TH "md__r_e_a_d_m_e" 3 "Mon Dec 9 2019" "Version 3.0" "eco-bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__r_e_a_d_m_e \- README 
+
+.PP
+\fC\fP \fC\fP \fC\fP
+.PP
+.SS "Authors"
+.PP
+.IP "\(bu" 2
+\fBRaj Prakash Shinde\fP \fCGitHub\fP 
+.br
+I am a Masters in Robotics Engineering student at the University of Maryland, College Park\&. My primary area of interest are Legged Robotics and Automation\&.
+.IP "\(bu" 2
+\fBPrasheel Renkuntla\fP \fCGitHub\fP 
+.br
+I am a Master's in Robotics Engineering student at the University of Maryland, College Park\&. My primary area of interest is in Vision integrated Robot Systems\&.
+.PP
+.PP
+.SS "Overview"
+.PP
+This is ROS Package developed for ACME Robotics to demonstrate the functionality of their new eco-bot\&.
+.PP
+.SS "Sprint Planning and Discussion"
+.PP
+Sprint- \fCLink\fP
+.PP
+.SS "Agile Iterative Process Log"
+.PP
+Log- \fCLink\fP
+.PP
+.SS "Dependencies"
+.PP
+.IP "1." 4
+Ubuntu 16\&.04
+.IP "2." 4
+C++ 11/14/17
+.IP "3." 4
+ROS Kinetic
+.IP "4." 4
+Turtlebot stack 
+.br
+ Install by running following command 
+.PP
+.nf
+1 sudo apt-get install ros-kinetic-turtlebot-gazebo ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-rviz-launchers
+
+.fi
+.PP
+
+.PP
+.PP
+.SS "Build"
+.PP
+Steps to build 
+.PP
+.nf
+1 mkdir -p ~/catkin_ws/src
+2 cd ~/catkin_ws/
+3 catkin_make
+4 source devel/setup\&.bash
+5 cd src/
+6 git clone https://github\&.com/Prasheel24/Object-Collector-Robot
+7 cd ~/catkin_ws/
+8 catkin_make
+
+.fi
+.PP
+ 
+.SS "Run"
+.PP
+\fBGenerate Map\fP 
+.br
+ Open a new Terminal 
+.PP
+.nf
+1 source devel/setup\&.bash
+2 roslaunch ecobot TurtlebotMapping\&.launch
+
+.fi
+.PP
+ \fBSave Map to Directory\fP 
+.br
+ Open a new Terminal 
+.PP
+.nf
+1 rosrun map_server map_saver map:=/robot_1/map -f CollectorSpace
+
+.fi
+.PP
+ \fBCollect Garbage\fP 
+.br
+ Open a new Terminal 
+.PP
+.nf
+1 source devel/setup\&.bash
+2 roslaunch ecobot TurtlebotCollect\&.launch
+
+.fi
+.PP
+.PP
+.SS "References"
+.PP
+.IP "\(bu" 2
+http://wiki.ros.org/
+.IP "\(bu" 2
+http://wiki.ros.org/rrt_exploration
+.IP "\(bu" 2
+http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%20As%20Plugin%20in%20ROS
+.IP "\(bu" 2
+https://www.geeksforgeeks.org/a-search-algorithm/
+.PP
+.PP
+.SS "Contributions"
+.PP
+.IP "\(bu" 2
+**RRT Exploration Package-** \fIH\&. Umari and S\&. Mukhopadhyay, 'Autonomous robotic exploration based on multiple rapidly-exploring randomized trees,' 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Vancouver, BC, 2017, pp\&. 1396-1402\&.\fP \fIdoi: 10\&.1109/IROS\&.2017\&.8202319\fP \fIkeywords: {edge detection;mobile robots;multi-agent systems;navigation;path planning;random processes;robot vision;trees (mathematics);efficient robotic exploration;three-dimensional space;autonomous robotic exploration;randomized trees;efficient robotic navigation;autonomous exploration strategies;edge detection;dimensional exploration;multiple Rapidly-exploring Random Trees;RRT algorithm;Robot Operating System framework;frontier detection;image processing;Detectors;Image edge detection;Robot sensing systems;Path planning;Navigation},\fP URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8202319&isnumber=8202121
+.IP "\(bu" 2
+**Logo -** https://www.flaticon.com/authors/nhor-phai
+.PP
+.PP
+.SS "Disclaimer"
+.PP
+.PP
+.nf
+1 BSD 3-Clause License
+2 
+3 Copyright (c) 2019, Raj Shinde
+4 Copyright (c) 2019, Prasheel Renkuntla
+5 All rights reserved\&.
+6 
+7 Redistribution and use in source and binary forms, with or without
+8 modification, are permitted provided that the following conditions are met:
+9 
+10 1\&. Redistributions of source code must retain the above copyright notice, this
+11    list of conditions and the following disclaimer\&.
+12 
+13 2\&. Redistributions in binary form must reproduce the above copyright notice,
+14    this list of conditions and the following disclaimer in the documentation
+15    and/or other materials provided with the distribution\&.
+16 
+17 3\&. Neither the name of the copyright holder nor the names of its
+18    contributors may be used to endorse or promote products derived from
+19    this software without specific prior written permission\&.
+20 
+21 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+22 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+23 IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+24 DISCLAIMED\&. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+25 FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+26 DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+27 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+28 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+29 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+30 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE\&.
+.fi
+.PP
+ 

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_collector" kind="class" language="C++" prot="public">
+    <compoundname>Collector</compoundname>
+    <includes refid="collector_8hpp" local="no">collector.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_collector_1ad60b06491094b8fddf25502cf162cdf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Collector::Collector</definition>
+        <argsstring>()</argsstring>
+        <name>Collector</name>
+        <briefdescription>
+<para>Constructor of class <ref refid="class_collector" kindref="compound">Collector</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/collector.hpp" line="56" column="1" bodyfile="src/collector.cpp" bodystart="56" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_collector_1a721d622ac394ad293cfdd2231ead25ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Collector::~Collector</definition>
+        <argsstring>()</argsstring>
+        <name>~Collector</name>
+        <briefdescription>
+<para>Destructor of class <ref refid="class_collector" kindref="compound">Collector</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/collector.hpp" line="63" column="1" bodyfile="src/collector.cpp" bodystart="58" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_collector_1acdf75e4beb24fb24dc88be6d15bfd094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Collector::collector</definition>
+        <argsstring>()</argsstring>
+        <name>collector</name>
+        <briefdescription>
+<para><ref refid="class_collector" kindref="compound">Collector</ref> method to be called from here. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool, returns true if object collected </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/collector.hpp" line="70" column="1" bodyfile="src/collector.cpp" bodystart="61" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/collector.hpp" line="49" column="1" bodyfile="include/collector.hpp" bodystart="49" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_collector_1ad60b06491094b8fddf25502cf162cdf6" prot="public" virt="non-virtual"><scope>Collector</scope><name>Collector</name></member>
+      <member refid="class_collector_1acdf75e4beb24fb24dc88be6d15bfd094" prot="public" virt="non-virtual"><scope>Collector</scope><name>collector</name></member>
+      <member refid="class_collector_1a721d622ac394ad293cfdd2231ead25ff" prot="public" virt="non-virtual"><scope>Collector</scope><name>~Collector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

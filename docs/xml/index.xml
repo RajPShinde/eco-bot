@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="classastar__plugin_1_1_a_star_planner" kind="class"><name>astar_plugin::AStarPlanner</name>
+    <member refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" kind="variable"><name>value</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kind="variable"><name>mapSize</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kind="variable"><name>occupancyGridMap</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a0d9b3ad5c3a83a96192609939af84c3d" kind="variable"><name>infinity</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1aae46db226358860bb296612e97a67617" kind="variable"><name>tBreak</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1ab20d703c7c32c96a523295cf07f8ef99" kind="variable"><name>ROSNodeHandle</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a9accb42a886464ae84db5259aad9c444" kind="variable"><name>originX</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1aa680b5cf31ff141738c409c4e86dbba6" kind="variable"><name>originY</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a698245ae6075cbbcb7d50d949025df95" kind="variable"><name>resolution</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a1be22c40d97241edb0a60b7bd3c332f3" kind="variable"><name>costmap_ros</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1afeaa9448af26fc54e8adb0a906bd6324" kind="variable"><name>costmap</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a3befa689d0be167cbde58b71c635f5ae" kind="variable"><name>initialized</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kind="variable"><name>width</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kind="variable"><name>height</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a709090708527da7d103f7c9373f4b651" kind="function"><name>AStarPlanner</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a79cd3d4231e807ccc04f70d1e4ecd837" kind="function"><name>AStarPlanner</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a6eaf79c8595c501e03117436fd499e42" kind="function"><name>AStarPlanner</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1abd555da48b7cb20f1fef16962ac0a71c" kind="function"><name>initialize</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a0452b64fca4b454fad7da2249494a9fd" kind="function"><name>makePlan</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a70e9cb8c51872dd8f83d1ae4a7006c62" kind="function"><name>runAStar</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a65c23083aa562f0ce8a881d26fb020a7" kind="function"><name>findPath</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1aae75ccdcf38f6cd848d024a8aebc0bc0" kind="function"><name>constructPath</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a875990bd4b8b9ab17855ce54b4df4780" kind="function"><name>getMapCoordinates</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a18fac92699522fa76a2add6ea75fa6fc" kind="function"><name>calculateHCellScore</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1aa54d997cd223de69fb7a37a79dc5cd1c" kind="function"><name>calculateCellIndex</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a660c014cd14a8de3080b138b44f5437e" kind="function"><name>getCellRowIndex</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a7242cadadc720feb8af97bc9f427f53c" kind="function"><name>getCellColIndex</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a29d81e8f4ac6191296d5c180be9ac8ae" kind="function"><name>isCellFree</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1ae8f5105e002f679874c3d55815fe30ad" kind="function"><name>isCellFree</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1ad07f32fd3a1e44ef3bb9bb1e59237023" kind="function"><name>getMoveToCellCost</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a2f19049be7428c445b7159cc111b4401" kind="function"><name>getMoveToCellCost</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a5ea485f93bfba47034d611b04eba2189" kind="function"><name>findFreeNeighborCell</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1ac43f501b17770643240a6e36174a73b9" kind="function"><name>convertToMapCoordinates</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1aae9903fa7f48e8e1ce45f4c772989e95" kind="function"><name>getCellIndex</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1add9c03d5a079ad44e5f91ccc8344679d" kind="function"><name>getCellCoordinates</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a3e3717511d9000f1c55f3f57a58dfd0f" kind="function"><name>isCoordinateInBounds</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a2d44c51604b31cd5f7e8599520ae3645" kind="function"><name>addNeighborCellToOpenList</name></member>
+    <member refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kind="function"><name>isStartAndGoalValid</name></member>
+  </compound>
+  <compound refid="class_collector" kind="class"><name>Collector</name>
+    <member refid="class_collector_1ad60b06491094b8fddf25502cf162cdf6" kind="function"><name>Collector</name></member>
+    <member refid="class_collector_1a721d622ac394ad293cfdd2231ead25ff" kind="function"><name>~Collector</name></member>
+    <member refid="class_collector_1acdf75e4beb24fb24dc88be6d15bfd094" kind="function"><name>collector</name></member>
+  </compound>
+  <compound refid="class_grid_square" kind="class"><name>GridSquare</name>
+    <member refid="class_grid_square_1af62396d0127126d7f95a81f81f4bc833" kind="variable"><name>currentGridSquare</name></member>
+    <member refid="class_grid_square_1a9d04f5503abd3663e7496dc6c3a702c0" kind="variable"><name>fCost</name></member>
+    <member refid="class_grid_square_1a88fe5e8a65dec8e59dde719e4a99b043" kind="function"><name>GridSquare</name></member>
+    <member refid="class_grid_square_1a59667a543b4501774304ea25d8cd5589" kind="function"><name>~GridSquare</name></member>
+    <member refid="class_grid_square_1acea2649a57dd575402c2366de18cd9a8" kind="function"><name>getCurrentGridSquare</name></member>
+    <member refid="class_grid_square_1a6e82cc70c531d6a2fede8dadb3cd1e02" kind="function"><name>getFCost</name></member>
+  </compound>
+  <compound refid="class_navigate_robot" kind="class"><name>NavigateRobot</name>
+    <member refid="class_navigate_robot_1a6eadd58c6c56d73ff90e3d7ebd94bb3d" kind="variable"><name>flag</name></member>
+    <member refid="class_navigate_robot_1ac27678ab7ff5b0416f661e899a50f9b4" kind="function"><name>NavigateRobot</name></member>
+    <member refid="class_navigate_robot_1a004a6768d65abf86fba9e3fa586c54e6" kind="function"><name>~NavigateRobot</name></member>
+    <member refid="class_navigate_robot_1a1382b2a30d0dccfbe2e63132f3cbd880" kind="function"><name>twistRobot</name></member>
+    <member refid="class_navigate_robot_1ad02fc9f2481f002b7ad3b654a8ec80d2" kind="function"><name>start</name></member>
+  </compound>
+  <compound refid="class_randomizer" kind="class"><name>Randomizer</name>
+    <member refid="class_randomizer_1a177786f6220e566e57626d78c6ee0d66" kind="variable"><name>xc</name></member>
+    <member refid="class_randomizer_1aae5e16f209511400d5e2ceea7803acc6" kind="variable"><name>yc</name></member>
+    <member refid="class_randomizer_1a6f1e3b306ed5d631a73990c757e777c6" kind="function"><name>Randomizer</name></member>
+    <member refid="class_randomizer_1a33bacd33bccd73fa894cfb8405bb1591" kind="function"><name>~Randomizer</name></member>
+    <member refid="class_randomizer_1a058604a7e58e05e0b5082a865601f98c" kind="function"><name>randomizeX</name></member>
+    <member refid="class_randomizer_1a8118622933e6fb5a7a9120e6247abe4c" kind="function"><name>randomizeY</name></member>
+    <member refid="class_randomizer_1a7bbb208529d0c02e4a5aa7510f69a7b7" kind="function"><name>xOffset</name></member>
+    <member refid="class_randomizer_1a47b692837880d2840cbc92b79a5a0de3" kind="function"><name>yOffset</name></member>
+  </compound>
+  <compound refid="class_spawn_collect" kind="class"><name>SpawnCollect</name>
+    <member refid="class_spawn_collect_1a16ff5608dbf1a872940f4c12ceda2e13" kind="variable"><name>xc</name></member>
+    <member refid="class_spawn_collect_1a3a3487468e2efe57143c449ea3c7359f" kind="variable"><name>yc</name></member>
+    <member refid="class_spawn_collect_1a035acd229bc57cd9bc033415bd2f8a3b" kind="function"><name>SpawnCollect</name></member>
+    <member refid="class_spawn_collect_1ad7f73203218a60b6031f00839c84f28e" kind="function"><name>~SpawnCollect</name></member>
+    <member refid="class_spawn_collect_1a1e9e7b7699157f36f841f7f2eea574ef" kind="function"><name>spawn</name></member>
+    <member refid="class_spawn_collect_1ace0451dfd4b27aac3445aec71f60f9e7" kind="function"><name>collect</name></member>
+  </compound>
+  <compound refid="namespaceastar__plugin" kind="namespace"><name>astar_plugin</name>
+  </compound>
+  <compound refid="collector_8hpp" kind="file"><name>collector.hpp</name>
+  </compound>
+  <compound refid="grid_square_8hpp" kind="file"><name>gridSquare.hpp</name>
+  </compound>
+  <compound refid="navigate_robot_8hpp" kind="file"><name>navigateRobot.hpp</name>
+  </compound>
+  <compound refid="path_planner_8hpp" kind="file"><name>pathPlanner.hpp</name>
+  </compound>
+  <compound refid="randomizer_8hpp" kind="file"><name>randomizer.hpp</name>
+  </compound>
+  <compound refid="spawn_collect_8hpp" kind="file"><name>spawnCollect.hpp</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="collector_8cpp" kind="file"><name>collector.cpp</name>
+    <member refid="collector_8cpp_1a21e20cc0b6656ae897b3cbb969b93241" kind="typedef"><name>MoveBaseClient</name></member>
+    <member refid="collector_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="grid_square_8cpp" kind="file"><name>gridSquare.cpp</name>
+  </compound>
+  <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="test_2main_8cpp_1a8d24d18e6d8ae7bb7d0e43127c4202e2" kind="function"><name>threadSpinning</name></member>
+    <member refid="test_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="navigate_robot_8cpp" kind="file"><name>navigateRobot.cpp</name>
+  </compound>
+  <compound refid="path_planner_8cpp" kind="file"><name>pathPlanner.cpp</name>
+    <member refid="path_planner_8cpp_1a7333a98920b802a9d5d861496d67b1f3" kind="function"><name>operator&lt;</name></member>
+  </compound>
+  <compound refid="randomizer_8cpp" kind="file"><name>randomizer.cpp</name>
+  </compound>
+  <compound refid="spawn_collect_8cpp" kind="file"><name>spawnCollect.cpp</name>
+  </compound>
+  <compound refid="test_grid_square_8cpp" kind="file"><name>testGridSquare.cpp</name>
+    <member refid="test_grid_square_8cpp_1a8642e37efe28c645b3328e697b8687aa" kind="function"><name>TEST</name></member>
+    <member refid="test_grid_square_8cpp_1aab22a65713fc4a625bca360127f54b4c" kind="function"><name>TEST</name></member>
+    <member refid="test_grid_square_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_navigate_robot_8cpp" kind="file"><name>testNavigateRobot.cpp</name>
+    <member refid="test_navigate_robot_8cpp_1ab63cc19d361017bcaeafdd6dcaf90c0f" kind="function"><name>TEST</name></member>
+    <member refid="test_navigate_robot_8cpp_1ab9381bbc210f36b78e67f433aa51b662" kind="function"><name>TEST</name></member>
+    <member refid="test_navigate_robot_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_path_planner_8cpp" kind="file"><name>testPathPlanner.cpp</name>
+    <member refid="test_path_planner_8cpp_1ac503100674ed5b6740a33b5f13133832" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a4d861461d0da76f4df110cb76d92703e" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a9221fc80803af264b8f6c0b7e5ded6d9" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a9517790106786b00a5d81287fadd5671" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a5734ee20bc8bcc184b682dff07944d7a" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1ae4eea0f42fb9725b98c44764c779fc5f" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a3b8b8056849157ca413be5b843333b49" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1aaf1d4469153226e7f61dbf9dfaebd708" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a694d5894f7bb1a9c0a38cb22aa015816" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a2658881037901d96358ad4e325e8697d" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a9e3c714032270e641abff3dc7b08c9e7" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1ae95e0b89cd974af68e0c0d9629ff42f4" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a532503ede4e65a7c0c5dc524caa60e63" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a90ad57f20e9660deedd92bf143d53186" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a9b0c4b226b95442108829473be3a9d86" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a4e58186605d8ec87ffac79bcbc9a4e5f" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1afc2cc941fa5c95d5e6673a7b9d91b764" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a5b72b88d64f1938d3f8a4bfc76c9816c" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a9c7475d0696e7c9ca9940d2b6123260a" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a8e80e538bf915bf00f6c751909ec9e32" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a4a1285e3edabd619ae0b8658d802af63" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1aa0148b0144da2556d4fae9b6579b0039" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1ac5d266559642ed4d5e6b8469a69ac50b" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a941048139ec90fc74286ff13cace75b0" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1a974f48f0f003284d61e6842c0bee0a8b" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1ac9cf7f47b6ddea8d065bc70fdfa72195" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1ab664a2d8a8a44aef432c78ebdcc6b982" kind="function"><name>TEST</name></member>
+    <member refid="test_path_planner_8cpp_1aa32dc0b52130e967fd354db4d3f7a13e" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="test_randomizer_8cpp" kind="file"><name>testRandomizer.cpp</name>
+    <member refid="test_randomizer_8cpp_1a5e823328bb3468226e64883da33b2ce4" kind="function"><name>TEST</name></member>
+    <member refid="test_randomizer_8cpp_1a49953de77585b019c581d8e9229c769f" kind="function"><name>TEST</name></member>
+  </compound>
+  <compound refid="test_spawn_collect_8cpp" kind="file"><name>testSpawnCollect.cpp</name>
+    <member refid="test_spawn_collect_8cpp_1a1249564234e1481f2dfd13e1db46456b" kind="function"><name>TEST</name></member>
+    <member refid="test_spawn_collect_8cpp_1adfc639957fc2e3e07222be3aa2995e11" kind="function"><name>TEST</name></member>
+    <member refid="test_spawn_collect_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+</doxygenindex>

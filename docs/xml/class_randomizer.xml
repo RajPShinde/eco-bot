@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_randomizer" kind="class" language="C++" prot="public">
+    <compoundname>Randomizer</compoundname>
+    <includes refid="randomizer_8hpp" local="no">randomizer.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_randomizer_1a177786f6220e566e57626d78c6ee0d66" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Randomizer::xc</definition>
+        <argsstring></argsstring>
+        <name>xc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="51" column="1" bodyfile="include/randomizer.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_randomizer_1aae5e16f209511400d5e2ceea7803acc6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Randomizer::yc</definition>
+        <argsstring></argsstring>
+        <name>yc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="51" column="1" bodyfile="include/randomizer.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_randomizer_1a6f1e3b306ed5d631a73990c757e777c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Randomizer::Randomizer</definition>
+        <argsstring>()</argsstring>
+        <name>Randomizer</name>
+        <briefdescription>
+<para>Constructor of class <ref refid="class_randomizer" kindref="compound">Randomizer</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="58" column="1" bodyfile="src/randomizer.cpp" bodystart="50" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_randomizer_1a33bacd33bccd73fa894cfb8405bb1591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Randomizer::~Randomizer</definition>
+        <argsstring>()</argsstring>
+        <name>~Randomizer</name>
+        <briefdescription>
+<para>Destructor of class <ref refid="class_randomizer" kindref="compound">Randomizer</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="65" column="1" bodyfile="src/randomizer.cpp" bodystart="53" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_randomizer_1a058604a7e58e05e0b5082a865601f98c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Randomizer::randomizeX</definition>
+        <argsstring>()</argsstring>
+        <name>randomizeX</name>
+        <briefdescription>
+<para>function to randomize x </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double xr </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="72" column="1" bodyfile="src/randomizer.cpp" bodystart="56" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_randomizer_1a8118622933e6fb5a7a9120e6247abe4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Randomizer::randomizeY</definition>
+        <argsstring>()</argsstring>
+        <name>randomizeY</name>
+        <briefdescription>
+<para>function to randomize y </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double yr </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="79" column="1" bodyfile="src/randomizer.cpp" bodystart="69" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_randomizer_1a7bbb208529d0c02e4a5aa7510f69a7b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Randomizer::xOffset</definition>
+        <argsstring>(double xo, double xr, double xn)</argsstring>
+        <name>xOffset</name>
+        <param>
+          <type>double</type>
+          <declname>xo</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xn</declname>
+        </param>
+        <briefdescription>
+<para>function to offset x </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xo, robot origin </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xr, trash </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xn, target </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double xn, new traget </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="88" column="1" bodyfile="src/randomizer.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_randomizer_1a47b692837880d2840cbc92b79a5a0de3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Randomizer::yOffset</definition>
+        <argsstring>(double yo, double yr, double yn)</argsstring>
+        <name>yOffset</name>
+        <param>
+          <type>double</type>
+          <declname>yo</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yn</declname>
+        </param>
+        <briefdescription>
+<para>function to offset y </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yo, robot origin </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yr, trash </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>yn, traget </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double yn, new target </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/randomizer.hpp" line="97" column="1" bodyfile="src/randomizer.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/randomizer.hpp" line="49" column="1" bodyfile="include/randomizer.hpp" bodystart="49" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_randomizer_1a6f1e3b306ed5d631a73990c757e777c6" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>Randomizer</name></member>
+      <member refid="class_randomizer_1a058604a7e58e05e0b5082a865601f98c" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>randomizeX</name></member>
+      <member refid="class_randomizer_1a8118622933e6fb5a7a9120e6247abe4c" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>randomizeY</name></member>
+      <member refid="class_randomizer_1a177786f6220e566e57626d78c6ee0d66" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>xc</name></member>
+      <member refid="class_randomizer_1a7bbb208529d0c02e4a5aa7510f69a7b7" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>xOffset</name></member>
+      <member refid="class_randomizer_1aae5e16f209511400d5e2ceea7803acc6" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>yc</name></member>
+      <member refid="class_randomizer_1a47b692837880d2840cbc92b79a5a0de3" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>yOffset</name></member>
+      <member refid="class_randomizer_1a33bacd33bccd73fa894cfb8405bb1591" prot="public" virt="non-virtual"><scope>Randomizer</scope><name>~Randomizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

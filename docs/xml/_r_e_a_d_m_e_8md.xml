@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;ecobot.png&quot;/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Build<sp/>Status](https://travis-ci.org/Prasheel24/Object-Collector-Robot.svg?branch=master)](https://travis-ci.org/Prasheel24/Object-Collector-Robot)</highlight></codeline>
+<codeline><highlight class="normal">[![Coverage<sp/>Status](https://coveralls.io/repos/github/Prasheel24/Object-Collector-Robot/badge.svg?branch=master&amp;service=github)](https://coveralls.io/github/Prasheel24/Object-Collector-Robot?branch=master)</highlight></codeline>
+<codeline><highlight class="normal">[![License<sp/>BSD<sp/>3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/Prasheel24/Object-Collector-Robot/blob/master/LICENSE)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Authors</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Raj<sp/>Prakash<sp/>Shinde**<sp/>[GitHub](https://github.com/RajPShinde)</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;I<sp/>am<sp/>a<sp/>Masters<sp/>in<sp/>Robotics<sp/>Engineering<sp/>student<sp/>at<sp/>the<sp/>University<sp/>of<sp/>Maryland,<sp/>College<sp/>Park.<sp/>My<sp/>primary<sp/>area<sp/>of<sp/>interest<sp/>are<sp/>Legged<sp/>Robotics<sp/>and<sp/>Automation.<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Prasheel<sp/>Renkuntla**<sp/>[GitHub](https://github.com/Prasheel24)</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;I<sp/>am<sp/>a<sp/>Master&apos;s<sp/>in<sp/>Robotics<sp/>Engineering<sp/>student<sp/>at<sp/>the<sp/>University<sp/>of<sp/>Maryland,<sp/>College<sp/>Park.<sp/>My<sp/>primary<sp/>area<sp/>of<sp/>interest<sp/>is<sp/>in<sp/>Vision<sp/>integrated<sp/>Robot<sp/>Systems.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Overview</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>ROS<sp/>Package<sp/>developed<sp/>for<sp/>ACME<sp/>Robotics<sp/>to<sp/>demonstrate<sp/>the<sp/>functionality<sp/>of<sp/>their<sp/>new<sp/>eco-bot.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Sprint<sp/>Planning<sp/>and<sp/>Discussion</highlight></codeline>
+<codeline><highlight class="normal">Sprint-<sp/>[Link](https://docs.google.com/document/d/1_uG7fMXPrtZlpRLsgD74NdLRX3DKDXxCicppZWBDNvQ)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Agile<sp/>Iterative<sp/>Process<sp/>Log</highlight></codeline>
+<codeline><highlight class="normal">Log-<sp/>[Link](https://docs.google.com/spreadsheets/d/1DkxCx4_GxvRXjRTTrmgZvdOQ4z0DMrpGEavg439tQak)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Dependencies</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Ubuntu<sp/>16.04</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>C++<sp/>11/14/17</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>ROS<sp/>Kinetic</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Turtlebot<sp/>stack</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;<sp/>Install<sp/>by<sp/>running<sp/>following<sp/>command</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>ros-kinetic-turtlebot-gazebo<sp/>ros-kinetic-turtlebot-apps<sp/>ros-kinetic-turtlebot-rviz-launchers</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Build</highlight></codeline>
+<codeline><highlight class="normal">Steps<sp/>to<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>-p<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>~/catkin_ws/</highlight></codeline>
+<codeline><highlight class="normal">catkin_make</highlight></codeline>
+<codeline><highlight class="normal">source<sp/>devel/setup.bash</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Prasheel24/Object-Collector-Robot</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>~/catkin_ws/</highlight></codeline>
+<codeline><highlight class="normal">catkin_make</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Run</highlight></codeline>
+<codeline><highlight class="normal">**Generate<sp/>Map**</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;<sp/>Open<sp/>a<sp/>new<sp/>Terminal</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">source<sp/>devel/setup.bash</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>ecobot<sp/>TurtlebotMapping.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">**Save<sp/>Map<sp/>to<sp/>Directory**</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;<sp/>Open<sp/>a<sp/>new<sp/>Terminal</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>map_server<sp/>map_saver<sp/>map:=/robot_1/map<sp/>-f<sp/>CollectorSpace</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">**Collect<sp/>Garbage**</highlight></codeline>
+<codeline><highlight class="normal">&lt;br&gt;<sp/>Open<sp/>a<sp/>new<sp/>Terminal</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">source<sp/>devel/setup.bash</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>ecobot<sp/>TurtlebotCollect.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>References</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>http://wiki.ros.org/</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>http://wiki.ros.org/rrt_exploration</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%20As%20Plugin%20in%20ROS</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>https://www.geeksforgeeks.org/a-search-algorithm/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Contributions</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**RRT<sp/>Exploration<sp/>Package-**<sp/>*H.<sp/>Umari<sp/>and<sp/>S.<sp/>Mukhopadhyay,<sp/>&quot;Autonomous<sp/>robotic<sp/>exploration<sp/>based<sp/>on<sp/>multiple<sp/>rapidly-exploring<sp/>randomized<sp/>trees,&quot;<sp/>2017<sp/>IEEE/RSJ<sp/>International<sp/>Conference<sp/>on<sp/>Intelligent<sp/>Robots<sp/>and<sp/>Systems<sp/>(IROS),<sp/>Vancouver,<sp/>BC,<sp/>2017,<sp/>pp.<sp/>1396-1402.*</highlight></codeline>
+<codeline><highlight class="normal">*doi:<sp/>10.1109/IROS.2017.8202319*</highlight></codeline>
+<codeline><highlight class="normal">*keywords:<sp/>{edge<sp/>detection;mobile<sp/>robots;multi-agent<sp/>systems;navigation;path<sp/>planning;random<sp/>processes;robot<sp/>vision;trees<sp/>(mathematics);efficient<sp/>robotic<sp/>exploration;three-dimensional<sp/>space;autonomous<sp/>robotic<sp/>exploration;randomized<sp/>trees;efficient<sp/>robotic<sp/>navigation;autonomous<sp/>exploration<sp/>strategies;edge<sp/>detection;dimensional<sp/>exploration;multiple<sp/>Rapidly-exploring<sp/>Random<sp/>Trees;RRT<sp/>algorithm;Robot<sp/>Operating<sp/>System<sp/>framework;frontier<sp/>detection;image<sp/>processing;Detectors;Image<sp/>edge<sp/>detection;Robot<sp/>sensing<sp/>systems;Path<sp/>planning;Navigation},*</highlight></codeline>
+<codeline><highlight class="normal">URL:<sp/>http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8202319&amp;isnumber=8202121</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Logo<sp/>-**<sp/>https://www.flaticon.com/authors/nhor-phai</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Disclaimer</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">BSD<sp/>3-Clause<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Copyright<sp/>(c)<sp/>2019,<sp/>Raj<sp/>Shinde</highlight></codeline>
+<codeline><highlight class="normal">Copyright<sp/>(c)<sp/>2019,<sp/>Prasheel<sp/>Renkuntla</highlight></codeline>
+<codeline><highlight class="normal">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline><highlight class="normal">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline><highlight class="normal">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline><highlight class="normal">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline><highlight class="normal">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE</highlight></codeline>
+<codeline><highlight class="normal">FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL</highlight></codeline>
+<codeline><highlight class="normal">DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline><highlight class="normal">SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline><highlight class="normal">CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,</highlight></codeline>
+<codeline><highlight class="normal">OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE</highlight></codeline>
+<codeline><highlight class="normal">OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,424 @@
+\hypertarget{test_path_planner_8cpp}{}\section{test/test\+Path\+Planner.cpp File Reference}
+\label{test_path_planner_8cpp}\index{test/test\+Path\+Planner.\+cpp@{test/test\+Path\+Planner.\+cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$ros/console.\+h$>$}\\*
+{\ttfamily \#include $<$tf/transform\+\_\+listener.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist.\+h$>$}\\*
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Point.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Quaternion.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\\*
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+With\+Covariance\+Stamped.\+h$>$}\\*
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d\+\_\+ros.\+h$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$numeric$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include \char`\"{}path\+Planner.\+hpp\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{test_path_planner_8cpp_ac503100674ed5b6740a33b5f13133832}{T\+E\+ST} (Test\+Path\+Planner, test\+Node\+Handle)
+\item 
+\hyperlink{test_path_planner_8cpp_a4d861461d0da76f4df110cb76d92703e}{T\+E\+ST} (Test\+Path\+Planner, test\+Conversion\+To\+Map)
+\item 
+\hyperlink{test_path_planner_8cpp_a9221fc80803af264b8f6c0b7e5ded6d9}{T\+E\+ST} (Test\+Path\+Planner, test\+Check\+Cell\+Coordinates)
+\item 
+\hyperlink{test_path_planner_8cpp_a9517790106786b00a5d81287fadd5671}{T\+E\+ST} (Test\+Path\+Planner, test\+Coordinate\+Bounds)
+\item 
+\hyperlink{test_path_planner_8cpp_a5734ee20bc8bcc184b682dff07944d7a}{T\+E\+ST} (Test\+Path\+Planner, test\+Cell\+Values\+Index)
+\item 
+\hyperlink{test_path_planner_8cpp_ae4eea0f42fb9725b98c44764c779fc5f}{T\+E\+ST} (Test\+Path\+Planner, test\+Cell\+Values)
+\item 
+\hyperlink{test_path_planner_8cpp_a3b8b8056849157ca413be5b843333b49}{T\+E\+ST} (Test\+Path\+Planner, test\+Cell\+Index\+Calculation)
+\item 
+\hyperlink{test_path_planner_8cpp_aaf1d4469153226e7f61dbf9dfaebd708}{T\+E\+ST} (Test\+Path\+Planner, test\+Cell\+Index)
+\item 
+\hyperlink{test_path_planner_8cpp_a694d5894f7bb1a9c0a38cb22aa015816}{T\+E\+ST} (Test\+Path\+Planner, test\+Row\+Index)
+\item 
+\hyperlink{test_path_planner_8cpp_a2658881037901d96358ad4e325e8697d}{T\+E\+ST} (Test\+Path\+Planner, test\+Col\+Index)
+\item 
+\hyperlink{test_path_planner_8cpp_a9e3c714032270e641abff3dc7b08c9e7}{T\+E\+ST} (Test\+Path\+Planner, test\+H\+Value)
+\item 
+\hyperlink{test_path_planner_8cpp_ae95e0b89cd974af68e0c0d9629ff42f4}{T\+E\+ST} (Test\+Path\+Planner, test\+Moving\+Cost)
+\item 
+\hyperlink{test_path_planner_8cpp_a532503ede4e65a7c0c5dc524caa60e63}{T\+E\+ST} (Test\+Path\+Planner, test\+Moving\+Cost\+Individual\+Diagonal)
+\item 
+\hyperlink{test_path_planner_8cpp_a90ad57f20e9660deedd92bf143d53186}{T\+E\+ST} (Test\+Path\+Planner, test\+Moving\+Cost\+Individual\+Straight)
+\item 
+\hyperlink{test_path_planner_8cpp_a9b0c4b226b95442108829473be3a9d86}{T\+E\+ST} (test\+Path\+Planner, test\+Neighbor\+Cell\+New\+Point)
+\item 
+\hyperlink{test_path_planner_8cpp_a4e58186605d8ec87ffac79bcbc9a4e5f}{T\+E\+ST} (test\+Path\+Planner, test\+Neighbor\+Cell)
+\item 
+\hyperlink{test_path_planner_8cpp_afc2cc941fa5c95d5e6673a7b9d91b764}{T\+E\+ST} (Test\+Path\+Planner, test\+Construct\+Path)
+\item 
+\hyperlink{test_path_planner_8cpp_a5b72b88d64f1938d3f8a4bfc76c9816c}{T\+E\+ST} (Test\+Path\+Planner, test\+Find\+Path)
+\item 
+\hyperlink{test_path_planner_8cpp_a9c7475d0696e7c9ca9940d2b6123260a}{T\+E\+ST} (Test\+Path\+Planner, test\+Find\+Path\+New)
+\item 
+\hyperlink{test_path_planner_8cpp_a8e80e538bf915bf00f6c751909ec9e32}{T\+E\+ST} (Test\+Path\+Planner, test\+Find\+Path\+New\+Filled)
+\item 
+\hyperlink{test_path_planner_8cpp_a4a1285e3edabd619ae0b8658d802af63}{T\+E\+ST} (Test\+Path\+Planner, test\+Find\+Path\+New\+Extreme)
+\item 
+\hyperlink{test_path_planner_8cpp_aa0148b0144da2556d4fae9b6579b0039}{T\+E\+ST} (Test\+Path\+Planner, test\+Run\+A\+Star)
+\item 
+\hyperlink{test_path_planner_8cpp_ac5d266559642ed4d5e6b8469a69ac50b}{T\+E\+ST} (Test\+Path\+Planner, test\+Start\+Goal\+Validation\+First)
+\item 
+\hyperlink{test_path_planner_8cpp_a941048139ec90fc74286ff13cace75b0}{T\+E\+ST} (Test\+Path\+Planner, test\+Start\+Goal\+Validation\+Second)
+\item 
+\hyperlink{test_path_planner_8cpp_a974f48f0f003284d61e6842c0bee0a8b}{T\+E\+ST} (Test\+Path\+Planner, test\+Find\+Path\+Thorough)
+\item 
+\hyperlink{test_path_planner_8cpp_ac9cf7f47b6ddea8d065bc70fdfa72195}{T\+E\+ST} (Test\+Path\+Planner, test\+Find\+Free\+Neighbor\+Cell)
+\item 
+\hyperlink{test_path_planner_8cpp_ab664a2d8a8a44aef432c78ebdcc6b982}{T\+E\+ST} (Test\+Path\+Planner, test\+Add\+Neighbors\+To\+Open\+List)
+\item 
+\hyperlink{test_path_planner_8cpp_aa32dc0b52130e967fd354db4d3f7a13e}{T\+E\+ST} (Test\+Path\+Planner, test\+Is\+Start\+Goal\+Valid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Node\+Handle)}{TEST(TestPathPlanner, testNodeHandle)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Node\+Handle}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_ac503100674ed5b6740a33b5f13133832}{}\label{test_path_planner_8cpp_ac503100674ed5b6740a33b5f13133832}
+
+
+Definition at line 77 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Conversion\+To\+Map)}{TEST(TestPathPlanner, testConversionToMap)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Conversion\+To\+Map}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a4d861461d0da76f4df110cb76d92703e}{}\label{test_path_planner_8cpp_a4d861461d0da76f4df110cb76d92703e}
+
+
+Definition at line 91 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Check\+Cell\+Coordinates)}{TEST(TestPathPlanner, testCheckCellCoordinates)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Check\+Cell\+Coordinates}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a9221fc80803af264b8f6c0b7e5ded6d9}{}\label{test_path_planner_8cpp_a9221fc80803af264b8f6c0b7e5ded6d9}
+
+
+Definition at line 110 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Coordinate\+Bounds)}{TEST(TestPathPlanner, testCoordinateBounds)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Coordinate\+Bounds}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a9517790106786b00a5d81287fadd5671}{}\label{test_path_planner_8cpp_a9517790106786b00a5d81287fadd5671}
+
+
+Definition at line 134 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Cell\+Values\+Index)}{TEST(TestPathPlanner, testCellValuesIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Cell\+Values\+Index}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a5734ee20bc8bcc184b682dff07944d7a}{}\label{test_path_planner_8cpp_a5734ee20bc8bcc184b682dff07944d7a}
+
+
+Definition at line 144 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Cell\+Values)}{TEST(TestPathPlanner, testCellValues)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Cell\+Values}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_ae4eea0f42fb9725b98c44764c779fc5f}{}\label{test_path_planner_8cpp_ae4eea0f42fb9725b98c44764c779fc5f}
+
+
+Definition at line 159 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Cell\+Index\+Calculation)}{TEST(TestPathPlanner, testCellIndexCalculation)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Cell\+Index\+Calculation}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a3b8b8056849157ca413be5b843333b49}{}\label{test_path_planner_8cpp_a3b8b8056849157ca413be5b843333b49}
+
+
+Definition at line 174 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Cell\+Index)}{TEST(TestPathPlanner, testCellIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Cell\+Index}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_aaf1d4469153226e7f61dbf9dfaebd708}{}\label{test_path_planner_8cpp_aaf1d4469153226e7f61dbf9dfaebd708}
+
+
+Definition at line 185 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Row\+Index)}{TEST(TestPathPlanner, testRowIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Row\+Index}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a694d5894f7bb1a9c0a38cb22aa015816}{}\label{test_path_planner_8cpp_a694d5894f7bb1a9c0a38cb22aa015816}
+
+
+Definition at line 196 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Col\+Index)}{TEST(TestPathPlanner, testColIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Col\+Index}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a2658881037901d96358ad4e325e8697d}{}\label{test_path_planner_8cpp_a2658881037901d96358ad4e325e8697d}
+
+
+Definition at line 208 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+H\+Value)}{TEST(TestPathPlanner, testHValue)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+H\+Value}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a9e3c714032270e641abff3dc7b08c9e7}{}\label{test_path_planner_8cpp_a9e3c714032270e641abff3dc7b08c9e7}
+
+
+Definition at line 220 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Moving\+Cost)}{TEST(TestPathPlanner, testMovingCost)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Moving\+Cost}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_ae95e0b89cd974af68e0c0d9629ff42f4}{}\label{test_path_planner_8cpp_ae95e0b89cd974af68e0c0d9629ff42f4}
+
+
+Definition at line 232 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Moving\+Cost\+Individual\+Diagonal)}{TEST(TestPathPlanner, testMovingCostIndividualDiagonal)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Moving\+Cost\+Individual\+Diagonal}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a532503ede4e65a7c0c5dc524caa60e63}{}\label{test_path_planner_8cpp_a532503ede4e65a7c0c5dc524caa60e63}
+
+
+Definition at line 245 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Moving\+Cost\+Individual\+Straight)}{TEST(TestPathPlanner, testMovingCostIndividualStraight)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Moving\+Cost\+Individual\+Straight}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a90ad57f20e9660deedd92bf143d53186}{}\label{test_path_planner_8cpp_a90ad57f20e9660deedd92bf143d53186}
+
+
+Definition at line 256 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(test\+Path\+Planner, test\+Neighbor\+Cell\+New\+Point)}{TEST(testPathPlanner, testNeighborCellNewPoint)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{test\+Path\+Planner}]{, }
+\item[{test\+Neighbor\+Cell\+New\+Point}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a9b0c4b226b95442108829473be3a9d86}{}\label{test_path_planner_8cpp_a9b0c4b226b95442108829473be3a9d86}
+
+
+Definition at line 267 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(test\+Path\+Planner, test\+Neighbor\+Cell)}{TEST(testPathPlanner, testNeighborCell)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{test\+Path\+Planner}]{, }
+\item[{test\+Neighbor\+Cell}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a4e58186605d8ec87ffac79bcbc9a4e5f}{}\label{test_path_planner_8cpp_a4e58186605d8ec87ffac79bcbc9a4e5f}
+
+
+Definition at line 279 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Construct\+Path)}{TEST(TestPathPlanner, testConstructPath)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Construct\+Path}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_afc2cc941fa5c95d5e6673a7b9d91b764}{}\label{test_path_planner_8cpp_afc2cc941fa5c95d5e6673a7b9d91b764}
+
+
+Definition at line 291 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Find\+Path)}{TEST(TestPathPlanner, testFindPath)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Find\+Path}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a5b72b88d64f1938d3f8a4bfc76c9816c}{}\label{test_path_planner_8cpp_a5b72b88d64f1938d3f8a4bfc76c9816c}
+
+
+Definition at line 304 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Find\+Path\+New)}{TEST(TestPathPlanner, testFindPathNew)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Find\+Path\+New}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a9c7475d0696e7c9ca9940d2b6123260a}{}\label{test_path_planner_8cpp_a9c7475d0696e7c9ca9940d2b6123260a}
+
+
+Definition at line 319 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Find\+Path\+New\+Filled)}{TEST(TestPathPlanner, testFindPathNewFilled)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Find\+Path\+New\+Filled}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a8e80e538bf915bf00f6c751909ec9e32}{}\label{test_path_planner_8cpp_a8e80e538bf915bf00f6c751909ec9e32}
+
+
+Definition at line 335 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Find\+Path\+New\+Extreme)}{TEST(TestPathPlanner, testFindPathNewExtreme)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Find\+Path\+New\+Extreme}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a4a1285e3edabd619ae0b8658d802af63}{}\label{test_path_planner_8cpp_a4a1285e3edabd619ae0b8658d802af63}
+
+
+Definition at line 351 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Run\+A\+Star)}{TEST(TestPathPlanner, testRunAStar)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Run\+A\+Star}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_aa0148b0144da2556d4fae9b6579b0039}{}\label{test_path_planner_8cpp_aa0148b0144da2556d4fae9b6579b0039}
+
+
+Definition at line 366 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Start\+Goal\+Validation\+First)}{TEST(TestPathPlanner, testStartGoalValidationFirst)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Start\+Goal\+Validation\+First}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_ac5d266559642ed4d5e6b8469a69ac50b}{}\label{test_path_planner_8cpp_ac5d266559642ed4d5e6b8469a69ac50b}
+
+
+Definition at line 384 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Start\+Goal\+Validation\+Second)}{TEST(TestPathPlanner, testStartGoalValidationSecond)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Start\+Goal\+Validation\+Second}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a941048139ec90fc74286ff13cace75b0}{}\label{test_path_planner_8cpp_a941048139ec90fc74286ff13cace75b0}
+
+
+Definition at line 399 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Find\+Path\+Thorough)}{TEST(TestPathPlanner, testFindPathThorough)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Find\+Path\+Thorough}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_a974f48f0f003284d61e6842c0bee0a8b}{}\label{test_path_planner_8cpp_a974f48f0f003284d61e6842c0bee0a8b}
+
+
+Definition at line 414 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Find\+Free\+Neighbor\+Cell)}{TEST(TestPathPlanner, testFindFreeNeighborCell)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Find\+Free\+Neighbor\+Cell}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_ac9cf7f47b6ddea8d065bc70fdfa72195}{}\label{test_path_planner_8cpp_ac9cf7f47b6ddea8d065bc70fdfa72195}
+
+
+Definition at line 450 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Add\+Neighbors\+To\+Open\+List)}{TEST(TestPathPlanner, testAddNeighborsToOpenList)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Add\+Neighbors\+To\+Open\+List}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_ab664a2d8a8a44aef432c78ebdcc6b982}{}\label{test_path_planner_8cpp_ab664a2d8a8a44aef432c78ebdcc6b982}
+
+
+Definition at line 480 of file test\+Path\+Planner.\+cpp.
+
+\index{test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test\+Path\+Planner.\+cpp@{test\+Path\+Planner.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Test\+Path\+Planner, test\+Is\+Start\+Goal\+Valid)}{TEST(TestPathPlanner, testIsStartGoalValid)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Test\+Path\+Planner}]{, }
+\item[{test\+Is\+Start\+Goal\+Valid}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_path_planner_8cpp_aa32dc0b52130e967fd354db4d3f7a13e}{}\label{test_path_planner_8cpp_aa32dc0b52130e967fd354db4d3f7a13e}
+
+
+Definition at line 504 of file test\+Path\+Planner.\+cpp.
+
