@@ -35,24 +35,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @copyright BSD 3-Clause License 
  *  @copyright Copyright © 2019 Raj Shinde, Prasheel Renkuntla
  *  @file    gridSquare.cpp
- *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
+ *  @author  Raj Shinde
  *  @date    12/09/2019
  *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
  *  @section Implementation file for GridSquare class
  */
 
-#include <stdio.h>
-#include <set>
 #include <numeric>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
+#include <set>
 #include <fstream>
 #include <iostream>
 #include <iomanip>
@@ -63,19 +55,19 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "gridSquare.hpp"
 
 GridSquare::GridSquare() {
-  currentGridSquare = 0;
-  fCost = 0.0;
+currentGridSquare = 0;
+fCost = 0.0;
 }
 
 GridSquare::~GridSquare() {
-  currentGridSquare = 0;
-  fCost = 0.0;
+currentGridSquare = 0;
+fCost = 0.0;
 }
 
 int GridSquare::getCurrentGridSquare() {
-  return 1
+return currentGridSquare;
 }
 
 float GridSquare::getFCost() {
-  return 1;
+return fCost;
 }
