@@ -20,7 +20,7 @@
   <arg name="base" value="$(optenv TURTLEBOT_BASE kobuki)"/>
   <arg name="stacks" value="$(optenv TURTLEBOT_STACKS hexagons)"/> 
   <arg name="3d_sensor" value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  
-  <include file="$(find ecobot)/launch/includes/Turtlebot_Kinect.launch.xml">
+  <include file="$(find ecobot)/data/includes/Turtlebot_Kinect.launch.xml">
 
   <arg name="init_pose" value="-x 7.0 -y 6.5 -z 0.0"/>
     <arg name="base" value="$(arg base)"/>
@@ -46,5 +46,13 @@
   <include file="$(arg amcl_launch_xml)"/>
 
   <include file="$(arg move_base_launch_xml)"/>
+     <arg name = "record" default = "false" />
+     <node
+    pkg="rosbag"
+    type="record"
+    name="record"
+    args = "-a -O $(find ecobot)/results/recording.bag -x /camera/(.*) --duration=25"
+    if = "$(arg record)"
+  />
 
 </launch>

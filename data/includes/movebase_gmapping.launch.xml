@@ -48,11 +48,11 @@
     <param name="controller_patience" value="1" /> 
     <remap from="cmd_vel" to="mobile_base/commands/velocity"/>
     <param name="recovery_behavior_enabled" value="false" />
-    <rosparam file="$(find ecobot)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find ecobot)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find ecobot)/param/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find ecobot)/param/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find ecobot)/param/base_local_planner_params.yaml" command="load" />  
+    <rosparam file="$(find ecobot)/data/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find ecobot)/data/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find ecobot)/data/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find ecobot)/data/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find ecobot)/data/param/base_local_planner_params.yaml" command="load" />  
     <param name="global_costmap/global_frame" value="$(arg namespace)/map"/>
     <param name="global_costmap/robot_base_frame" value="$(arg namespace)/base_link"/>
     <param name="global_costmap/laser_scan_sensor/sensor_frame" value="/$(arg namespace)/base_laser_link"/>

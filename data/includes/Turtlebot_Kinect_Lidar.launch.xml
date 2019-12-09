@@ -3,7 +3,7 @@
   <arg name="robot_name"/>
   <arg name="init_pose"/>
  <param name="robot_description"
-        command="$(find xacro)/xacro.py '$(find ecobot)/launch/includes/urdf/Turtlebot_Kinect_Lidar.urdf.xacro'"/>
+        command="$(find xacro)/xacro.py '$(find ecobot)/data/includes/urdf/Turtlebot_Kinect_Lidar.urdf.xacro'"/>
   <node pkg="gazebo_ros" type="spawn_model" name="spawn_$(arg robot_name)" 
         args="$(arg init_pose) -unpause -urdf -param robot_description -model $(arg robot_name)" respawn="false">
   </node>
