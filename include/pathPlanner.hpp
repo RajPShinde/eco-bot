@@ -37,25 +37,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @file    pathPlanner.h
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
- *  @date    12/02/2019
- *  @version 2.0
+ *  @date    12/09/2019
+ *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
  *  @section Header file for path planning through A star plugin.
  */
 
-#ifndef INCLUDE_ASTARPLANNER_HPP_
-#define INCLUDE_ASTARPLANNER_HPP_
-
-#include <string.h>
-#include <set>
-#include <string>
-#include <vector>
-#include <utility>
-#include <random>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits>
+#ifndef INCLUDE_PATHPLANNER_HPP_
+#define INCLUDE_PATHPLANNER_HPP_
 
 #include <ros/ros.h>
 #include <tf/tf.h>
@@ -77,23 +66,26 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <nav_msgs/GetPlan.h>
 #include <nav_core/base_global_planner.h>
 
+#include <set>
+#include <string>
+#include <vector>
+#include <utility>
+#include <limits>
+#include <random>
+#include "gridSquare.hpp"
 #include "sensor_msgs/LaserScan.h"
 #include "sensor_msgs/PointCloud2.h"
 
-namespace astar_plugin
-{
-  class AStarPlanner : public nav_core::BaseGlobalPlanner
-  {
-  public:
-    int value;   
+namespace astar_plugin {
+class AStarPlanner : public nav_core::BaseGlobalPlanner {
+ public:
+    int value;
     int mapSize;  //  size of the occupancy grid map
     bool *occupancyGridMap;  //  pointer to check if map exists
     float infinity = std::numeric_limits<float>::infinity();  //  inf to start
     float tBreak;
-    std::vector<std::pair<int, float>> gridSquare;  //  the grid cell that will be used
-    //size_t size; //2
     ros::NodeHandle ROSNodeHandle;  //  Nodehandle object
-    float originX;  
+    float originX;
     float originY;
     float resolution;
     costmap_2d::Costmap2DROS *costmap_ros;
@@ -101,125 +93,21 @@ namespace astar_plugin
     bool initialized;  //  variable to check if path planner is initialised
     int width;
     int height;
-   
-    /**
-     *   @brief Function to calculate H cell score
-     *   @param int, cell index value 
-     *   @param int, cell limits
-     *   @return float, H value
-     */
-    float calculateHCellScore(int cellIndex, int cellSquare); 
-
-    /**
-     *   @brief Function to calculate cell index
-     *   @param int, cell y value 
-     *   @param int, cell x value
-     *   @return int, cell index
-     */
-    int calculateCellIndex(int i, int j);
-
-    /**
-     *   @brief Function to get Cell Row index
-     *   @param int, cell index value 
-     *   @param int, cell limits
-     *   @return int, cell row index
-     */
-    int getCellRowIndex(int index);
-
-    /**
-     *   @brief Function to get Cell Column index
-     *   @param int, cell index value 
-     *   @return int, cell column index
-     */
-    int getCellColIndex(int index);
-
-    /**
-     *   @brief Function to check if the cell is free
-     *   @param int, cell index value 
-     *   @return bool, returns true if free
-     */
-    bool isCellFree(int cellIndex);
-
-    /**
-     *   @brief Overloaded function to check if cell is free
-     *   @param int, cell x value
-     *   @param int, cell y value
-     *   @return bool, returns true if free
-     */
-    bool isCellFree(int i, int j);
-    
-    /**
-     *   @brief Function to get moving cost to a cell
-     *   @param int, first cell index
-     *   @param int, second cell index
-     *   @return float, cell cost
-     */
-    float getMoveToCellCost(int cellIndex1, int cellIndex2);
-   
-   /**
-     *   @brief Overloaded function to get moving cost to a cell
-     *   @param int, first cell x index
-     *   @param int, first cell y index
-     *   @param int, second cell x index
-     *   @param int, second cell y index
-     *   @return float, cell cost
-     */
-    float getMoveToCellCost(int i1, int j1, int i2, int j2);
-
-    /**
-     *   @brief Function to find free neighbouring cell to traverse
-     *   @param int, previous cell index
-     *   @return std::vector<int>, new cell indices
-     */
-    std::vector<int> findFreeNeighborCell(int cellIndex);
-
-    /**
-     *   @brief Function to convert coordinates into a static map
-     *   @param int, x coordinate
-     *   @param int, y coordinate
-     *   @return none
-     */
-    void convertToMapCoordinates(float &x, float &y);
-
-    /**
-     *   @brief Function to get cell index
-     *   @param int, x coordinate
-     *   @param int, y coordinate
-     *   @return int, index of cell
-     */
-    int getCellIndex(float x, float y);
-
-    /**
-     *   @brief Function to get cell coordinates
-     *   @param int, index
-     *   @param float, x coordinate
-     *   @param float, y coordinate
-     *   @return none
-     */
-    void getCellCoordinates(int index, float &x, float &y);
-
-    /**
-     *   @brief Function to check whether given coordinates are under boundary
-     *   @param int, x coordinate
-     *   @param int, y coordinate
-     *   @return bool, returns true if inside boundary
-     */
-    bool isCoordinateInBounds(float x, float y);
 
     /**
      *   @brief Constructor of class AStar planner
      *   @param none
      *   @return none
      */
-    AStarPlanner(); 
+    AStarPlanner();
 
     /**
      *   @brief Overloaded constructor to call ros node handle.
      *   @param ros::NodeHandle
      *   @return none
      */
-    AStarPlanner(ros::NodeHandle &);
-    
+    explicit AStarPlanner(ros::NodeHandle &);
+
     /**
      *   @brief Overloaded constructor to initialise 2D cost map 
      *   @param string, name
@@ -275,14 +163,125 @@ namespace astar_plugin
                                    std::vector<float> g_score);
 
     /**
+     *   @brief Function to get map coordinates
+     *   @param float, x coordinate
+     *   @param float, y coordinate
+     *   @return std::vector<float> returns map coordinates
+     */
+    std::vector<float> getMapCoordinates(float x, float y);
+
+    /**
+     *   @brief Function to calculate H cell score
+     *   @param int, cell index value 
+     *   @param int, cell limits
+     *   @return float, H value
+     */
+    float calculateHCellScore(int cellIndex, int cellSquare);
+
+    /**
+     *   @brief Function to calculate cell index
+     *   @param int, cell y value 
+     *   @param int, cell x value
+     *   @return int, cell index
+     */
+    int calculateCellIndex(int i, int j);
+
+    /**
+     *   @brief Function to get Cell Row index
+     *   @param int, cell index value 
+     *   @return int, cell row index
+     */
+    int getCellRowIndex(int index);
+
+    /**
+     *   @brief Function to get Cell Column index
+     *   @param int, cell index value 
+     *   @return int, cell column index
+     */
+    int getCellColIndex(int index);
+
+    /**
+     *   @brief Function to check if the cell is free
+     *   @param int, cell index value 
+     *   @return bool, returns true if free
+     */
+    bool isCellFree(int cellIndex);
+
+    /**
+     *   @brief Overloaded function to check if cell is free
+     *   @param int, cell x value
+     *   @param int, cell y value
+     *   @return bool, returns true if free
+     */
+    bool isCellFree(int i, int j);
+
+    /**
+     *   @brief Function to get moving cost to a cell
+     *   @param int, first cell index
+     *   @param int, second cell index
+     *   @return float, cell cost
+     */
+    float getMoveToCellCost(int cellIndex1, int cellIndex2);
+
+   /**
+     *   @brief Overloaded function to get moving cost to a cell
+     *   @param int, first cell x index
+     *   @param int, first cell y index
+     *   @param int, second cell x index
+     *   @param int, second cell y index
+     *   @return float, cell cost
+     */
+    float getMoveToCellCost(int i1, int j1, int i2, int j2);
+
+    /**
+     *   @brief Function to find free neighbouring cell to traverse
+     *   @param int, previous cell index
+     *   @return std::vector<int>, new cell indices
+     */
+    std::vector<int> findFreeNeighborCell(int cellIndex);
+
+    /**
+     *   @brief Function to convert coordinates into a static map
+     *   @param int, x coordinate
+     *   @param int, y coordinate
+     *   @return none
+     */
+    void convertToMapCoordinates(float &x, float &y);
+
+    /**
+     *   @brief Function to get cell index
+     *   @param int, x coordinate
+     *   @param int, y coordinate
+     *   @return int, index of cell
+     */
+    int getCellIndex(float x, float y);
+
+    /**
+     *   @brief Function to get cell coordinates
+     *   @param int, index
+     *   @param float, x coordinate
+     *   @param float, y coordinate
+     *   @return none
+     */
+    void getCellCoordinates(int index, float &x, float &y);
+
+    /**
+     *   @brief Function to check whether given coordinates are under boundary
+     *   @param int, x coordinate
+     *   @param int, y coordinate
+     *   @return bool, returns true if inside boundary
+     */
+    bool isCoordinateInBounds(float x, float y);
+
+    /**
      *   @brief Function to add nearest neighbor to open list of coordinates
-     *   @param std::set<std::vector<std::pair<int, float>>>, set of coordinates
+     *   @param std::set<GridSquare>, set of coordinates
      *   @param int, neighbour cell
      *   @param int, goal cell
      *   @param std::vector<float>, current g function value for cell
      *   @return none
      */
-    void addNeighborGridSquareToOpenList(std::set<std::vector<std::pair<int, float>>> &OPL,
+    void addNeighborCellToOpenList(std::set<GridSquare> &OPL,
                                          int neighborCell,
                                          int goalCell,
                                          std::vector<float> g_score);
@@ -293,9 +292,8 @@ namespace astar_plugin
      *   @param int, goal cell
      *   @return bool, returns true if valid.
      */    
-    bool isStartAndGoalValid(int startCell, int goalCell); 
-
-  };
+    bool isStartAndGoalValid(int startCell, int goalCell);
 };
+};  //  namespace astar_plugin
 
-#endif  //  INCLUDE_ASTARPLANNER_HPP_
+#endif  //  INCLUDE_PATHPLANNER_HPP_

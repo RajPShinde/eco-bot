@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="md_README" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>README</title>
+    <detaileddescription>
+<para><image type="html" name="ecobot.png"></image>
+</para><para><ulink url="https://travis-ci.org/Prasheel24/Object-Collector-Robot"></ulink> <ulink url="https://coveralls.io/github/Prasheel24/Object-Collector-Robot?branch=master"></ulink> <ulink url="https://github.com/Prasheel24/Object-Collector-Robot/blob/master/LICENSE"></ulink></para><para><heading level="2">Authors</heading>
+</para><para><itemizedlist>
+<listitem><para><bold>Raj Prakash Shinde</bold> <ulink url="https://github.com/RajPShinde">GitHub</ulink> <linebreak/>
+I am a Masters in Robotics Engineering student at the University of Maryland, College Park. My primary area of interest are Legged Robotics and Automation.</para></listitem><listitem><para><bold>Prasheel Renkuntla</bold> <ulink url="https://github.com/Prasheel24">GitHub</ulink> <linebreak/>
+I am a Master&apos;s in Robotics Engineering student at the University of Maryland, College Park. My primary area of interest is in Vision integrated Robot Systems.</para></listitem></itemizedlist>
+</para><para><heading level="2">Overview</heading>
+</para><para>This is ROS Package developed for ACME Robotics to demonstrate the functionality of their new eco-bot.</para><para><heading level="2">Sprint Planning and Discussion</heading>
+</para><para>Sprint- <ulink url="https://docs.google.com/document/d/1_uG7fMXPrtZlpRLsgD74NdLRX3DKDXxCicppZWBDNvQ">Link</ulink></para><para><heading level="2">Agile Iterative Process Log</heading>
+</para><para>Log- <ulink url="https://docs.google.com/spreadsheets/d/1DkxCx4_GxvRXjRTTrmgZvdOQ4z0DMrpGEavg439tQak">Link</ulink></para><para><heading level="2">Dependencies</heading>
+</para><para><orderedlist>
+<listitem><para>Ubuntu 16.04</para></listitem><listitem><para>C++ 11/14/17</para></listitem><listitem><para>ROS Kinetic</para></listitem><listitem><para>Turtlebot stack <linebreak/>
+ Install by running following command <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>ros-kinetic-turtlebot-gazebo<sp/>ros-kinetic-turtlebot-apps<sp/>ros-kinetic-turtlebot-rviz-launchers</highlight></codeline>
+</programlisting></para></listitem></orderedlist>
+</para><para><heading level="2">Build</heading>
+</para><para>Steps to build <programlisting><codeline><highlight class="normal">mkdir<sp/>-p<sp/>~/catkin_ws/src</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>~/catkin_ws/</highlight></codeline>
+<codeline><highlight class="normal">catkin_make</highlight></codeline>
+<codeline><highlight class="normal">source<sp/>devel/setup.bash</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/Prasheel24/Object-Collector-Robot</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>~/catkin_ws/</highlight></codeline>
+<codeline><highlight class="normal">catkin_make</highlight></codeline>
+</programlisting> <heading level="2">Run</heading>
+</para><para><bold>Generate Map</bold> <linebreak/>
+ Open a new Terminal <programlisting><codeline><highlight class="normal">source<sp/>devel/setup.bash</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>ecobot<sp/>TurtlebotMapping.launch</highlight></codeline>
+</programlisting> <bold>Save Map to Directory</bold> <linebreak/>
+ Open a new Terminal <programlisting><codeline><highlight class="normal">rosrun<sp/>map_server<sp/>map_saver<sp/>map:=/robot_1/map<sp/>-f<sp/>CollectorSpace</highlight></codeline>
+</programlisting> <bold>Collect Garbage</bold> <linebreak/>
+ Open a new Terminal <programlisting><codeline><highlight class="normal">source<sp/>devel/setup.bash</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>ecobot<sp/>TurtlebotCollect.launch</highlight></codeline>
+</programlisting></para><para><heading level="2">References</heading>
+</para><para><itemizedlist>
+<listitem><para><ulink url="http://wiki.ros.org/">http://wiki.ros.org/</ulink></para></listitem><listitem><para><ulink url="http://wiki.ros.org/rrt_exploration">http://wiki.ros.org/rrt_exploration</ulink></para></listitem><listitem><para><ulink url="http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%20As%20Plugin%20in%20ROS">http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%20As%20Plugin%20in%20ROS</ulink></para></listitem><listitem><para><ulink url="https://www.geeksforgeeks.org/a-search-algorithm/">https://www.geeksforgeeks.org/a-search-algorithm/</ulink></para></listitem></itemizedlist>
+</para><para><heading level="2">Contributions</heading>
+</para><para><itemizedlist>
+<listitem><para>**RRT Exploration Package-** <emphasis>H. Umari and S. Mukhopadhyay, &quot;Autonomous robotic exploration based on multiple rapidly-exploring randomized trees,&quot; 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Vancouver, BC, 2017, pp. 1396-1402.</emphasis> <emphasis>doi: 10.1109/IROS.2017.8202319</emphasis> <emphasis>keywords: {edge detection;mobile robots;multi-agent systems;navigation;path planning;random processes;robot vision;trees (mathematics);efficient robotic exploration;three-dimensional space;autonomous robotic exploration;randomized trees;efficient robotic navigation;autonomous exploration strategies;edge detection;dimensional exploration;multiple Rapidly-exploring Random Trees;RRT algorithm;Robot Operating System framework;frontier detection;image processing;Detectors;Image edge detection;Robot sensing systems;Path planning;Navigation},</emphasis> URL: <ulink url="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8202319&amp;isnumber=8202121">http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8202319&amp;isnumber=8202121</ulink></para></listitem><listitem><para>**Logo -** <ulink url="https://www.flaticon.com/authors/nhor-phai">https://www.flaticon.com/authors/nhor-phai</ulink></para></listitem></itemizedlist>
+</para><para><heading level="2">Disclaimer</heading>
+</para><para><programlisting><codeline><highlight class="normal">BSD<sp/>3-Clause<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Copyright<sp/>(c)<sp/>2019,<sp/>Raj<sp/>Shinde</highlight></codeline>
+<codeline><highlight class="normal">Copyright<sp/>(c)<sp/>2019,<sp/>Prasheel<sp/>Renkuntla</highlight></codeline>
+<codeline><highlight class="normal">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline><highlight class="normal">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline><highlight class="normal">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline><highlight class="normal">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline><highlight class="normal">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE</highlight></codeline>
+<codeline><highlight class="normal">FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL</highlight></codeline>
+<codeline><highlight class="normal">DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline><highlight class="normal">SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline><highlight class="normal">CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,</highlight></codeline>
+<codeline><highlight class="normal">OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE</highlight></codeline>
+<codeline><highlight class="normal">OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -32,22 +32,25 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *************************************************************************/
 
 /**
- *  @copyright BSD 3-Clause License
+ *  @copyright BSD 3-Clause License 
  *  @copyright Copyright © 2019 Raj Shinde, Prasheel Renkuntla
  *  @file    main.cpp
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
- *  @date    12/02/2019
- *  @version 2.0 
+ *  @date    12/09/2019
+ *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
- *  @mainpage A ROS Package for ecobot robot
- *  @section main program to call
+ *  @section main call to ecobot
  */
 
 #include <ros/ros.h>
-#include <navigateRobot.h>
+#include "navigateRobot.hpp"
 
 int main(int argc, char** argv) {
-  ros::init(argc, argv, "ecobot_listener");
-  return 0;
+//  main node to start
+ros::init(argc, argv, "ecobot_listener");
+NavigateRobot ecobot;
+//  start ecobot here
+int var = ecobot.start(true);
+return 0;
 }

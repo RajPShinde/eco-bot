@@ -37,17 +37,23 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @file    navigateRobot.h
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
- *  @date    12/02/2019
- *  @version 2.0
+ *  @date    12/09/2019
+ *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
  *  @section Header file for navigation of the robot
  */
+
+#ifndef INCLUDE_NAVIGATEROBOT_HPP_
+#define INCLUDE_NAVIGATEROBOT_HPP_
+
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
 #include <geometry_msgs/Twist.h>
 
 class NavigateRobot {
  public:
+  bool flag;
+
   /**
    *   @brief Constructor of class NavigateRobot
    *   @param none
@@ -67,14 +73,14 @@ class NavigateRobot {
    *   @param const geometry_msgs::TwistConstPtr, pointer to twist
    *   @return none
    */
-  bool twistRobot(const geometry_msgs::TwistConstPtr &msg);
+  void twistRobot(const geometry_msgs::TwistConstPtr &msg);
 
   /**
    *   @brief Function to start the robot
    *   @param none
    *   @return none
    */
-  void start();
+  int start(bool flag);
 };
 
-
+#endif  //  INCLUDE_NAVIGATEROBOT_HPP_

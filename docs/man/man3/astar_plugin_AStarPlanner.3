@@ -1,0 +1,711 @@
+.TH "astar_plugin::AStarPlanner" 3 "Mon Dec 9 2019" "Version 3.0" "eco-bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+astar_plugin::AStarPlanner \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pathPlanner\&.hpp>\fP
+.PP
+Inherits BaseGlobalPlanner\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAStarPlanner\fP ()"
+.br
+.RI "\fIConstructor of class AStar planner\&. \fP"
+.ti -1c
+.RI "\fBAStarPlanner\fP (ros::NodeHandle &)"
+.br
+.RI "\fIOverloaded constructor to call ros node handle\&. \fP"
+.ti -1c
+.RI "\fBAStarPlanner\fP (std::string name, costmap_2d::Costmap2DROS *\fBcostmap_ros\fP)"
+.br
+.RI "\fIOverloaded constructor to initialise 2D cost map\&. \fP"
+.ti -1c
+.RI "void \fBinitialize\fP (std::string name, costmap_2d::Costmap2DROS *\fBcostmap_ros\fP)"
+.br
+.RI "\fIFunction inherited from base class to initialise map\&. \fP"
+.ti -1c
+.RI "bool \fBmakePlan\fP (const geometry_msgs::PoseStamped &start, const geometry_msgs::PoseStamped &goal, std::vector< geometry_msgs::PoseStamped > &plan)"
+.br
+.RI "\fIFunction to make a plan to reach the goal\&. \fP"
+.ti -1c
+.RI "std::vector< int > \fBrunAStar\fP (int startCell, int goalCell)"
+.br
+.RI "\fIFunction to run astar algorithm\&. \fP"
+.ti -1c
+.RI "std::vector< int > \fBfindPath\fP (int startCell, int goalCell, std::vector< float > g_score)"
+.br
+.RI "\fIFunction to find path to reach the goal\&. \fP"
+.ti -1c
+.RI "std::vector< int > \fBconstructPath\fP (int startCell, int goalCell, std::vector< float > g_score)"
+.br
+.RI "\fIFunction to construct a path to reach the goal\&. \fP"
+.ti -1c
+.RI "std::vector< float > \fBgetMapCoordinates\fP (float x, float y)"
+.br
+.RI "\fIFunction to get map coordinates\&. \fP"
+.ti -1c
+.RI "float \fBcalculateHCellScore\fP (int cellIndex, int cellSquare)"
+.br
+.RI "\fIFunction to calculate H cell score\&. \fP"
+.ti -1c
+.RI "int \fBcalculateCellIndex\fP (int i, int j)"
+.br
+.RI "\fIFunction to calculate cell index\&. \fP"
+.ti -1c
+.RI "int \fBgetCellRowIndex\fP (int index)"
+.br
+.RI "\fIFunction to get Cell Row index\&. \fP"
+.ti -1c
+.RI "int \fBgetCellColIndex\fP (int index)"
+.br
+.RI "\fIFunction to get Cell Column index\&. \fP"
+.ti -1c
+.RI "bool \fBisCellFree\fP (int cellIndex)"
+.br
+.RI "\fIFunction to check if the cell is free\&. \fP"
+.ti -1c
+.RI "bool \fBisCellFree\fP (int i, int j)"
+.br
+.RI "\fIOverloaded function to check if cell is free\&. \fP"
+.ti -1c
+.RI "float \fBgetMoveToCellCost\fP (int cellIndex1, int cellIndex2)"
+.br
+.RI "\fIFunction to get moving cost to a cell\&. \fP"
+.ti -1c
+.RI "float \fBgetMoveToCellCost\fP (int i1, int j1, int i2, int j2)"
+.br
+.RI "\fIOverloaded function to get moving cost to a cell\&. \fP"
+.ti -1c
+.RI "std::vector< int > \fBfindFreeNeighborCell\fP (int cellIndex)"
+.br
+.RI "\fIFunction to find free neighbouring cell to traverse\&. \fP"
+.ti -1c
+.RI "void \fBconvertToMapCoordinates\fP (float &x, float &y)"
+.br
+.RI "\fIFunction to convert coordinates into a static map\&. \fP"
+.ti -1c
+.RI "int \fBgetCellIndex\fP (float x, float y)"
+.br
+.RI "\fIFunction to get cell index\&. \fP"
+.ti -1c
+.RI "void \fBgetCellCoordinates\fP (int index, float &x, float &y)"
+.br
+.RI "\fIFunction to get cell coordinates\&. \fP"
+.ti -1c
+.RI "bool \fBisCoordinateInBounds\fP (float x, float y)"
+.br
+.RI "\fIFunction to check whether given coordinates are under boundary\&. \fP"
+.ti -1c
+.RI "void \fBaddNeighborCellToOpenList\fP (std::set< \fBGridSquare\fP > &OPL, int neighborCell, int goalCell, std::vector< float > g_score)"
+.br
+.RI "\fIFunction to add nearest neighbor to open list of coordinates\&. \fP"
+.ti -1c
+.RI "bool \fBisStartAndGoalValid\fP (int startCell, int goalCell)"
+.br
+.RI "\fIFunction to check if the start and end goal are valid\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBvalue\fP"
+.br
+.ti -1c
+.RI "int \fBmapSize\fP"
+.br
+.ti -1c
+.RI "bool * \fBoccupancyGridMap\fP"
+.br
+.ti -1c
+.RI "float \fBinfinity\fP = std::numeric_limits<float>::infinity()"
+.br
+.ti -1c
+.RI "float \fBtBreak\fP"
+.br
+.ti -1c
+.RI "ros::NodeHandle \fBROSNodeHandle\fP"
+.br
+.ti -1c
+.RI "float \fBoriginX\fP"
+.br
+.ti -1c
+.RI "float \fBoriginY\fP"
+.br
+.ti -1c
+.RI "float \fBresolution\fP"
+.br
+.ti -1c
+.RI "costmap_2d::Costmap2DROS * \fBcostmap_ros\fP"
+.br
+.ti -1c
+.RI "costmap_2d::Costmap2D * \fBcostmap\fP"
+.br
+.ti -1c
+.RI "bool \fBinitialized\fP"
+.br
+.ti -1c
+.RI "int \fBwidth\fP"
+.br
+.ti -1c
+.RI "int \fBheight\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 80 of file pathPlanner\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "astar_plugin::AStarPlanner::AStarPlanner ()"
+
+.PP
+Constructor of class AStar planner\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Definition at line 77 of file pathPlanner\&.cpp\&.
+.SS "astar_plugin::AStarPlanner::AStarPlanner (ros::NodeHandle & nh)\fC [explicit]\fP"
+
+.PP
+Overloaded constructor to call ros node handle\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIros::NodeHandle\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file pathPlanner\&.cpp\&.
+.SS "astar_plugin::AStarPlanner::AStarPlanner (std::string name, costmap_2d::Costmap2DROS * costmap_ros)"
+
+.PP
+Overloaded constructor to initialise 2D cost map\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring,name\fP 
+.br
+\fIcostmap_2d::Costmap2DROS,ROS\fP 2D cost map 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file pathPlanner\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void astar_plugin::AStarPlanner::addNeighborCellToOpenList (std::set< \fBGridSquare\fP > & OPL, int neighborCell, int goalCell, std::vector< float > g_score)"
+
+.PP
+Function to add nearest neighbor to open list of coordinates\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::set<GridSquare>,set\fP of coordinates 
+.br
+\fIint,neighbour\fP cell 
+.br
+\fIint,goal\fP cell 
+.br
+\fIstd::vector<float>,current\fP g function value for cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Definition at line 379 of file pathPlanner\&.cpp\&.
+.SS "int astar_plugin::AStarPlanner::calculateCellIndex (int i, int j)"
+
+.PP
+Function to calculate cell index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,cell\fP y value 
+.br
+\fIint,cell\fP x value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int, cell index 
+.RE
+.PP
+
+.PP
+Definition at line 478 of file pathPlanner\&.cpp\&.
+.SS "float astar_plugin::AStarPlanner::calculateHCellScore (int cellIndex, int cellSquare)"
+
+.PP
+Function to calculate H cell score\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,cell\fP index value 
+.br
+\fIint,cell\fP limits 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+float, H value 
+.RE
+.PP
+
+.PP
+Definition at line 469 of file pathPlanner\&.cpp\&.
+.SS "std::vector< int > astar_plugin::AStarPlanner::constructPath (int startCell, int goalCell, std::vector< float > g_score)"
+
+.PP
+Function to construct a path to reach the goal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,start\fP cell 
+.br
+\fIint,goal\fP cell 
+.br
+\fIstd::vector<float>,g\fP function value for each cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<int>, if correct, then best path else empty path 
+.RE
+.PP
+
+.PP
+Definition at line 342 of file pathPlanner\&.cpp\&.
+.SS "void astar_plugin::AStarPlanner::convertToMapCoordinates (float & x, float & y)"
+
+.PP
+Function to convert coordinates into a static map\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,x\fP coordinate 
+.br
+\fIint,y\fP coordinate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Definition at line 247 of file pathPlanner\&.cpp\&.
+.SS "std::vector< int > astar_plugin::AStarPlanner::findFreeNeighborCell (int cellIndex)"
+
+.PP
+Function to find free neighbouring cell to traverse\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,previous\fP cell index 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<int>, new cell indices 
+.RE
+.PP
+
+.PP
+Definition at line 391 of file pathPlanner\&.cpp\&.
+.SS "std::vector< int > astar_plugin::AStarPlanner::findPath (int startCell, int goalCell, std::vector< float > g_score)"
+
+.PP
+Function to find path to reach the goal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,start\fP cell 
+.br
+\fIint,goal\fP cell 
+.br
+\fIstd::vector<float>,g\fP function value for each cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<int>, if correct, then best path else empty path 
+.RE
+.PP
+
+.PP
+Definition at line 297 of file pathPlanner\&.cpp\&.
+.SS "int astar_plugin::AStarPlanner::getCellColIndex (int index)"
+
+.PP
+Function to get Cell Column index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,cell\fP index value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int, cell column index 
+.RE
+.PP
+
+.PP
+Definition at line 486 of file pathPlanner\&.cpp\&.
+.SS "void astar_plugin::AStarPlanner::getCellCoordinates (int index, float & x, float & y)"
+
+.PP
+Function to get cell coordinates\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,index\fP 
+.br
+\fIfloat,x\fP coordinate 
+.br
+\fIfloat,y\fP coordinate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Definition at line 269 of file pathPlanner\&.cpp\&.
+.SS "int astar_plugin::AStarPlanner::getCellIndex (float x, float y)"
+
+.PP
+Function to get cell index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,x\fP coordinate 
+.br
+\fIint,y\fP coordinate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int, index of cell 
+.RE
+.PP
+
+.PP
+Definition at line 260 of file pathPlanner\&.cpp\&.
+.SS "int astar_plugin::AStarPlanner::getCellRowIndex (int index)"
+
+.PP
+Function to get Cell Row index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,cell\fP index value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int, cell row index 
+.RE
+.PP
+
+.PP
+Definition at line 482 of file pathPlanner\&.cpp\&.
+.SS "std::vector< float > astar_plugin::AStarPlanner::getMapCoordinates (float x, float y)"
+
+.PP
+Function to get map coordinates\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfloat,x\fP coordinate 
+.br
+\fIfloat,y\fP coordinate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<float> returns map coordinates 
+.RE
+.PP
+
+.PP
+Definition at line 254 of file pathPlanner\&.cpp\&.
+.SS "float astar_plugin::AStarPlanner::getMoveToCellCost (int cellIndex1, int cellIndex2)"
+
+.PP
+Function to get moving cost to a cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,first\fP cell index 
+.br
+\fIint,second\fP cell index 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+float, cell cost 
+.RE
+.PP
+
+.PP
+Definition at line 460 of file pathPlanner\&.cpp\&.
+.SS "float astar_plugin::AStarPlanner::getMoveToCellCost (int i1, int j1, int i2, int j2)"
+
+.PP
+Overloaded function to get moving cost to a cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,first\fP cell x index 
+.br
+\fIint,first\fP cell y index 
+.br
+\fIint,second\fP cell x index 
+.br
+\fIint,second\fP cell y index 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+float, cell cost 
+.RE
+.PP
+
+.PP
+Definition at line 444 of file pathPlanner\&.cpp\&.
+.SS "void astar_plugin::AStarPlanner::initialize (std::string name, costmap_2d::Costmap2DROS * costmap_ros)"
+
+.PP
+Function inherited from base class to initialise map\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring,name\fP 
+.br
+\fIcostmap_2d::Costmap2DROS,ROS\fP 2D cost map 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file pathPlanner\&.cpp\&.
+.SS "bool astar_plugin::AStarPlanner::isCellFree (int cellIndex)"
+
+.PP
+Function to check if the cell is free\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,cell\fP index value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool, returns true if free 
+.RE
+.PP
+
+.PP
+Definition at line 495 of file pathPlanner\&.cpp\&.
+.SS "bool astar_plugin::AStarPlanner::isCellFree (int i, int j)"
+
+.PP
+Overloaded function to check if cell is free\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,cell\fP x value 
+.br
+\fIint,cell\fP y value 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool, returns true if free 
+.RE
+.PP
+
+.PP
+Definition at line 490 of file pathPlanner\&.cpp\&.
+.SS "bool astar_plugin::AStarPlanner::isCoordinateInBounds (float x, float y)"
+
+.PP
+Function to check whether given coordinates are under boundary\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,x\fP coordinate 
+.br
+\fIint,y\fP coordinate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool, returns true if inside boundary 
+.RE
+.PP
+
+.PP
+Definition at line 279 of file pathPlanner\&.cpp\&.
+.SS "bool astar_plugin::AStarPlanner::isStartAndGoalValid (int startCell, int goalCell)"
+
+.PP
+Function to check if the start and end goal are valid\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,start\fP cell 
+.br
+\fIint,goal\fP cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool, returns true if valid\&. 
+.RE
+.PP
+
+.PP
+Definition at line 414 of file pathPlanner\&.cpp\&.
+.SS "bool astar_plugin::AStarPlanner::makePlan (const geometry_msgs::PoseStamped & start, const geometry_msgs::PoseStamped & goal, std::vector< geometry_msgs::PoseStamped > & plan)"
+
+.PP
+Function to make a plan to reach the goal\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIconst\fP geometry_msgs::PoseStamped, start pose 
+.br
+\fIconst\fP geometry_msgs::PoseStamped, goal pose 
+.br
+\fIstd::vector<geometry_msgs::PoseStamped>,vector\fP plan to reach 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+bool, returns true if plan exists 
+.RE
+.PP
+
+.PP
+Definition at line 159 of file pathPlanner\&.cpp\&.
+.SS "std::vector< int > astar_plugin::AStarPlanner::runAStar (int startCell, int goalCell)"
+
+.PP
+Function to run astar algorithm\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint,start\fP cell 
+.br
+\fIint,goal\fP cell 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<int>, returns best path coordinates 
+.RE
+.PP
+
+.PP
+Definition at line 288 of file pathPlanner\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "costmap_2d::Costmap2D* astar_plugin::AStarPlanner::costmap"
+
+.PP
+Definition at line 92 of file pathPlanner\&.hpp\&.
+.SS "costmap_2d::Costmap2DROS* astar_plugin::AStarPlanner::costmap_ros"
+
+.PP
+Definition at line 91 of file pathPlanner\&.hpp\&.
+.SS "int astar_plugin::AStarPlanner::height"
+
+.PP
+Definition at line 95 of file pathPlanner\&.hpp\&.
+.SS "float astar_plugin::AStarPlanner::infinity = std::numeric_limits<float>::infinity()"
+
+.PP
+Definition at line 85 of file pathPlanner\&.hpp\&.
+.SS "bool astar_plugin::AStarPlanner::initialized"
+
+.PP
+Definition at line 93 of file pathPlanner\&.hpp\&.
+.SS "int astar_plugin::AStarPlanner::mapSize"
+
+.PP
+Definition at line 83 of file pathPlanner\&.hpp\&.
+.SS "bool* astar_plugin::AStarPlanner::occupancyGridMap"
+
+.PP
+Definition at line 84 of file pathPlanner\&.hpp\&.
+.SS "float astar_plugin::AStarPlanner::originX"
+
+.PP
+Definition at line 88 of file pathPlanner\&.hpp\&.
+.SS "float astar_plugin::AStarPlanner::originY"
+
+.PP
+Definition at line 89 of file pathPlanner\&.hpp\&.
+.SS "float astar_plugin::AStarPlanner::resolution"
+
+.PP
+Definition at line 90 of file pathPlanner\&.hpp\&.
+.SS "ros::NodeHandle astar_plugin::AStarPlanner::ROSNodeHandle"
+
+.PP
+Definition at line 87 of file pathPlanner\&.hpp\&.
+.SS "float astar_plugin::AStarPlanner::tBreak"
+
+.PP
+Definition at line 86 of file pathPlanner\&.hpp\&.
+.SS "int astar_plugin::AStarPlanner::value"
+
+.PP
+Definition at line 82 of file pathPlanner\&.hpp\&.
+.SS "int astar_plugin::AStarPlanner::width"
+
+.PP
+Definition at line 94 of file pathPlanner\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for eco-bot from the source code\&.

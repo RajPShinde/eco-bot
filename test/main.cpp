@@ -37,24 +37,40 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @file    main.cpp
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
- *  @date    12/02/2019
- *  @version 2.0 
+ *  @date    12/09/2019
+ *  @version 3.0 
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
  *  @section main program to run gtest
  */
 
 #include <ros/ros.h>
 #include <gtest/gtest.h>
+#include <boost/thread.hpp>
 
 /**
  *  @brief  Main Function for running tests
  *  @param  int argc, char argv
  *  @return int
  */
-int main(int argc, char** argv) {
-  ::testing::InitGoogleTest(&argc, argv);
+void threadSpinning(void) {
+    ros::Rate loop_rate(10);
 
-  // Initializing and naming a node
-  ros::init(argc, argv, "tester");
+    while (ros::ok()) {
+        ros::spinOnce();
+        loop_rate.sleep();
+    }
+}
+
+int main(int argc, char** argv) {
+  testing::InitGoogleTest(&argc, argv);
+  ros::init(argc, argv, "testPlanner");
+  ros::NodeHandle nh;
+  boost::thread th(threadSpinning);
+
+  int ret = RUN_ALL_TESTS();
+
+  ros::shutdown();
+  th.join();
+
   return RUN_ALL_TESTS();
 }

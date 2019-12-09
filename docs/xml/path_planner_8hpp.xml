@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="path_planner_8hpp" kind="file" language="C++">
+    <compoundname>pathPlanner.hpp</compoundname>
+    <includes local="no">ros/ros.h</includes>
+    <includes local="no">tf/tf.h</includes>
+    <includes local="no">tf/transform_datatypes.h</includes>
+    <includes local="no">tf/transform_listener.h</includes>
+    <includes local="no">geometry_msgs/Twist.h</includes>
+    <includes local="no">geometry_msgs/PoseStamped.h</includes>
+    <includes local="no">geometry_msgs/PoseWithCovarianceStamped.h</includes>
+    <includes local="no">angles/angles.h</includes>
+    <includes local="no">base_local_planner/world_model.h</includes>
+    <includes local="no">base_local_planner/costmap_model.h</includes>
+    <includes local="no">move_base_msgs/MoveBaseGoal.h</includes>
+    <includes local="no">move_base_msgs/MoveBaseAction.h</includes>
+    <includes local="no">costmap_2d/costmap_2d.h</includes>
+    <includes local="no">costmap_2d/costmap_2d_ros.h</includes>
+    <includes local="no">nav_msgs/Odometry.h</includes>
+    <includes local="no">nav_msgs/OccupancyGrid.h</includes>
+    <includes local="no">nav_msgs/Path.h</includes>
+    <includes local="no">nav_msgs/GetPlan.h</includes>
+    <includes local="no">nav_core/base_global_planner.h</includes>
+    <includes local="no">set</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">random</includes>
+    <includes refid="grid_square_8hpp" local="yes">gridSquare.hpp</includes>
+    <includes local="yes">sensor_msgs/LaserScan.h</includes>
+    <includes local="yes">sensor_msgs/PointCloud2.h</includes>
+    <includedby refid="path_planner_8cpp" local="yes">src/pathPlanner.cpp</includedby>
+    <includedby refid="test_path_planner_8cpp" local="yes">test/testPathPlanner.cpp</includedby>
+    <incdepgraph>
+      <node id="51">
+        <label>sensor_msgs/PointCloud2.h</label>
+      </node>
+      <node id="47">
+        <label>limits</label>
+      </node>
+      <node id="41">
+        <label>nav_msgs/GetPlan.h</label>
+      </node>
+      <node id="27">
+        <label>tf/transform_listener.h</label>
+      </node>
+      <node id="38">
+        <label>nav_msgs/Odometry.h</label>
+      </node>
+      <node id="44">
+        <label>string</label>
+      </node>
+      <node id="34">
+        <label>move_base_msgs/MoveBaseGoal.h</label>
+      </node>
+      <node id="25">
+        <label>tf/tf.h</label>
+      </node>
+      <node id="31">
+        <label>angles/angles.h</label>
+      </node>
+      <node id="33">
+        <label>base_local_planner/costmap_model.h</label>
+      </node>
+      <node id="48">
+        <label>random</label>
+      </node>
+      <node id="35">
+        <label>move_base_msgs/MoveBaseAction.h</label>
+      </node>
+      <node id="30">
+        <label>geometry_msgs/PoseWithCovarianceStamped.h</label>
+      </node>
+      <node id="37">
+        <label>costmap_2d/costmap_2d_ros.h</label>
+      </node>
+      <node id="26">
+        <label>tf/transform_datatypes.h</label>
+      </node>
+      <node id="29">
+        <label>geometry_msgs/PoseStamped.h</label>
+      </node>
+      <node id="28">
+        <label>geometry_msgs/Twist.h</label>
+      </node>
+      <node id="45">
+        <label>vector</label>
+      </node>
+      <node id="40">
+        <label>nav_msgs/Path.h</label>
+      </node>
+      <node id="49">
+        <label>gridSquare.hpp</label>
+        <link refid="grid_square_8hpp"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>utility</label>
+      </node>
+      <node id="24">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="23">
+        <label>include/pathPlanner.hpp</label>
+        <link refid="pathPlanner.hpp"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>nav_core/base_global_planner.h</label>
+      </node>
+      <node id="39">
+        <label>nav_msgs/OccupancyGrid.h</label>
+      </node>
+      <node id="32">
+        <label>base_local_planner/world_model.h</label>
+      </node>
+      <node id="50">
+        <label>sensor_msgs/LaserScan.h</label>
+      </node>
+      <node id="43">
+        <label>set</label>
+      </node>
+      <node id="36">
+        <label>costmap_2d/costmap_2d.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="54">
+        <label>test/testPathPlanner.cpp</label>
+        <link refid="test_path_planner_8cpp"/>
+      </node>
+      <node id="53">
+        <label>src/pathPlanner.cpp</label>
+        <link refid="path_planner_8cpp"/>
+      </node>
+      <node id="52">
+        <label>include/pathPlanner.hpp</label>
+        <link refid="pathPlanner.hpp"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classastar__plugin_1_1_a_star_planner" prot="public">astar_plugin::AStarPlanner</innerclass>
+    <innernamespace refid="namespaceastar__plugin">astar_plugin</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">BSD<sp/>3-Clause<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Copyright<sp/>(c)<sp/>2019,<sp/>Raj<sp/>Shinde</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Copyright<sp/>(c)<sp/>2019,<sp/>Prasheel<sp/>Renkuntla</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_PATHPLANNER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_PATHPLANNER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ros/ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/tf.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_datatypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tf/transform_listener.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/Twist.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;geometry_msgs/PoseWithCovarianceStamped.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;angles/angles.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;base_local_planner/world_model.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;base_local_planner/costmap_model.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;move_base_msgs/MoveBaseGoal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;move_base_msgs/MoveBaseAction.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;costmap_2d/costmap_2d.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;costmap_2d/costmap_2d_ros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/Odometry.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/OccupancyGrid.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/Path.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_msgs/GetPlan.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nav_core/base_global_planner.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="grid_square_8hpp" kindref="compound">gridSquare.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sensor_msgs/LaserScan.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sensor_msgs/PointCloud2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="namespaceastar__plugin" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceastar__plugin" kindref="compound">astar_plugin</ref><sp/>{</highlight></codeline>
+<codeline lineno="80" refid="classastar__plugin_1_1_a_star_planner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classastar__plugin_1_1_a_star_planner" kindref="compound">AStarPlanner</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>nav_core::BaseGlobalPlanner<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82" refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1afb117804426fe5f1a9a882a0da06047a" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="83" refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a5edf65eab6aa9be80520ebbcaa9e6704" kindref="member">mapSize</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>size<sp/>of<sp/>the<sp/>occupancy<sp/>grid<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*<ref refid="classastar__plugin_1_1_a_star_planner_1a205a9cf7b62779627bf89c8b0d78f391" kindref="member">occupancyGridMap</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>pointer<sp/>to<sp/>check<sp/>if<sp/>map<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classastar__plugin_1_1_a_star_planner_1a0d9b3ad5c3a83a96192609939af84c3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a0d9b3ad5c3a83a96192609939af84c3d" kindref="member">infinity</ref><sp/>=<sp/>std::numeric_limits&lt;float&gt;::infinity();<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>inf<sp/>to<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classastar__plugin_1_1_a_star_planner_1aae46db226358860bb296612e97a67617" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1aae46db226358860bb296612e97a67617" kindref="member">tBreak</ref>;</highlight></codeline>
+<codeline lineno="87" refid="classastar__plugin_1_1_a_star_planner_1ab20d703c7c32c96a523295cf07f8ef99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/><ref refid="classastar__plugin_1_1_a_star_planner_1ab20d703c7c32c96a523295cf07f8ef99" kindref="member">ROSNodeHandle</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Nodehandle<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classastar__plugin_1_1_a_star_planner_1a9accb42a886464ae84db5259aad9c444" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a9accb42a886464ae84db5259aad9c444" kindref="member">originX</ref>;</highlight></codeline>
+<codeline lineno="89" refid="classastar__plugin_1_1_a_star_planner_1aa680b5cf31ff141738c409c4e86dbba6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1aa680b5cf31ff141738c409c4e86dbba6" kindref="member">originY</ref>;</highlight></codeline>
+<codeline lineno="90" refid="classastar__plugin_1_1_a_star_planner_1a698245ae6075cbbcb7d50d949025df95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a698245ae6075cbbcb7d50d949025df95" kindref="member">resolution</ref>;</highlight></codeline>
+<codeline lineno="91" refid="classastar__plugin_1_1_a_star_planner_1a1be22c40d97241edb0a60b7bd3c332f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>costmap_2d::Costmap2DROS<sp/>*<ref refid="classastar__plugin_1_1_a_star_planner_1a1be22c40d97241edb0a60b7bd3c332f3" kindref="member">costmap_ros</ref>;</highlight></codeline>
+<codeline lineno="92" refid="classastar__plugin_1_1_a_star_planner_1afeaa9448af26fc54e8adb0a906bd6324" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>costmap_2d::Costmap2D<sp/>*<ref refid="classastar__plugin_1_1_a_star_planner_1afeaa9448af26fc54e8adb0a906bd6324" kindref="member">costmap</ref>;</highlight></codeline>
+<codeline lineno="93" refid="classastar__plugin_1_1_a_star_planner_1a3befa689d0be167cbde58b71c635f5ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a3befa689d0be167cbde58b71c635f5ae" kindref="member">initialized</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>variable<sp/>to<sp/>check<sp/>if<sp/>path<sp/>planner<sp/>is<sp/>initialised</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a712676c797f8a99a81b7aa48e02d227b" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="95" refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1ad3806c8e75f4008de6b4ba1a1cbd2c42" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a709090708527da7d103f7c9373f4b651" kindref="member">AStarPlanner</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a709090708527da7d103f7c9373f4b651" kindref="member">AStarPlanner</ref>(ros::NodeHandle<sp/>&amp;);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a709090708527da7d103f7c9373f4b651" kindref="member">AStarPlanner</ref>(std::string<sp/>name,<sp/>costmap_2d::Costmap2DROS<sp/>*costmap_ros);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1abd555da48b7cb20f1fef16962ac0a71c" kindref="member">initialize</ref>(std::string<sp/>name,<sp/>costmap_2d::Costmap2DROS<sp/>*costmap_ros);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a0452b64fca4b454fad7da2249494a9fd" kindref="member">makePlan</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::PoseStamped<sp/>&amp;start,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>geometry_msgs::PoseStamped<sp/>&amp;goal,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;geometry_msgs::PoseStamped&gt;<sp/>&amp;plan);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a70e9cb8c51872dd8f83d1ae4a7006c62" kindref="member">runAStar</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startCell,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goalCell);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a65c23083aa562f0ce8a881d26fb020a7" kindref="member">findPath</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startCell,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goalCell,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;float&gt;<sp/>g_score);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classastar__plugin_1_1_a_star_planner_1aae75ccdcf38f6cd848d024a8aebc0bc0" kindref="member">constructPath</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startCell,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goalCell,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;float&gt;<sp/>g_score);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;float&gt;<sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a875990bd4b8b9ab17855ce54b4df4780" kindref="member">getMapCoordinates</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a18fac92699522fa76a2add6ea75fa6fc" kindref="member">calculateHCellScore</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellIndex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellSquare);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1aa54d997cd223de69fb7a37a79dc5cd1c" kindref="member">calculateCellIndex</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a660c014cd14a8de3080b138b44f5437e" kindref="member">getCellRowIndex</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a7242cadadc720feb8af97bc9f427f53c" kindref="member">getCellColIndex</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a29d81e8f4ac6191296d5c180be9ac8ae" kindref="member">isCellFree</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellIndex);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a29d81e8f4ac6191296d5c180be9ac8ae" kindref="member">isCellFree</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1ad07f32fd3a1e44ef3bb9bb1e59237023" kindref="member">getMoveToCellCost</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellIndex1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellIndex2);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1ad07f32fd3a1e44ef3bb9bb1e59237023" kindref="member">getMoveToCellCost</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j2);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a5ea485f93bfba47034d611b04eba2189" kindref="member">findFreeNeighborCell</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellIndex);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1ac43f501b17770643240a6e36174a73b9" kindref="member">convertToMapCoordinates</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;y);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1aae9903fa7f48e8e1ce45f4c772989e95" kindref="member">getCellIndex</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1add9c03d5a079ad44e5f91ccc8344679d" kindref="member">getCellCoordinates</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;y);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a3e3717511d9000f1c55f3f57a58dfd0f" kindref="member">isCoordinateInBounds</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a2d44c51604b31cd5f7e8599520ae3645" kindref="member">addNeighborCellToOpenList</ref>(std::set&lt;GridSquare&gt;<sp/>&amp;OPL,</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>neighborCell,</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goalCell,</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;float&gt;<sp/>g_score);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classastar__plugin_1_1_a_star_planner_1a755e2c8b550458a1c4640a86fca1d993" kindref="member">isStartAndGoalValid</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startCell,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>goalCell);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">};<sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>namespace<sp/>astar_plugin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/><sp/>INCLUDE_PATHPLANNER_HPP_</highlight></codeline>
+    </programlisting>
+    <location file="include/pathPlanner.hpp"/>
+  </compounddef>
+</doxygen>

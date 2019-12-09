@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_grid_square" kind="class" language="C++" prot="public">
+    <compoundname>GridSquare</compoundname>
+    <includes refid="grid_square_8hpp" local="no">gridSquare.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_grid_square_1af62396d0127126d7f95a81f81f4bc833" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GridSquare::currentGridSquare</definition>
+        <argsstring></argsstring>
+        <name>currentGridSquare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/gridSquare.hpp" line="57" column="1" bodyfile="include/gridSquare.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grid_square_1a9d04f5503abd3663e7496dc6c3a702c0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float GridSquare::fCost</definition>
+        <argsstring></argsstring>
+        <name>fCost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/gridSquare.hpp" line="58" column="1" bodyfile="include/gridSquare.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_grid_square_1a88fe5e8a65dec8e59dde719e4a99b043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GridSquare::GridSquare</definition>
+        <argsstring>()</argsstring>
+        <name>GridSquare</name>
+        <briefdescription>
+<para>Constructor of class <ref refid="class_grid_square" kindref="compound">GridSquare</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/gridSquare.hpp" line="65" column="1" bodyfile="src/gridSquare.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_square_1a59667a543b4501774304ea25d8cd5589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GridSquare::~GridSquare</definition>
+        <argsstring>()</argsstring>
+        <name>~GridSquare</name>
+        <briefdescription>
+<para>Destructor of class <ref refid="class_grid_square" kindref="compound">GridSquare</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/gridSquare.hpp" line="72" column="1" bodyfile="src/gridSquare.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_square_1acea2649a57dd575402c2366de18cd9a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GridSquare::getCurrentGridSquare</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentGridSquare</name>
+        <briefdescription>
+<para>Function fo get current grid square. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int, current grid square </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/gridSquare.hpp" line="79" column="1" bodyfile="src/gridSquare.cpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grid_square_1a6e82cc70c531d6a2fede8dadb3cd1e02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float GridSquare::getFCost</definition>
+        <argsstring>()</argsstring>
+        <name>getFCost</name>
+        <briefdescription>
+<para>Function to get current function Cost. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float, current F cost </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/gridSquare.hpp" line="86" column="1" bodyfile="src/gridSquare.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/gridSquare.hpp" line="55" column="1" bodyfile="include/gridSquare.hpp" bodystart="55" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_grid_square_1af62396d0127126d7f95a81f81f4bc833" prot="public" virt="non-virtual"><scope>GridSquare</scope><name>currentGridSquare</name></member>
+      <member refid="class_grid_square_1a9d04f5503abd3663e7496dc6c3a702c0" prot="public" virt="non-virtual"><scope>GridSquare</scope><name>fCost</name></member>
+      <member refid="class_grid_square_1acea2649a57dd575402c2366de18cd9a8" prot="public" virt="non-virtual"><scope>GridSquare</scope><name>getCurrentGridSquare</name></member>
+      <member refid="class_grid_square_1a6e82cc70c531d6a2fede8dadb3cd1e02" prot="public" virt="non-virtual"><scope>GridSquare</scope><name>getFCost</name></member>
+      <member refid="class_grid_square_1a88fe5e8a65dec8e59dde719e4a99b043" prot="public" virt="non-virtual"><scope>GridSquare</scope><name>GridSquare</name></member>
+      <member refid="class_grid_square_1a59667a543b4501774304ea25d8cd5589" prot="public" virt="non-virtual"><scope>GridSquare</scope><name>~GridSquare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

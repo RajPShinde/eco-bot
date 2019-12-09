@@ -1,0 +1,33 @@
+prasheel@prasheelHP:~/ObjectCollectorFinal/GitUploadEcoBot/eco-bot$ cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+Done processing ./src/main.cpp
+./src/spawnCollect.cpp:58:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/spawnCollect.cpp:58:  Static/global string variables are not permitted.  [runtime/string] [4]
+./src/spawnCollect.cpp:59:  Static/global string variables are not permitted.  [runtime/string] [4]
+./src/spawnCollect.cpp:60:  Static/global string variables are not permitted.  [runtime/string] [4]
+Done processing ./src/spawnCollect.cpp
+./src/randomizer.cpp:60:  Consider using rand_r(...) instead of rand(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+./src/randomizer.cpp:72:  Consider using rand_r(...) instead of rand(...) for improved thread safety.  [runtime/threadsafe_fn] [2]
+Done processing ./src/randomizer.cpp
+Done processing ./src/gridSquare.cpp
+Done processing ./src/navigateRobot.cpp
+Done processing ./src/pathPlanner.cpp
+Done processing ./src/collector.cpp
+Done processing ./include/gridSquare.hpp
+./include/pathPlanner.hpp:136:  Is this a non-const reference? If so, make const or use a pointer: std::vector<geometry_msgs::PoseStamped> &plan  [runtime/references] [2]
+./include/pathPlanner.hpp:249:  Is this a non-const reference? If so, make const or use a pointer: float &x  [runtime/references] [2]
+./include/pathPlanner.hpp:249:  Is this a non-const reference? If so, make const or use a pointer: float &y  [runtime/references] [2]
+./include/pathPlanner.hpp:266:  Is this a non-const reference? If so, make const or use a pointer: float &x  [runtime/references] [2]
+./include/pathPlanner.hpp:266:  Is this a non-const reference? If so, make const or use a pointer: float &y  [runtime/references] [2]
+./include/pathPlanner.hpp:284:  Is this a non-const reference? If so, make const or use a pointer: std::set<GridSquare> &OPL  [runtime/references] [2]
+Done processing ./include/pathPlanner.hpp
+Done processing ./include/randomizer.hpp
+Done processing ./include/spawnCollect.hpp
+Done processing ./include/navigateRobot.hpp
+Done processing ./include/collector.hpp
+Done processing ./test/main.cpp
+Done processing ./test/testNavigateRobot.cpp
+Done processing ./test/testPathPlanner.cpp
+Done processing ./test/testGridSquare.cpp
+Done processing ./test/testRandomizer.cpp
+Done processing ./test/testSpawnCollect.cpp
+Total errors found: 12

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="randomizer_8hpp" kind="file" language="C++">
+    <compoundname>randomizer.hpp</compoundname>
+    <includedby refid="collector_8cpp" local="yes">src/collector.cpp</includedby>
+    <includedby refid="randomizer_8cpp" local="no">src/randomizer.cpp</includedby>
+    <includedby refid="test_randomizer_8cpp" local="yes">test/testRandomizer.cpp</includedby>
+    <invincdepgraph>
+      <node id="57">
+        <label>src/collector.cpp</label>
+        <link refid="collector_8cpp"/>
+      </node>
+      <node id="58">
+        <label>src/randomizer.cpp</label>
+        <link refid="randomizer_8cpp"/>
+      </node>
+      <node id="56">
+        <label>include/randomizer.hpp</label>
+        <link refid="randomizer.hpp"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>test/testRandomizer.cpp</label>
+        <link refid="test_randomizer_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_randomizer" prot="public">Randomizer</innerclass>
+    <briefdescription>
+<para>Final Project - ecobot (A trash Collecting Robot) </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="copyright"><para>BSD 3-Clause License </para></simplesect>
+<simplesect kind="copyright"><para>Copyright © 2019 Raj Shinde, Prasheel Renkuntla</para></simplesect>
+<simplesect kind="author"><para>Prasheel Renkuntla </para></simplesect>
+<simplesect kind="author"><para>Raj Shinde </para></simplesect>
+<simplesect kind="date"><para>12/09/2019 </para></simplesect>
+<simplesect kind="version"><para>3.0 </para></simplesect>
+</para><sect1 id="spawn_collect_8hpp_1Header">
+<title>file for collecting trash</title>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">BSD<sp/>3-Clause<sp/>License</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Copyright<sp/>(c)<sp/>2019,<sp/>Raj<sp/>Shinde</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Copyright<sp/>(c)<sp/>2019,<sp/>Prasheel<sp/>Renkuntla</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor">#ifndef<sp/>INCLUDE_RANDOMIZER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDE_RANDOMIZER_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_randomizer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_randomizer" kindref="compound">Randomizer</ref><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="class_randomizer_1aae5e16f209511400d5e2ceea7803acc6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_randomizer_1a177786f6220e566e57626d78c6ee0d66" kindref="member">xc</ref>,<sp/><ref refid="class_randomizer_1aae5e16f209511400d5e2ceea7803acc6" kindref="member">yc</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><ref refid="class_randomizer_1a6f1e3b306ed5d631a73990c757e777c6" kindref="member">Randomizer</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="class_randomizer_1a33bacd33bccd73fa894cfb8405bb1591" kindref="member">~Randomizer</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_randomizer_1a058604a7e58e05e0b5082a865601f98c" kindref="member">randomizeX</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_randomizer_1a8118622933e6fb5a7a9120e6247abe4c" kindref="member">randomizeY</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_randomizer_1a7bbb208529d0c02e4a5aa7510f69a7b7" kindref="member">xOffset</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xo,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xr,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xn);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_randomizer_1a47b692837880d2840cbc92b79a5a0de3" kindref="member">yOffset</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yo,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yr,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yn);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/><sp/>INCLUDE_RANDOMIZER_HPP_</highlight></codeline>
+    </programlisting>
+    <location file="include/randomizer.hpp"/>
+  </compounddef>
+</doxygen>

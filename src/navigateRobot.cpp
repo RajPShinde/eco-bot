@@ -37,33 +37,55 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @file    navigateRobot.cpp
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
- *  @date    12/02/2019
- *  @version 2.0
+ *  @date    12/09/2019
+ *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
- *  @section Implementation file for navigation of robot
+ *  @section Implementation file for navigation of the robot
  */
 
-#ifndef INCLUDE_NAVIGATEROBOT_HPP_
-#define INCLUDE_NAVIGATEROBOT_HPP_
-
-#include <navigateRobot.h>
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
 #include <geometry_msgs/Twist.h>
 
-NavigateRobot::NavigateRobot(){
-};
+#include "navigateRobot.hpp"
 
-NavigateRobot::~NavigateRobot(){
-};
-
-bool NavigateRobot::twistRobot(const geometry_msgs::TwistConstPtr &msg) {
+NavigateRobot::NavigateRobot() {
 }
 
-void NavigateRobot::start() {
-  while (ros::ok()) {
-    ros::spinOnce();    
-    loop_rate.sleep();
+NavigateRobot::~NavigateRobot() {
+}
+
+void NavigateRobot::twistRobot(const geometry_msgs::TwistConstPtr &msg) {
+  //  Set geometry messages to the robot
+  double transVelocity = msg->linear.x;
+  double rotVelocity = msg->angular.z;
+  double velDiff = (0.143 * rotVelocity) / 2.0;
+  double leftPower = (transVelocity + velDiff) / 0.076;
+  double rightPower = (transVelocity - velDiff) / 0.076;
+  //  check for individual node
+  ROS_INFO_STREAM("\n Left wheel: " << leftPower
+                  << ",  Right wheel: "<< rightPower << "\n");
+}
+
+int NavigateRobot::start(bool flag) {
+  //  initialise node handle
+  ros::NodeHandle nh;
+  if (flag) {
+    //  start a subcriber to the given topic
+    ros::Subscriber sub =
+        nh.subscribe("/navigation_velocity_smoother/raw_cmd_vel", 1000,
+        &NavigateRobot::twistRobot, this);
+    ros::Rate loop_rate(10);
+
+    while (ros::ok()) {
+      ros::spinOnce();
+      loop_rate.sleep();
+    }
+  } else {
+    //  for testing of the node, this is fake subscriber that publishes for 5
+    ros::Subscriber sub =
+        nh.subscribe("/navigation_velocity_smoother/raw_cmd_vel", 5,
+        &NavigateRobot::twistRobot, this);
   }
+  return 0;
 }
-#endif  //  INCLUDE_NAVIGATEROBOT_HPP_

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
+    <compoundname>test</compoundname>
+    <innerfile refid="test_2main_8cpp">main.cpp</innerfile>
+    <innerfile refid="test_grid_square_8cpp">testGridSquare.cpp</innerfile>
+    <innerfile refid="test_navigate_robot_8cpp">testNavigateRobot.cpp</innerfile>
+    <innerfile refid="test_path_planner_8cpp">testPathPlanner.cpp</innerfile>
+    <innerfile refid="test_randomizer_8cpp">testRandomizer.cpp</innerfile>
+    <innerfile refid="test_spawn_collect_8cpp">testSpawnCollect.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="test/"/>
+  </compounddef>
+</doxygen>

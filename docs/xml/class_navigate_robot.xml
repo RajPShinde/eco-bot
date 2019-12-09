@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_navigate_robot" kind="class" language="C++" prot="public">
+    <compoundname>NavigateRobot</compoundname>
+    <includes refid="navigate_robot_8hpp" local="no">navigateRobot.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_navigate_robot_1a6eadd58c6c56d73ff90e3d7ebd94bb3d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool NavigateRobot::flag</definition>
+        <argsstring></argsstring>
+        <name>flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/navigateRobot.hpp" line="55" column="1" bodyfile="include/navigateRobot.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_navigate_robot_1ac27678ab7ff5b0416f661e899a50f9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NavigateRobot::NavigateRobot</definition>
+        <argsstring>()</argsstring>
+        <name>NavigateRobot</name>
+        <briefdescription>
+<para>Constructor of class <ref refid="class_navigate_robot" kindref="compound">NavigateRobot</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/navigateRobot.hpp" line="62" column="1" bodyfile="src/navigateRobot.cpp" bodystart="52" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navigate_robot_1a004a6768d65abf86fba9e3fa586c54e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NavigateRobot::~NavigateRobot</definition>
+        <argsstring>()</argsstring>
+        <name>~NavigateRobot</name>
+        <briefdescription>
+<para>Destructor of class <ref refid="class_navigate_robot" kindref="compound">NavigateRobot</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/navigateRobot.hpp" line="69" column="1" bodyfile="src/navigateRobot.cpp" bodystart="55" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navigate_robot_1a1382b2a30d0dccfbe2e63132f3cbd880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NavigateRobot::twistRobot</definition>
+        <argsstring>(const geometry_msgs::TwistConstPtr &amp;msg)</argsstring>
+        <name>twistRobot</name>
+        <param>
+          <type>const geometry_msgs::TwistConstPtr &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Function to twist the robot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>geometry_msgs::TwistConstPtr, pointer to twist </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/navigateRobot.hpp" line="76" column="1" bodyfile="src/navigateRobot.cpp" bodystart="58" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_navigate_robot_1ad02fc9f2481f002b7ad3b654a8ec80d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int NavigateRobot::start</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>start</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Function to start the robot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>none</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/navigateRobot.hpp" line="83" column="1" bodyfile="src/navigateRobot.cpp" bodystart="70" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/navigateRobot.hpp" line="53" column="1" bodyfile="include/navigateRobot.hpp" bodystart="53" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_navigate_robot_1a6eadd58c6c56d73ff90e3d7ebd94bb3d" prot="public" virt="non-virtual"><scope>NavigateRobot</scope><name>flag</name></member>
+      <member refid="class_navigate_robot_1ac27678ab7ff5b0416f661e899a50f9b4" prot="public" virt="non-virtual"><scope>NavigateRobot</scope><name>NavigateRobot</name></member>
+      <member refid="class_navigate_robot_1ad02fc9f2481f002b7ad3b654a8ec80d2" prot="public" virt="non-virtual"><scope>NavigateRobot</scope><name>start</name></member>
+      <member refid="class_navigate_robot_1a1382b2a30d0dccfbe2e63132f3cbd880" prot="public" virt="non-virtual"><scope>NavigateRobot</scope><name>twistRobot</name></member>
+      <member refid="class_navigate_robot_1a004a6768d65abf86fba9e3fa586c54e6" prot="public" virt="non-virtual"><scope>NavigateRobot</scope><name>~NavigateRobot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
