@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>ecobot</name>
-  <version>1.0.0</version>
+  <version>3.0.0</version>
   <description>An environment protector robot which automatically picks objects(trash) spawned randomly.</description>
 
   <maintainer email="prasheel@umd.edu">Prasheel Renkuntla</maintainer>
@@ -27,4 +27,8 @@
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>base_local_planner</exec_depend>
   <exec_depend>move_base_msgs</exec_depend>
+  <test_depend>rosunit</test_depend>
+  <export>
+    <nav_core plugin="${prefix}/astar_plugin.xml" />
+  </export>
 </package>
