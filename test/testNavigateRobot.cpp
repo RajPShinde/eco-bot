@@ -78,7 +78,8 @@ EXPECT_EQ(0, pub.getNumSubscribers());
 
 //  run subscriber and check publisher and subscriber
 ros::Subscriber sub =
-nh.subscribe("/navigation_velocity_smoother/raw_cmd_vel", 5, &NavigateRobot::twistRobot, &testN);
+nh.subscribe("/navigation_velocity_smoother/raw_cmd_vel", 5,
+             &NavigateRobot::twistRobot, &testN);
 
 for (int i = 0; i < 10; i++) {
   pub.publish(msg);
@@ -92,41 +93,31 @@ EXPECT_EQ(1, sub.getNumPublishers());
 EXPECT_EQ(1, pub.getNumSubscribers());
 }
 
-//Currently under development
-// TEST(TestNavigateRobot, testStart) {
-//     geometry_msgs::Twist msg;
-//     msg.linear.x = 0.0;
-//     msg.linear.y = 0.0;
-//     msg.linear.z = 0.0;
-//     msg.angular.x = 0.0;
-//     msg.angular.y = 0.0;
-//     msg.angular.z = 0.0;
-//     NavigateRobot testN = NavigateRobot();
+TEST(TestNavigateRobot, testStart) {
+    geometry_msgs::Twist msg;
+    msg.linear.x = 0.0;
+    msg.linear.y = 0.0;
+    msg.linear.z = 0.0;
+    msg.angular.x = 0.0;
+    msg.angular.y = 0.0;
+    msg.angular.z = 0.0;
+    NavigateRobot testN = NavigateRobot();
 
-//     ros::NodeHandle nh;
-//     ros::Publisher pub =
-//     nh.advertise<geometry_msgs::Twist>
-//     ("/navigation_velocity_smoother/raw_cmd_vel", 5, &testN);
+    ros::NodeHandle nh;
+    ros::Publisher pub =
+    nh.advertise<geometry_msgs::Twist>
+    ("/navigation_velocity_smoother/raw_cmd_vel", 5, &testN);
 
-//     // ///< run publisher and check publisher and subscriber
-//     ros::WallDuration(5.0).sleep();
-//     ros::spinOnce();
-//     EXPECT_EQ(0, pub.getNumSubscribers());
+    //  run fake publisher and subscriber
+    ros::WallDuration(5.0).sleep();
+    ros::spinOnce();
+    EXPECT_EQ(0, pub.getNumSubscribers());
 
-//     ///< run subscriber and check publisher and subscriber
-//     // ros::Subscriber sub =
-//     // nh.subscribe("/navigation_velocity_smoother/raw_cmd_vel", 5, &NavigateRobot::twistRobot, &testN);
-    
-//     // for (int i = 0; i < 10; i++) {
-//     //     pub.publish(msg);
-//     //     ros::WallDuration(0.1).sleep();
-//     //     ros::spinOnce();
-//     // }
-//     int res = 0;
-//     testN.flag = true;
-//     // EXPECT_EQ(1, .getNumPublishers());
-//     EXPECT_EQ(0, testN.start(false));
-// }
+    int res = 0;
+    testN.flag = true;
+    // EXPECT_EQ(1, .getNumPublishers());
+    EXPECT_EQ(0, testN.start(false));
+}
 
 /**
  *  @brief  Main Function for running tests for Navigate Robot Class

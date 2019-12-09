@@ -1,4 +1,4 @@
-/************************************************************************
+  /************************************************************************
 BSD 3-Clause License
 
 Copyright (c) 2019, Raj Shinde
@@ -96,7 +96,6 @@ bool Collector::collector() {
   ac.sendGoal(goal);
 
   ac.waitForResult(ros::Duration(17 + 2.3 * abs(6.5 + yr)));
-  
   //  if the robot reaches successfully then it will remove the trash
   if (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
     ROS_INFO_STREAM("Hooray, Trash is collected!");

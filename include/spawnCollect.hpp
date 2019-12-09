@@ -47,23 +47,23 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define INCLUDE_SPAWNCOLLECT_HPP_
 
 class SpawnCollect {
-public:
-	int xc, yc;
+ public:
+  int xc, yc;
 
   /**
    *   @brief Constructor of class SpawnCollect
    *   @param none
    *   @return none
    */
-	SpawnCollect();
-	
+  SpawnCollect();
+
   /**
    *   @brief Constructor of class SpawnCollect
    *   @param none
    *   @return none
    */
-	~SpawnCollect();
-	
+  ~SpawnCollect();
+
   /**
    *   @brief Function to spawn trash
    *   @param int xr, trash x location
@@ -71,14 +71,14 @@ public:
    *   @param int flag, reference
    *   @return bool
    */
-	bool spawn(int xr, int yr, int flag);
-	
+  bool spawn(int xr, int yr, int flag);
+
   /**
    *   @brief Function to collect trash
    *   @param int flag, reference
    *   @return bool
    */
-	bool collect(int flag);
+  bool collect(int flag);
 };
 
 #endif  //  INCLUDE_SPAWNCOLLECT_HPP_

@@ -44,43 +44,31 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 #include <ros/ros.h>
+#include <ros/console.h>
 #include <tf/transform_listener.h>
 #include <geometry_msgs/Twist.h>
 #include <gtest/gtest.h>
+#include <geometry_msgs/Point.h>
+#include <geometry_msgs/Quaternion.h>
+#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
+#include <costmap_2d/costmap_2d_ros.h>
 
-#include <cstdlib>
 #include <memory>
-#include <stdio.h>
 #include <set>
 #include <numeric>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
 #include <fstream>
 #include <iostream>
 #include <iomanip>
 #include <iterator>
 #include <algorithm>
 #include <string>
-#include <ros/console.h>
 #include <vector>
 #include <sstream>
 #include <map>
 #include <limits>
 #include "pathPlanner.hpp"
 // #include "gridSquare.hpp"
-
-#include <geometry_msgs/Point.h>
-#include <geometry_msgs/Quaternion.h>
-#include <geometry_msgs/Twist.h>
-#include <geometry_msgs/PoseStamped.h>
-#include <geometry_msgs/PoseWithCovarianceStamped.h>
-#include <tf/transform_listener.h>
-#include <costmap_2d/costmap_2d_ros.h>
 
 /**
  * @def TEST(TestPathPlanner, testNodeHandle)
@@ -91,7 +79,7 @@ TEST(TestPathPlanner, testNodeHandle) {
 ros::NodeHandle nh;
 astar_plugin::AStarPlanner testPP(nh);
 //  current node name
-std::string node_name = "/testPlanner";
+const char* node_name = "/testPlanner";
 //  Returns true when robot name is testPlanner
 EXPECT_EQ(node_name, ros::this_node::getName());
 }
@@ -111,7 +99,8 @@ float& indCoordinate = point;
 testPP.convertToMapCoordinates(indCoordinate, indCoordinate);
 std::vector<float> testCoordinates {10.0, 10.0};
 //  Should return true when testcoordinates are equal to 10, 10
-EXPECT_EQ(testCoordinates, testPP.getMapCoordinates(indCoordinate, indCoordinate));
+EXPECT_EQ(testCoordinates, testPP.getMapCoordinates(indCoordinate,
+                                                    indCoordinate));
 }
 
 /**
@@ -134,7 +123,8 @@ testPP.getCellCoordinates(index, indCoordinate, indCoordinate);
 std::vector<float> testCoordinates {0.0, 0.0};
 
 //  Should return true when the testcoordinates are at origin
-EXPECT_EQ(testCoordinates, testPP.getMapCoordinates(indCoordinate, indCoordinate));
+EXPECT_EQ(testCoordinates, testPP.getMapCoordinates(indCoordinate,
+                                                    indCoordinate));
 }
 
 /**
@@ -143,7 +133,7 @@ EXPECT_EQ(testCoordinates, testPP.getMapCoordinates(indCoordinate, indCoordinate
  */
 TEST(TestPathPlanner, testCoordinateBounds) {
 astar_plugin::AStarPlanner testPP;
-//  The testcoordinates should be out of boundary when map params not initialised.
+//  The testcoordinates should be out of boundary when map not initialised.
 EXPECT_FALSE(testPP.isCoordinateInBounds(10, 10));
 }
 
@@ -230,7 +220,7 @@ EXPECT_EQ(res, testPP.getCellColIndex(0));
 TEST(TestPathPlanner, testHValue) {
 astar_plugin::AStarPlanner testPP;
 testPP.width = 10;
-float resF= 0.0;
+float resF = 0.0;
 //  At origin the H Cell score is 0.
 EXPECT_EQ(resF, testPP.calculateHCellScore(0, 0));
 }
@@ -279,7 +269,7 @@ astar_plugin::AStarPlanner testPP;
 std::vector<int> resCells = {0};
 testPP.width = 10;
 //  Given index 10, without map the free neighbor cells are 0.
-EXPECT_EQ(resCells,(testPP.findFreeNeighborCell(10)));
+EXPECT_EQ(resCells, (testPP.findFreeNeighborCell(10)));
 }
 
 /**
@@ -291,7 +281,7 @@ astar_plugin::AStarPlanner testPP;
 std::vector<int> resCells = {0};
 testPP.width = 10;
 //  Without map, the free neighbor cells are 0.
-EXPECT_EQ(resCells,(testPP.findFreeNeighborCell(0)));
+EXPECT_EQ(resCells, (testPP.findFreeNeighborCell(0)));
 }
 
 /**
@@ -360,7 +350,6 @@ EXPECT_EQ(resF, testPP.findPath(10, 10, g_test));
  */
 TEST(TestPathPlanner, testFindPathNewExtreme) {
 astar_plugin::AStarPlanner testPP;
-//GridSquare gs;
 testPP.value = 0;
 float infinity = std::numeric_limits<float>::infinity();
 std::vector<float> g_test = {infinity};
@@ -376,7 +365,6 @@ EXPECT_EQ(resF, testPP.findPath(1000, 1000, g_test));
  */
 TEST(TestPathPlanner, testRunAStar) {
 astar_plugin::AStarPlanner testPP;
-//GridSquare gs;
 testPP.value = 0;
 float infinity = std::numeric_limits<float>::infinity();
 std::vector<float> g_test = {infinity};
@@ -435,11 +423,11 @@ int mapSize = testPP.width*testPP.height;
 testPP.occupancyGridMap = new bool[mapSize];
 for (unsigned int iy = 0; iy < testPP.height; iy++) {
   for (unsigned int ix = 0; ix < testPP.width; ix++) {
-   int cost = 0;
-   if (cost == 0) {
+    int cost = 0;
+    if (cost == 0) {
       testPP.occupancyGridMap[iy*testPP.width+ix] = true;
-      }
-   }
+    }
+  }
 }
 //  Fill the occupancy grid
 std::vector<float> g_score;
@@ -469,12 +457,11 @@ testPP.occupancyGridMap = new bool[mapSize];
 //  Fill the occupancy grid
 for (unsigned int iy = 0; iy < testPP.height; iy++) {
   for (unsigned int ix = 0; ix < testPP.width; ix++) {
-   int cost = 0;
-
+    int cost = 0;
     if (cost == 0) {
       testPP.occupancyGridMap[iy*testPP.width+ix] = true;
      }
-   }
+  }
 }
 int ints[] = {0, 0, 1, 2, 3, 5, 6, 7, 8};
 std::vector <int> test (ints, ints+sizeof(ints)/sizeof(int));
@@ -554,83 +541,3 @@ astar_plugin::AStarPlanner testPP;
     //  Delete the map.
     delete[] testPP.occupancyGridMap;
 }
-
-// Currently under Development
-// TEST(TestPathPlanner, testAStarCostMap) {
-// bool initialized = true;
-// std::string name = "AStarPlanner";
-// tf::TransformListener tf_(ros::Duration(10));
-// auto costmap_ros_ = new costmap_2d::Costmap2DROS("my_costmap", tf_);
-
-// astar_plugin::AStarPlanner testPP;
-// testPP.initialize(name, costmap_ros_);
-
-// // EXPECT_EQ(true, initialized);
-// }
-// TEST(TestPathPlanner, testMakePlanFalse) {
-// bool initialized = false;
-// // geometry_msgs::PoseStamped pose_msg;
-// geometry_msgs::PoseStamped msgPose1;
-// ros::Time start = ros::Time::now();
-// msgPose1.header.stamp = start;
-// msgPose1.header.frame_id = "map";
-// msgPose1.pose.position.x = 0;
-// msgPose1.pose.position.y = 0;
-// msgPose1.pose.position.z = 0.25;
-// tf::Transform transform;
-// transform.setOrigin(tf::Vector3(0.0, 0.0, 0.0));
-// tf::Quaternion quaternion1;
-// quaternion1.setRPY(0.5, 0.9, 1.90);
-// //auto quaternion = tf.transformations.quaternion_from_euler(0, 0, 0);
-// msgPose1.pose.orientation.x = quaternion1[0];
-// msgPose1.pose.orientation.y = quaternion1[1];
-// msgPose1.pose.orientation.z = quaternion1[2];
-// msgPose1.pose.orientation.w = quaternion1[3];
-// geometry_msgs::PoseStamped& poseStart = msgPose1;
-
-// geometry_msgs::PoseStamped msgPose2;
-// ros::Time goal = ros::Time::now();
-// msgPose2.header.stamp = goal;
-// msgPose2.header.frame_id = "map";
-// msgPose2.pose.position.x = 0;
-// msgPose2.pose.position.y = 0;
-// msgPose2.pose.position.z = 0.25;
-// transform.setOrigin(tf::Vector3(0.0, 0.0, 0.0));
-// tf::Quaternion quaternion2;
-// quaternion2.setRPY(1.5, 0.0, 1.0);
-// //auto quaternion = tf.transformations.quaternion_from_euler(0, 0, 0);
-// msgPose2.pose.orientation.x = quaternion2[0];
-// msgPose2.pose.orientation.y = quaternion2[1];
-// msgPose2.pose.orientation.z = quaternion2[2];
-// msgPose2.pose.orientation.w = quaternion2[3];
-// geometry_msgs::PoseStamped& poseGoal = msgPose2;
-
-// std::vector<geometry_msgs::PoseStamped> vecPlan = {poseStart, poseGoal};
-// std::vector<geometry_msgs::PoseStamped>& plan = vecPlan;
-//  tf::TransformListener tf_(ros::Duration(0.01));
-// auto costmap_ros_ = new costmap_2d::Costmap2DROS("my_costmap", tf_);
-// astar_plugin::AStarPlanner testPP;
-// testPP.initialize("testPlanner", costmap_ros_);
-// EXPECT_FALSE(testPP.makePlan(poseStart, poseGoal, vecPlan));
-// }
-
-// geometry_msgs::Point point(1, 2, 3);
-// geometry_msgs::Pose pose(point, geometry_msgs::Quaternion(4,5,6,7));
-
-// geometry_msgs::PoseStamped& poseStart = msgPose1;
-
-// const geometry_msgs::PoseStamped msgPose2;
-// ros::Time goal = ros::Time::now();
-// msgPose2.header.stamp = goal;
-// msgPose2.header.frame_id = "map";
-// msgPose2.pose.position.x = 0;
-// msgPose2.pose.position.y = 0;
-// msgPose2.pose.position.z = 0.25;
-// quaternion = tf.transformations.quaternion_from_euler(0, 0, 0);
-// msgPose2.pose.orientation.x = quaternion[0];
-// msgPose2.pose.orientation.y = quaternion[1];
-// msgPose2.pose.orientation.z = quaternion[2];
-// msgPose2.pose.orientation.w = quaternion[3];
-
-// geometry_msgs::PoseStamped& poseGoal = msgPose2;
-//

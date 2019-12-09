@@ -1,4 +1,4 @@
-/************************************************************************
+	/************************************************************************
 BSD 3-Clause License
 
 Copyright (c) 2019, Raj Shinde
@@ -65,6 +65,6 @@ EXPECT_LT(testn.randomizeY(), 8);
 TEST(testRandomizer, checkOffset) {
 Randomizer testn;
 // should be less than specified limit
-EXPECT_LT(testn.xOffset(0,1,2), 20);
-EXPECT_LT(testn.yOffset(0,1,2), 20);
+EXPECT_LT(testn.xOffset(0, 1, 2), 20);
+EXPECT_LT(testn.yOffset(0, 1, 2), 20);
 }

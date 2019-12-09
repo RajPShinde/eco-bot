@@ -46,19 +46,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef INCLUDE_GRIDSQUARE_HPP_
 #define INCLUDE_GRIDSQUARE_HPP_
 
-#include <string.h>
 #include <set>
 #include <string>
 #include <vector>
 #include <utility>
 #include <random>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits>
 
 class GridSquare {
-  public:
+ public:
     int currentGridSquare;  //  current grid square
     float fCost;  //  function cost
 

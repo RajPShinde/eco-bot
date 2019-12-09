@@ -43,19 +43,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @section Header file for path planning through A star plugin.
  */
 
-#ifndef INCLUDE_ASTARPLANNER_HPP_
-#define INCLUDE_ASTARPLANNER_HPP_
-
-#include <string.h>
-#include <set>
-#include <string>
-#include <vector>
-#include <utility>
-#include <random>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits>
+#ifndef INCLUDE_PATHPLANNER_HPP_
+#define INCLUDE_PATHPLANNER_HPP_
 
 #include <ros/ros.h>
 #include <tf/tf.h>
@@ -76,22 +65,27 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <nav_msgs/Path.h>
 #include <nav_msgs/GetPlan.h>
 #include <nav_core/base_global_planner.h>
-#include <gridSquare.hpp>
+
+#include <set>
+#include <string>
+#include <vector>
+#include <utility>
+#include <limits>
+#include <random>
+#include "gridSquare.hpp"
 #include "sensor_msgs/LaserScan.h"
 #include "sensor_msgs/PointCloud2.h"
 
-namespace astar_plugin
-{
-  class AStarPlanner : public nav_core::BaseGlobalPlanner
-  {
-  public:
-    int value;   
+namespace astar_plugin {
+class AStarPlanner : public nav_core::BaseGlobalPlanner {
+ public:
+    int value;
     int mapSize;  //  size of the occupancy grid map
     bool *occupancyGridMap;  //  pointer to check if map exists
     float infinity = std::numeric_limits<float>::infinity();  //  inf to start
     float tBreak;
     ros::NodeHandle ROSNodeHandle;  //  Nodehandle object
-    float originX;  
+    float originX;
     float originY;
     float resolution;
     costmap_2d::Costmap2DROS *costmap_ros;
@@ -105,15 +99,15 @@ namespace astar_plugin
      *   @param none
      *   @return none
      */
-    AStarPlanner(); 
+    AStarPlanner();
 
     /**
      *   @brief Overloaded constructor to call ros node handle.
      *   @param ros::NodeHandle
      *   @return none
      */
-    AStarPlanner(ros::NodeHandle &);
-    
+    explicit AStarPlanner(ros::NodeHandle &);
+
     /**
      *   @brief Overloaded constructor to initialise 2D cost map 
      *   @param string, name
@@ -175,14 +169,14 @@ namespace astar_plugin
      *   @return std::vector<float> returns map coordinates
      */
     std::vector<float> getMapCoordinates(float x, float y);
-   
+
     /**
      *   @brief Function to calculate H cell score
      *   @param int, cell index value 
      *   @param int, cell limits
      *   @return float, H value
      */
-    float calculateHCellScore(int cellIndex, int cellSquare); 
+    float calculateHCellScore(int cellIndex, int cellSquare);
 
     /**
      *   @brief Function to calculate cell index
@@ -220,7 +214,7 @@ namespace astar_plugin
      *   @return bool, returns true if free
      */
     bool isCellFree(int i, int j);
-    
+
     /**
      *   @brief Function to get moving cost to a cell
      *   @param int, first cell index
@@ -228,7 +222,7 @@ namespace astar_plugin
      *   @return float, cell cost
      */
     float getMoveToCellCost(int cellIndex1, int cellIndex2);
-   
+
    /**
      *   @brief Overloaded function to get moving cost to a cell
      *   @param int, first cell x index
@@ -298,9 +292,8 @@ namespace astar_plugin
      *   @param int, goal cell
      *   @return bool, returns true if valid.
      */    
-    bool isStartAndGoalValid(int startCell, int goalCell); 
-
-  };
+    bool isStartAndGoalValid(int startCell, int goalCell);
 };
+};  //  namespace astar_plugin
 
-#endif  //  INCLUDE_ASTARPLANNER_HPP_
+#endif  //  INCLUDE_PATHPLANNER_HPP_

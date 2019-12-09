@@ -47,36 +47,36 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define INCLUDE_RANDOMIZER_HPP_
 
 class Randomizer {
-public:
-	double xc, yc;
+ public:
+  double xc, yc;
 
   /**
    *   @brief Constructor of class Randomizer
    *   @param none
    *   @return none
    */
-	Randomizer();
+  Randomizer();
 
   /**
    *   @brief Destructor of class Randomizer
    *   @param none
    *   @return none
    */
-	~Randomizer();
+  ~Randomizer();
 
   /**
    *   @brief function to randomize x
    *   @param none
    *   @return double xr
    */
-	double randomizeX();
+  double randomizeX();
 
   /**
    *   @brief function to randomize y
    *   @param none
    *   @return double yr
    */
-	double randomizeY();
+  double randomizeY();
 
   /**
    *   @brief function to offset x
@@ -85,7 +85,7 @@ public:
    *   @param double xn, target
    *   @return double xn, new traget
    */
-	double xOffset(double xo, double xr, double xn);
+  double xOffset(double xo, double xr, double xn);
 
   /**
    *   @brief function to offset y
@@ -94,7 +94,7 @@ public:
    *   @param double yn, traget
    *   @return double yn, new target
    */
-	double yOffset(double yo, double yr, double yn);
+  double yOffset(double yo, double yr, double yn);
 };
 
 #endif  //  INCLUDE_RANDOMIZER_HPP_

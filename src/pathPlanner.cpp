@@ -78,13 +78,13 @@ namespace astar_plugin {
   }
 
   AStarPlanner::AStarPlanner(ros::NodeHandle &nh) {
-  	//  initialise node handle for this plugin
+    //  initialise node handle for this plugin
     ROSNodeHandle = nh;
   }
 
   AStarPlanner::AStarPlanner(std::string name,
                              costmap_2d::Costmap2DROS *cost_ros) {
-  	//  overridden function call for the node initialisation
+    //  overridden function call for the node initialisation
     initialize(name, cost_ros);
   }
 
@@ -329,7 +329,7 @@ std::vector<int> AStarPlanner::findPath(int startCell,
     }
   }
   if (g_score[goalCell] != infinity) {
-  	//  planner constructs path from here
+    //  planner constructs path from here
     bestPath = constructPath(startCell, goalCell, g_score);
     return bestPath;
   } else {
@@ -448,7 +448,7 @@ float AStarPlanner::getMoveToCellCost(int i1, int j1, int i2, int j2) {
       || (i2 == i1 - 1 && j2 == j1 - 1) || (j2 == j1 - 1 && i2 == i1 + 1)) {
     moveCost = 1.4;
   } else {
-  	//  if moving in straight line, then h movecost is 1
+    //  if moving in straight line, then h movecost is 1
     if ((j2 == j1 && i2 == i1 - 1) || (i2 == i1 && j2 == j1 - 1)
        || (i2 == i1 + 1 && j2 == j1) || (i2 == i1 && j2 == j1 + 1)) {
       moveCost = 1;

@@ -50,7 +50,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * @def TEST(TestGridSquare, testGetCurrentSquare)
  * @brief To check if the current gridsquare is 0
  */
-TEST(TestGridSquare, testGetCurrentSquare) {	
+TEST(TestGridSquare, testGetCurrentSquare) {
 int res = 0;
 GridSquare testGS;
 //  Should return true when initial gridsquare is 0
@@ -73,7 +73,7 @@ EXPECT_EQ(resF, testGS.getFCost());
  *  @param  int argc, char argv
  *  @return int
  */
-int main(int argc, char **argv){
+int main(int argc, char **argv) {
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }

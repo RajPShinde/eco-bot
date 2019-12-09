@@ -82,7 +82,7 @@ int NavigateRobot::start(bool flag) {
       loop_rate.sleep();
     }
   } else {
-  	//  for testing of the node, this is fake subscriber that publishes for 5
+    //  for testing of the node, this is fake subscriber that publishes for 5
     ros::Subscriber sub =
         nh.subscribe("/navigation_velocity_smoother/raw_cmd_vel", 5,
         &NavigateRobot::twistRobot, this);

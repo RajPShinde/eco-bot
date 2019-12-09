@@ -47,28 +47,27 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define INCLUDE_COLLECTOR_HPP_
 
 class Collector {
-public:
-
+ public:
    /**
     *   @brief Constructor of class Collector
     *   @param none
     *   @return none
     */
-	Collector();
+  Collector();
 
    /**
     *   @brief Destructor of class Collector
     *   @param none
     *   @return none
     */
-	~Collector();
+  ~Collector();
 
    /**
     *   @brief Collector method to be called from here
     *   @param none
     *   @return bool, returns true if object collected
     */
-	bool collector();
+  bool collector();
 };
 
 #endif  //  INCLUDE_COLLECTOR_HPP_
