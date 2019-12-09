@@ -32,55 +32,63 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *************************************************************************/
 
 /**
- *  @copyright BSD 3-Clause License
+ *  @copyright BSD 3-Clause License 
  *  @copyright Copyright © 2019 Raj Shinde, Prasheel Renkuntla
- *  @file    navigateRobot.h
+ *  @file    gridSquare.h
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
  *  @date    12/09/2019
  *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
- *  @section Header file for navigation of the robot
+ *  @section Header file for creating a grid square for current cell and fcost.
  */
 
-#ifndef INCLUDE_NAVIGATEROBOT_HPP_
-#define INCLUDE_NAVIGATEROBOT_HPP_
+#ifndef INCLUDE_GRIDSQUARE_HPP_
+#define INCLUDE_GRIDSQUARE_HPP_
 
-#include <ros/ros.h>
-#include <tf/transform_listener.h>
-#include <geometry_msgs/Twist.h>
+#include <string.h>
+#include <set>
+#include <string>
+#include <vector>
+#include <utility>
+#include <random>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <limits>
 
-class NavigateRobot {
- public:
-  bool flag;
+class GridSquare {
+  public:
+    int currentGridSquare;  //  current grid square
+    float fCost;  //  function cost
 
-  /**
-   *   @brief Constructor of class NavigateRobot
-   *   @param none
-   *   @return none
-   */
-  NavigateRobot();
+    /**
+     *   @brief Constructor of class GridSquare
+     *   @param none
+     *   @return none
+     */    
+    GridSquare();
 
-  /**
-   *   @brief Destructor of class NavigateRobot
-   *   @param none
-   *   @return none
-   */
-  ~NavigateRobot();
+    /**
+     *   @brief Destructor of class GridSquare
+     *   @param none
+     *   @return none
+     */    
+    ~GridSquare();
 
-  /**
-   *   @brief Function to twist the robot.
-   *   @param const geometry_msgs::TwistConstPtr, pointer to twist
-   *   @return none
-   */
-  void twistRobot(const geometry_msgs::TwistConstPtr &msg);
+    /**
+     *   @brief Function fo get current grid square
+     *   @param none
+     *   @return int, current grid square
+     */    
+    int getCurrentGridSquare();
 
-  /**
-   *   @brief Function to start the robot
-   *   @param none
-   *   @return none
-   */
-  int start(bool flag);
+    /**
+     *   @brief Function to get current function Cost
+     *   @param none
+     *   @return float, current F cost
+     */    
+    float getFCost();
 };
 
-#endif  //  INCLUDE_NAVIGATEROBOT_HPP_
+#endif  //  INCLUDE_GRIDSQUARE_HPP_

@@ -37,8 +37,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @file    pathPlanner.h
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
- *  @date    12/02/2019
- *  @version 2.0
+ *  @date    12/09/2019
+ *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
  *  @section Header file for path planning through A star plugin.
  */
@@ -76,7 +76,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <nav_msgs/Path.h>
 #include <nav_msgs/GetPlan.h>
 #include <nav_core/base_global_planner.h>
-
+#include <gridSquare.hpp>
 #include "sensor_msgs/LaserScan.h"
 #include "sensor_msgs/PointCloud2.h"
 
@@ -90,8 +90,6 @@ namespace astar_plugin
     bool *occupancyGridMap;  //  pointer to check if map exists
     float infinity = std::numeric_limits<float>::infinity();  //  inf to start
     float tBreak;
-    std::vector<std::pair<int, float>> gridSquare;  //  the grid cell that will be used
-    //size_t size; //2
     ros::NodeHandle ROSNodeHandle;  //  Nodehandle object
     float originX;  
     float originY;
@@ -101,6 +99,82 @@ namespace astar_plugin
     bool initialized;  //  variable to check if path planner is initialised
     int width;
     int height;
+
+    /**
+     *   @brief Constructor of class AStar planner
+     *   @param none
+     *   @return none
+     */
+    AStarPlanner(); 
+
+    /**
+     *   @brief Overloaded constructor to call ros node handle.
+     *   @param ros::NodeHandle
+     *   @return none
+     */
+    AStarPlanner(ros::NodeHandle &);
+    
+    /**
+     *   @brief Overloaded constructor to initialise 2D cost map 
+     *   @param string, name
+     *   @param costmap_2d::Costmap2DROS, ROS 2D cost map
+     *   @return none
+     */
+    AStarPlanner(std::string name, costmap_2d::Costmap2DROS *costmap_ros);
+
+    /**
+     *   @brief Function inherited from base class to initialise map
+     *   @param string, name
+     *   @param costmap_2d::Costmap2DROS, ROS 2D cost map
+     *   @return none
+     */
+    void initialize(std::string name, costmap_2d::Costmap2DROS *costmap_ros);
+
+    /**
+     *   @brief Function to make a plan to reach the goal 
+     *   @param const geometry_msgs::PoseStamped, start pose
+     *   @param const geometry_msgs::PoseStamped, goal pose
+     *   @param std::vector<geometry_msgs::PoseStamped>, vector plan to reach
+     *   @return bool, returns true if plan exists
+     */
+    bool makePlan(const geometry_msgs::PoseStamped &start,
+                  const geometry_msgs::PoseStamped &goal,
+                  std::vector<geometry_msgs::PoseStamped> &plan);
+    /**
+     *   @brief Function to run astar algorithm
+     *   @param int, start cell
+     *   @param int, goal cell
+     *   @return std::vector<int>, returns best path coordinates
+     */
+    std::vector<int> runAStar(int startCell, int goalCell);
+
+    /**
+     *   @brief Function to find path to reach the goal 
+     *   @param int, start cell
+     *   @param int, goal cell
+     *   @param std::vector<float>, g function value for each cell
+     *   @return std::vector<int>, if correct, then best path else empty path
+     */
+    std::vector<int> findPath(int startCell, int goalCell,
+                              std::vector<float> g_score);
+
+    /**
+     *   @brief Function to construct a path to reach the goal 
+     *   @param int, start cell
+     *   @param int, goal cell
+     *   @param std::vector<float>, g function value for each cell
+     *   @return std::vector<int>, if correct, then best path else empty path
+     */
+    std::vector<int> constructPath(int startCell, int goalCell,
+                                   std::vector<float> g_score);
+
+    /**
+     *   @brief Function to get map coordinates
+     *   @param float, x coordinate
+     *   @param float, y coordinate
+     *   @return std::vector<float> returns map coordinates
+     */
+    std::vector<float> getMapCoordinates(float x, float y);
    
     /**
      *   @brief Function to calculate H cell score
@@ -121,7 +195,6 @@ namespace astar_plugin
     /**
      *   @brief Function to get Cell Row index
      *   @param int, cell index value 
-     *   @param int, cell limits
      *   @return int, cell row index
      */
     int getCellRowIndex(int index);
@@ -207,82 +280,14 @@ namespace astar_plugin
     bool isCoordinateInBounds(float x, float y);
 
     /**
-     *   @brief Constructor of class AStar planner
-     *   @param none
-     *   @return none
-     */
-    AStarPlanner(); 
-
-    /**
-     *   @brief Overloaded constructor to call ros node handle.
-     *   @param ros::NodeHandle
-     *   @return none
-     */
-    AStarPlanner(ros::NodeHandle &);
-    
-    /**
-     *   @brief Overloaded constructor to initialise 2D cost map 
-     *   @param string, name
-     *   @param costmap_2d::Costmap2DROS, ROS 2D cost map
-     *   @return none
-     */
-    AStarPlanner(std::string name, costmap_2d::Costmap2DROS *costmap_ros);
-
-    /**
-     *   @brief Function inherited from base class to initialise map
-     *   @param string, name
-     *   @param costmap_2d::Costmap2DROS, ROS 2D cost map
-     *   @return none
-     */
-    void initialize(std::string name, costmap_2d::Costmap2DROS *costmap_ros);
-
-    /**
-     *   @brief Function to make a plan to reach the goal 
-     *   @param const geometry_msgs::PoseStamped, start pose
-     *   @param const geometry_msgs::PoseStamped, goal pose
-     *   @param std::vector<geometry_msgs::PoseStamped>, vector plan to reach
-     *   @return bool, returns true if plan exists
-     */
-    bool makePlan(const geometry_msgs::PoseStamped &start,
-                  const geometry_msgs::PoseStamped &goal,
-                  std::vector<geometry_msgs::PoseStamped> &plan);
-    /**
-     *   @brief Function to run astar algorithm
-     *   @param int, start cell
-     *   @param int, goal cell
-     *   @return std::vector<int>, returns best path coordinates
-     */
-    std::vector<int> runAStar(int startCell, int goalCell);
-
-    /**
-     *   @brief Function to find path to reach the goal 
-     *   @param int, start cell
-     *   @param int, goal cell
-     *   @param std::vector<float>, g function value for each cell
-     *   @return std::vector<int>, if correct, then best path else empty path
-     */
-    std::vector<int> findPath(int startCell, int goalCell,
-                              std::vector<float> g_score);
-
-    /**
-     *   @brief Function to construct a path to reach the goal 
-     *   @param int, start cell
-     *   @param int, goal cell
-     *   @param std::vector<float>, g function value for each cell
-     *   @return std::vector<int>, if correct, then best path else empty path
-     */
-    std::vector<int> constructPath(int startCell, int goalCell,
-                                   std::vector<float> g_score);
-
-    /**
      *   @brief Function to add nearest neighbor to open list of coordinates
-     *   @param std::set<std::vector<std::pair<int, float>>>, set of coordinates
+     *   @param std::set<GridSquare>, set of coordinates
      *   @param int, neighbour cell
      *   @param int, goal cell
      *   @param std::vector<float>, current g function value for cell
      *   @return none
      */
-    void addNeighborGridSquareToOpenList(std::set<std::vector<std::pair<int, float>>> &OPL,
+    void addNeighborCellToOpenList(std::set<GridSquare> &OPL,
                                          int neighborCell,
                                          int goalCell,
                                          std::vector<float> g_score);

@@ -37,14 +37,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *  @file    pathPlanner.cpp
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
- *  @date    12/02/2019
- *  @version 2.0
+ *  @date    12/09/2019
+ *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
- *  @section Implementation file for path planning through A star plugin.
+ *  @section Implementation file for path planning algorithm
  */
 
 #include <stdio.h>
 #include <set>
+#include <numeric>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -55,43 +56,47 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <fstream>
 #include <iostream>
 #include <iomanip>
+#include <iterator>
+#include <algorithm>
 #include <string>
 #include <ros/console.h>
 #include <vector>
 #include <map>
 #include <limits>
-#include <pathPlanner.hpp>
+#include "pathPlanner.hpp"
+// #include "gridSquare.hpp"
 #include <pluginlib/class_loader.h>
 #include <pluginlib/class_list_macros.h>
 
-//register this planner as a BaseGlobalPlanner plugin
 PLUGINLIB_EXPORT_CLASS(astar_plugin::AStarPlanner, nav_core::BaseGlobalPlanner)
 
-namespace astar_plugin
-{
+namespace astar_plugin {
+
   AStarPlanner::AStarPlanner() {
   }
 
   AStarPlanner::AStarPlanner(ros::NodeHandle &nh) {
-    ROSNodeHandle = nh;
   }
  
   AStarPlanner::AStarPlanner(std::string name,
-                             costmap_2d::Costmap2DROS *costmap_ros) {
-   initialize(name, costmap_ros);
+                             costmap_2d::Costmap2DROS *cost_ros) {
   }
 
   void AStarPlanner::initialize(std::string name,
-                                costmap_2d::Costmap2DROS *costmap_ros) {
+                                costmap_2d::Costmap2DROS *cost_ros) {
 }
 
 bool AStarPlanner::makePlan(const geometry_msgs::PoseStamped &start,
                             const geometry_msgs::PoseStamped &goal,
                             std::vector<geometry_msgs::PoseStamped> &plan) {
- return false;
+  return false;
 }
 
 void AStarPlanner::convertToMapCoordinates(float &x, float &y) {
+}
+
+std::vector<float> AStarPlanner::getMapCoordinates(float x, float y) {
+  return 1;
 }
 
 int AStarPlanner::getCellIndex(float x, float y) {
@@ -105,15 +110,14 @@ bool AStarPlanner::isCoordinateInBounds(float x, float y) {
   return false;
 }
 
-std::vector<int> AStarPlanner::runAStar(int startCell,
-                                              int goalCell) {
+std::vector<int> AStarPlanner::runAStar(int startCell, int goalCell) {
   return 1;
 }
 
 std::vector<int> AStarPlanner::findPath(int startCell, 
                                         int goalCell, 
                                         std::vector<float> g_score) {
-  return 1;
+    return 1;
 }
 
 
@@ -123,10 +127,10 @@ std::vector<int> AStarPlanner::constructPath(int startCell,
   return 1;
 }
 
-void AStarPlanner::addNeighborGridSquareToOpenList(
-	std::set<std::vector<std::pair<int, float>>> &openSquaresList,
-    int neighborGridSquare, 
-    int goalGridSquare, 
+void AStarPlanner::addNeighborCellToOpenList(
+  std::set<GridSquare> &openSquaresList,
+    int neighborCell, 
+    int goalCell, 
     std::vector<float> g_score) {
 }
 
@@ -134,22 +138,22 @@ std::vector<int> AStarPlanner::findFreeNeighborCell(int cell) {
   return 1;
 }
 
-bool AStarPlanner::isStartAndGoalValid(int startGridSquare, int goalGridSquare)
+bool AStarPlanner::isStartAndGoalValid(int startCell, int goalCell)
 {
   return false;
 }
 
 float AStarPlanner::getMoveToCellCost(int i1, int j1, int i2, int j2)
 {
-  return 10.0;
+  return 1;
 }
 
 float AStarPlanner::getMoveToCellCost(int cellIndex1, int cellIndex2) {
-  return 10.0;
+  return 1;
 }
 
-float AStarPlanner::calculateHCellScore(int cellIndex, int cellSquare) {
-  return 10.0;
+float AStarPlanner::calculateHCellScore(int cellIndex, int goalCellSquare) {
+  return 1;
 }
 
 int AStarPlanner::calculateCellIndex(int i, int j) {
@@ -174,8 +178,8 @@ bool AStarPlanner::isCellFree(int cellIndex) {
 
 };
 
-bool operator<(std::vector<std::pair<int, float>> const &c1,
-               std::vector<std::pair<int, float>> const &c2) { 
-  //  return c1.fCost < c2.fCost; 
-  return false;
+
+bool operator<(GridSquare const &c1,
+               GridSquare const &c2) { 
+  return false; 
 }

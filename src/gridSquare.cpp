@@ -32,55 +32,50 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *************************************************************************/
 
 /**
- *  @copyright BSD 3-Clause License
+ *  @copyright BSD 3-Clause License 
  *  @copyright Copyright © 2019 Raj Shinde, Prasheel Renkuntla
- *  @file    navigateRobot.h
+ *  @file    gridSquare.cpp
  *  @author  Raj Shinde
  *  @author  Prasheel Renkuntla
  *  @date    12/09/2019
  *  @version 3.0
  *  @brief   Final Project - ecobot (A trash Collecting Robot)
- *  @section Header file for navigation of the robot
+ *  @section Implementation file for GridSquare class
  */
 
-#ifndef INCLUDE_NAVIGATEROBOT_HPP_
-#define INCLUDE_NAVIGATEROBOT_HPP_
+#include <stdio.h>
+#include <set>
+#include <numeric>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <iterator>
+#include <algorithm>
+#include <string>
 
-#include <ros/ros.h>
-#include <tf/transform_listener.h>
-#include <geometry_msgs/Twist.h>
+#include "gridSquare.hpp"
 
-class NavigateRobot {
- public:
-  bool flag;
+GridSquare::GridSquare() {
+  currentGridSquare = 0;
+  fCost = 0.0;
+}
 
-  /**
-   *   @brief Constructor of class NavigateRobot
-   *   @param none
-   *   @return none
-   */
-  NavigateRobot();
+GridSquare::~GridSquare() {
+  currentGridSquare = 0;
+  fCost = 0.0;
+}
 
-  /**
-   *   @brief Destructor of class NavigateRobot
-   *   @param none
-   *   @return none
-   */
-  ~NavigateRobot();
+int GridSquare::getCurrentGridSquare() {
+  return 1
+}
 
-  /**
-   *   @brief Function to twist the robot.
-   *   @param const geometry_msgs::TwistConstPtr, pointer to twist
-   *   @return none
-   */
-  void twistRobot(const geometry_msgs::TwistConstPtr &msg);
-
-  /**
-   *   @brief Function to start the robot
-   *   @param none
-   *   @return none
-   */
-  int start(bool flag);
-};
-
-#endif  //  INCLUDE_NAVIGATEROBOT_HPP_
+float GridSquare::getFCost() {
+  return 1;
+}
